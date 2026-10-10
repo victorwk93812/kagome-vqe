@@ -70,7 +70,8 @@ them was replaced in M0 and cannot be rerun.}
   \centering
   \includegraphics[width=\linewidth]{m0_before_after}
   \caption{Convergence before (grey) and after (orange) M0, best energy of each iteration. The
-    downward shift of about one unit is the readout error that was missing. The climb of
+    upward shift of about one unit (from about $-14$ to $-12.8$) is the readout error that was
+    missing: it adds bias. The climb of
     RVB\,+\,ADAM (right) is gone. Dots: the re-measured final energy.}
   \label{fig:m0}
 \end{figure}
@@ -107,7 +108,7 @@ defects touches exact simulation.
   The sampling primitive reports $\sum_i|c_i|\,\sigma_i/\sqrt{s}$ over the Pauli terms, which
   ignores correlations between terms. At the start point it reports \VSpreadLowReported{} at
   1024 shots against a real spread of \VSpreadLowReal{}, about \VSpreadRatio{} times too large;
-  at the optimum the real spread is exactly zero (\cref{prop:zerovar}). Method comparisons in M1
+  at the optimum the real spread without noise is exactly zero (\cref{prop:zerovar}). Method comparisons in M1
   and later therefore use repeated runs, never the reported \py{std}.
 \end{rem}
 

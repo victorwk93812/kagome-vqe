@@ -141,18 +141,18 @@
 </section>
 
 <section>
-  <h2>Reported error bars are {{SpreadRatio}}× too wide, and zero is exact at the optimum</h2>
+  <h2>Reported error bars are {{SpreadRatio}}× too wide; without noise the spread is zero at the optimum</h2>
   <div class="tiles">
     <div class="tile"><span class="k">reported std, 1024 shots</span><span class="v">{{SpreadLowReported}}</span></div>
     <div class="tile"><span class="k">real spread, {{SpreadRepeats}} repeats</span><span class="v accent">{{SpreadLowReal}}</span></div>
     <div class="tile"><span class="k">real spread, 4096 shots</span><span class="v">{{SpreadHighReal}}</span></div>
-    <div class="tile"><span class="k">real spread at the optimum</span><span class="v">{{SpreadLowZero}}</span></div>
+    <div class="tile"><span class="k">real spread at the optimum, no noise</span><span class="v">{{SpreadLowZero}}</span></div>
   </div>
   <div class="fragment math-anchor">
     <span class="theorem-name">Zero variance at the optimum.</span>
     \[ \sum_{i}z_iz_{6+i}+\sum_{i}\big(z_iz_{i+1}+z_{i+1}z_{6+i}\big)=-6+\sum_i\big(z_iz_{i+1}-z_{i+1}z_i\big)=-6\quad\text{every shot, every basis} \]
   </div>
-  <aside class="notes">The primitive reports sum |c_i| sigma_i / sqrt(shots), ignoring correlations between terms. Real spread measured at (phi, gamma) = (pi/4, pi/4) without gate noise. At the singlet product, each triangle's two unmatched bonds are perfectly anticorrelated shot by shot, so the sampled energy is exactly -18 with zero variance. Consequence: compare methods with repeated runs, not the reported std.</aside>
+  <aside class="notes">The primitive reports sum |c_i| sigma_i / sqrt(shots), ignoring correlations between terms. Real spread measured at (phi, gamma) = (pi/4, pi/4) without gate noise. At the singlet product, each triangle's two unmatched bonds are perfectly anticorrelated shot by shot, so without noise the sampled energy is exactly -18 with zero variance. With device noise the cancellation breaks: the roadmap measured {{RoadmapSpreadLow}} at 1024 shots at the exact parameters on FakeGuadalupeV2. Consequence: compare methods with repeated runs, not the reported std.</aside>
 </section>
 
 <!-- ============================== act V: M1 ============================== -->
@@ -212,7 +212,7 @@
   <ul class="tight">
     <li><code>uv run python -m docsgen</code> recomputes physics from <code>kagome_vqe</code> and reads <code>results/</code>; writes <code>data/numbers.json</code>, traces and figures.</li>
     <li><code>uv run pytest docsgen/tests</code> asserts every quoted number, the trace schemas, and that the deck and report use only known keys.</li>
-    <li>Quoted, not recomputed: the three pre-M0 seed-bug numbers (code no longer exists).</li>
+    <li>Quoted, not recomputed: the three pre-M0 seed-bug numbers (code no longer exists) and the roadmap's two noisy spread figures.</li>
     <li>PDF backup: <code>just slides-pdf</code> (DeckTape, one page per click).</li>
   </ul>
 </section>

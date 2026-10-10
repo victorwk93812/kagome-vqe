@@ -141,7 +141,13 @@ def registry() -> numbers.Registry:
 @needs_results
 def test_quoted_numbers_are_the_known_ones(registry: numbers.Registry) -> None:
     quoted = {k for k, v in registry.items() if v.quoted}
-    assert quoted == {"SeedBugSpread", "SeedBugGrad", "SeedBugRows"}
+    assert quoted == {
+        "SeedBugSpread",
+        "SeedBugGrad",
+        "SeedBugRows",
+        "RoadmapSpreadLow",
+        "RoadmapSpreadHigh",
+    }
 
 
 @needs_results
@@ -172,7 +178,7 @@ def test_numbers_files_are_current(registry: numbers.Registry) -> None:
 
 @needs_results
 def test_m1_means_match_readme(registry: numbers.Registry) -> None:
-    """The README's gradient table quotes the same means (it uses population std, ddof=0)."""
+    """The README's gradient table quotes the same means (its spread convention may differ)."""
     readme = (ROOT / "README.md").read_text()
     pattern = re.compile(r"\| (HVA|RVB) \| ([^|]+?) \| (\d+) \| ([\d.]+) % ± ([\d.]+) \|")
     labels = {

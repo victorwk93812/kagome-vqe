@@ -189,28 +189,28 @@
   "quoted": false
  },
  "ExactE": {
-  "value": -18.000000000000053,
+  "value": -17.999999999999968,
   "text": "−18.000",
   "math": "-18.000",
   "source": "docsgen.physics.facts",
   "quoted": false
  },
  "ExactEone": {
-  "value": -17.999999999999936,
+  "value": -17.999999999999908,
   "text": "−18.000",
   "math": "-18.000",
   "source": "docsgen.physics.facts",
   "quoted": false
  },
  "ExactEtwo": {
-  "value": -16.96132284070753,
+  "value": -16.96132284070752,
   "text": "−16.9613",
   "math": "-16.9613",
   "source": "docsgen.physics.facts",
   "quoted": false
  },
  "ExactGap": {
-  "value": 1.0386771592925221,
+  "value": 1.0386771592924475,
   "text": "1.0387",
   "math": "1.0387",
   "source": "docsgen.physics.facts",
@@ -1027,6 +1027,20 @@
   "math": "50\\%",
   "source": "docsgen.physics.facts",
   "quoted": false
+ },
+ "RoadmapSpreadHigh": {
+  "value": 0.06,
+  "text": "0.060",
+  "math": "0.060",
+  "source": "docs/roadmap.md M0 status, with device noise at the exact parameters",
+  "quoted": true
+ },
+ "RoadmapSpreadLow": {
+  "value": 0.144,
+  "text": "0.144",
+  "math": "0.144",
+  "source": "docs/roadmap.md M0 status, with device noise at the exact parameters",
+  "quoted": true
  },
  "SecPerEnergy": {
   "value": 2.672972753890226,

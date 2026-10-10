@@ -288,6 +288,10 @@ def _m0(reg: Registry) -> None:
     reg.add("SeedBugSpread", 0.22, decimals=2, source=src, quoted=True)
     reg.add("SeedBugGrad", 2, kind="int", source=src, quoted=True)
     reg.add("SeedBugRows", 5, kind="int", source=src, quoted=True)
+    # M0 spread check: measured with FakeGuadalupeV2 noise at the exact parameters (40 rows)
+    src = "docs/roadmap.md M0 status, with device noise at the exact parameters"
+    reg.add("RoadmapSpreadLow", 0.144, decimals=3, source=src, quoted=True)
+    reg.add("RoadmapSpreadHigh", 0.060, decimals=3, source=src, quoted=True)
 
 
 def _m1(reg: Registry) -> None:

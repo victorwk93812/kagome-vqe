@@ -41,16 +41,21 @@
 
 \subsection{Issues found while writing this report}
 
-These were found by recomputing every number from the code; they are listed here for the
-development worktree.
+These were found by recomputing every number from the code. The development session
+reproduced each of them and is fixing the prose and code on \py{main}.
 \begin{itemize}
   \item Parametric transpilation leaves each Heisenberg block at 5 CX instead of 3
     (\cref{prop:bound}). Binding first gives \VBoundCxHva{} CX and keeps \VBoundKeepHva{} instead of
     \VParamKeepHva{} of the energy at a generic point.
   \item \py{docs/physics.md} quotes 93 CX for RVB; the code gives \VCxRvb.
-  \item The README's seed spreads are population standard deviations (Table~\ref{tab:m1}, footnote).
-  \item The shot-noise spread vanishes at the exact optimum (\cref{prop:zerovar}); the M0 spread
-    figures are valid only away from it, as at the start point used here.
+  \item The README's seed spreads were population standard deviations (Table~\ref{tab:m1},
+    footnote); \py{main} is switching aggregated tables to sample standard deviations.
+  \item The M0 spread figures and those in this report were measured under different conditions,
+    and both are valid. The roadmap's figures (\VRoadmapSpreadLow{} at 1024 shots, \VRoadmapSpreadHigh{} at 4096) were taken
+    \emph{with} \py{FakeGuadalupeV2} noise at the exact parameters, where noise breaks the
+    cancellation of \cref{prop:zerovar}. This report's figures (\VSpreadLowReal, \VSpreadHighReal)
+    are noise-free at the start point. Without noise the spread at the optimum is exactly zero,
+    so the roadmap now states the conditions of its measurement.
   \item \py{HVAnsatz}'s docstring writes $e^{-i\gamma\Hev}e^{-i\phi\Hod}$; the circuit implements
     $e^{-i\frac\gamma2\Hev}e^{-i\frac\phi2\Hod}$ (\cref{dfn:ansatz}). Only the convention differs.
 \end{itemize}
