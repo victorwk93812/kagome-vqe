@@ -15,7 +15,9 @@
   qubits are laid along a Hamiltonian cycle of the lattice, and quantify how device noise turns
   that exact state into a biased plateau near \VPostFinalMax{} on a simulated
   \texttt{ibmq\_guadalupe}. Milestone M0 made the noisy simulation honest; milestone M1
-  compared gradient estimators at equal shot budgets. Every number in this report is generated
+  compared gradient estimators at equal shot budgets; milestone M2 measured four error-mitigation
+  techniques and, through an exact infinite-shot analysis, showed that the apparently best stack
+  owed its accuracy to two cancelling errors. Every number in this report is generated
   from the repository's code and result files by \texttt{docsgen}.
 \end{abstract}
 
@@ -28,6 +30,7 @@
 \input{sections/04-noise}
 \input{sections/m0-honest-noise}
 \input{sections/m1-gradients}
+\input{sections/m2-mitigation}
 \input{sections/90-status}
 
 \printbibliography

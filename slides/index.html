@@ -189,6 +189,44 @@
   <aside class="notes">Median line, min-max band over seeds. RVB curves still falling at three million shots: longer runs may reorder close finishers. HVA plain SPSA reaches 1e-5 relative error. Open follow-ups: decaying ADAM learning rate for HVA, longer RVB runs, more noisy seeds.</aside>
 </section>
 
+<!-- ============================== act VI: M2 ============================== -->
+<section>
+  <p class="act">VI · milestone M2 · error mitigation</p>
+  <h2>Ten mitigation stacks at fixed parameters: two look accurate, three overshoot</h2>
+  <img class="fig-img wide" src="media/m2_stacks.svg" alt="relative bias of every mitigation stack">
+  <div class="fragment math-anchor">
+    <span class="theorem-name">Every RVB/HVA state is a singlet.</span>
+    \[ \vec S_{\mathrm{tot}}^{\,2}\ket\psi=0\ \Rightarrow\ \textstyle\sum_\alpha\lVert S^\alpha_{\mathrm{tot}}\ket\psi\rVert^2=0\ \Rightarrow\ |b|=n/2\ \text{in every basis}:\ \text{discard the other shots} \]
+  </div>
+  <aside class="notes">Each stack evaluated {{MtRepeatsZero}} times at theta = 0 (noise-free -18) and theta = {{BoundTheta}} (HVA {{MtIdealHvaPt}}, RVB {{MtIdealRvbPt}}), {{MtShots}} shots per energy ({{MtShotsZne}} with ZNE). Raw bias {{MtHvaZeroRawRel}}. Readout + symmetry: {{MtHvaZeroRoSymRel}} / {{MtRvbZeroRoSymRel}} at no extra shots per energy, but HVA is {{MtHvaZeroRoSymBelow}} standard errors below -18. Readout + ZNE: {{MtHvaZeroRoZneRel}} at 3x shots. Symmetry + ZNE: {{MtHvaZeroRoSymZne}}. HVA twin overshoots ({{MtHvaZeroTwinRel}}): twin {{MtTwinIdealHva}} noisy {{MtTwinNoisyHva}}, damped more than the target. Symmetry filter keeps about {{MtKept}} of the shots under full noise. Code c9272e3, results e87051a.</aside>
+</section>
+
+<section>
+  <h2>Found while documenting: readout + symmetry is accurate only by cancellation</h2>
+  <img class="fig-img wide" src="media/m2_exact.svg" alt="infinite-shot bias under readout-only and full noise" style="max-height:360px">
+  <div class="tiles fragment">
+    <div class="tile"><span class="k">readout noise only, filter then correct</span><span class="v accent">{{MxHvaZeroRoRoSymRel}}</span></div>
+    <div class="tile"><span class="k">gate residual after consistent correction</span><span class="v">{{MxHvaZeroFullCtfRel}}</span></div>
+    <div class="tile"><span class="k">full noise, filter then correct</span><span class="v">{{MxHvaZeroFullRoSymRel}}</span></div>
+  </div>
+  <div class="fragment math-anchor">
+    \[ \text{filter strips single flips}\ \Rightarrow\ E_{\mathrm{ro+sym}}\approx\sum_t c_t\langle P_t\rangle\!\prod_{q\in S_t}\!\frac{1}{1-e_0^{(q)}-e_1^{(q)}}:\quad \text{factor } {{MxOverFactor:m}}\ \text{(predicted } {{MxOverPredicted:m}}) \]
+  </div>
+  <div class="fragment finding">Confirmed by the dev session; chosen stack withdrawn; main now corrects, then filters (56aadd3). Reruns pending.</div>
+  <aside class="notes">Infinite-shot computation: density matrix of the transpiled circuit, outcome distribution per basis without sampling, device readout channel applied analytically, estimators evaluated exactly (docsgen.physics.mitigation_exact). Reproduces the sampled means (HVA theta=0 full: {{MxHvaZeroFullRaw}}, {{MxHvaZeroFullRo}}, {{MxHvaZeroFullSym}}, {{MxHvaZeroFullRoSym}}). Readout correction alone is exactly unbiased under readout noise. Filtering first already removes every single-flip error to O(e^2); the per-qubit weights then still divide each two-body term by (1-e0-e1)^2, an over-correction of {{MxOverPct}}. Under full noise: {{MxOverFactor}} x {{MxHvaZeroFullSym}} = {{MxPredictFull}}, versus {{MxHvaZeroFullRoSym}} exact. The symmetry-only bias ({{MxHvaZeroFullSymRel}}) and the over-correction happen to match on FakeGuadalupeV2; less gate noise (M4) would push readings further below -18.</aside>
+</section>
+
+<section>
+  <h2>Mitigated runs find good parameters; readings below −18 are artefacts</h2>
+  <img class="fig-img wide" src="media/m2_vqe.svg" alt="mitigated optimisation traces">
+  <table class="num fragment">
+    <tr><th></th><th>re-measured final</th><th>noise-free energy of final params</th><th>total shots</th></tr>
+    <tr><td>HVA, plain SPSA</td><td>{{MvFinalHvaSpsa}} ± {{MvStdHvaSpsa}} ({{MvBelowHvaSpsa}} σ below −18)</td><td class="best">{{MvIdealHvaSpsa}}</td><td>{{MvShotsHvaSpsa}}</td></tr>
+    <tr><td>RVB, ADAM + parameter shift</td><td>{{MvFinalRvbPs}} ± {{MvStdRvbPs}}</td><td class="best">{{MvIdealRvbPs}}</td><td>{{MvShotsRvbPs}}</td></tr>
+  </table>
+  <aside class="notes">configs/m2_mitigated_vqe.toml, readout + symmetry as in c9272e3 (filter first). Unmitigated the same runs end near {{PostFinalRvbAdam}}. The parameters are within {{MvIdealErrHvaSpsa}} (HVA) and {{MvIdealErrRvbPs}} (RVB) of the ground energy; the reading differs by the stack's bias. By the variational principle for mixed states nothing physical is below -18.</aside>
+</section>
+
 <!-- ============================== closing ============================== -->
 <section>
   <h2>Scorecard</h2>
@@ -196,13 +234,13 @@
     <tr><th>milestone</th><th>question</th><th>answer so far</th><th>status</th></tr>
     <tr><td>M0</td><td>Are the noisy numbers real?</td><td>Not before M0. Floor {{PostFinalMin}} to {{PostFinalMax}}: a bias.</td><td>done</td></tr>
     <tr><td>M1</td><td>Most precision per shot?</td><td>RVB: ADAM + shift ({{MIdealRvbPs}}). HVA: SPSA ({{MIdealHvaSpsa}}).</td><td>done</td></tr>
-    <tr><td>M2</td><td>How much bias can mitigation remove?</td><td>—</td><td>next</td></tr>
+    <tr><td>M2</td><td>How much bias can mitigation remove?</td><td>Looked like {{MtHvaZeroRoSymRel}}, but by cancellation; consistent correction leaves {{MxHvaZeroFullCtfRel}}.</td><td>reopened</td></tr>
     <tr><td>M3</td><td>Is the benchmark testing anything?</td><td>Barely: exact at zero parameters.</td><td>planned</td></tr>
     <tr><td>M4</td><td>How far can depth fall?</td><td>Free step: bind parameters, {{CxHva}} → {{BoundCxHva}} CX.</td><td>planned</td></tr>
     <tr><td>M5</td><td>Can subspace methods remove the rest?</td><td>—</td><td>planned</td></tr>
   </table>
   <div class="fragment finding" style="max-width:1100px;margin:0.6em auto 0">
-    Open: the floor ({{PostErrHvaSpsa}} error) dominates everything; hardware calibration H0 deferred; the instance is easy, so conclusions need M3.
+    Open: about {{MxHvaZeroFullCtfRel}} gate residual after consistent readout + symmetry (M2 reruns, M4); hardware checks H0/H1 deferred; the instance is easy, so conclusions need M3.
   </div>
 </section>
 

@@ -18,7 +18,7 @@ import numpy as np
 from docsgen.paths import ROOT, summary_dir
 from kagome_vqe.results import LoadedRun, load_run
 
-__all__ = ["Aggregate", "aggregate", "by_name", "loaded_runs", "summary"]
+__all__ = ["Aggregate", "aggregate", "by_name", "evaluation", "loaded_runs", "summary"]
 
 _SEED_SUFFIX = re.compile(r"-s\d+$")
 
@@ -66,3 +66,16 @@ def aggregate(name: str, metric: str) -> dict[str, Aggregate]:
 def loaded_runs(name: str) -> tuple[LoadedRun, ...]:
     """Full run directories (traces included) behind a summary."""
     return tuple(load_run(ROOT / row["path"]) for row in summary(name))
+
+
+@cache
+def evaluation(name: str) -> dict[str, dict[str, Any]]:
+    """Rows of ``results/<name>/evaluation.json`` (fixed-point mode), keyed ``"hva_readout"``."""
+    rows: list[dict[str, Any]] = json.loads((summary_dir(name) / "evaluation.json").read_text())
+    out: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        if not isinstance(row["below_ground"], bool):
+            msg = f"{name}: below_ground must be a bool, got {row['below_ground']!r}"
+            raise TypeError(msg)
+        out[row["name"].split("-", 1)[1]] = row
+    return out

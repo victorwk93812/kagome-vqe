@@ -82,11 +82,11 @@ resynthesised.
 \end{rem}
 
 \begin{rem}[A stale figure in the prose docs]
-  \py{docs/physics.md} (section~8) says the transpiled circuits have ``66 (HVA) to 93 (RVB)''
-  CX. That sentence dates from the initial commit \texttt{d4a05ac}. With the current code RVB
-  compiles to \VCxRvb{} CX with or without the layout (\cref{tab:circuits}), equal to HVA, as
-  \cref{lem:eswap} predicts; the legacy eSWAP gives 54. The figure 93 is not reproducible; see
-  \cref{sec:status}.
+  Until \texttt{687d0ae}, \py{docs/physics.md} (section~8) said the transpiled circuits have
+  ``66 (HVA) to 93 (RVB)'' CX, a sentence from the initial commit \texttt{d4a05ac}. With the
+  current code RVB compiles to \VCxRvb{} CX with or without the layout (\cref{tab:circuits}),
+  equal to HVA, as \cref{lem:eswap} predicts; the legacy eSWAP gives 54. The corrected text
+  gives 66 for both and attributes 93 to the 2022 notebook's layout; see \cref{sec:status}.
 \end{rem}
 
 \subsection{Estimating an energy}

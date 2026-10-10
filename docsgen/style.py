@@ -71,6 +71,7 @@ def apply() -> None:
             "legend.fontsize": 8.5,
             "savefig.bbox": "tight",
             "svg.fonttype": "none",
+            "svg.hashsalt": "docsgen",  # deterministic clip-path ids, stable diffs
             "pdf.fonttype": 42,
         }
     )

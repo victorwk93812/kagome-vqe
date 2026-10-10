@@ -12,7 +12,9 @@
       \VPostFinalMax{}; a bias, not a convergence failure (\cref{sec:noise}). & done \\
     M1 & Which gradient gives most precision per shot? & RVB: ADAM + parameter shift
       (\VMIdealRvbPs). HVA: plain SPSA (\VMIdealHvaSpsa). & done \\
-    M2 & How much bias can mitigation remove? & -- & next \\
+    M2 & How much bias can mitigation remove? & Readout + symmetry looked like
+      \VMtHvaZeroRoSymRel{}, but that is a cancellation; treating readout consistently leaves
+      \VMxHvaZeroFullCtfRel{} (\cref{sec:m2cancel}). & reopened \\
     M3 & Is the benchmark testing anything? & Not much: exact at zero parameters
       (\cref{thm:cycle}). & planned \\
     M4 & How far can depth fall? & Free first step found: bind parameters before
@@ -29,9 +31,13 @@
 \begin{enumerate}
   \item \textbf{The noisy floor} (\VFloorHvaFull{} at the exact parameters) is the dominant
     error, about \VPostErrHvaSpsa. Better optimisers cannot remove it (\cref{prop:mixed} and \cref{prop:depol}).
-    The near-multiplicative structure of Table~\ref{tab:floor} favours rescaling and
-    extrapolation \parencite{temme2017} (M2) and fewer CX (M4).
-  \item \textbf{Hardware calibration H0} is deferred; every noisy number here is a simulation of
+    Readout correction and symmetry filtering, applied consistently, remove all but about
+    \VMxHvaZeroFullCtfRel{} of it (\cref{sec:m2}). The remaining gate residual needs ZNE, rescaling
+    or fewer CX (M4); the M2 reruns are testing the first two.
+  \item \textbf{Mitigated energies below $-18$} are artefacts (\cref{prop:mixed}). Every new stack
+    should be checked with readout-only and gate-only noise as well as full noise, so that a
+    cancellation like \cref{sec:m2cancel} is visible.
+  \item \textbf{Hardware checks H0 and H1} are deferred; every noisy number here is a simulation of
     a 2022 calibration snapshot.
   \item \textbf{M1 follow-ups:} decaying ADAM learning rate for HVA; longer RVB runs; more seeds
     with device noise.
@@ -42,20 +48,23 @@
 \subsection{Issues found while writing this report}
 
 These were found by recomputing every number from the code. The development session
-reproduced each of them and is fixing the prose and code on \py{main}.
+reproduced each of them and fixed the prose and code on \py{main} (\texttt{687d0ae},
+\texttt{56aadd3}).
 \begin{itemize}
   \item Parametric transpilation leaves each Heisenberg block at 5 CX instead of 3
     (\cref{prop:bound}). Binding first gives \VBoundCxHva{} CX and keeps \VBoundKeepHva{} instead of
     \VParamKeepHva{} of the energy at a generic point.
-  \item \py{docs/physics.md} quotes 93 CX for RVB; the code gives \VCxRvb.
+  \item \py{docs/physics.md} quoted 93 CX for RVB; the code gives \VCxRvb.
   \item The README's seed spreads were population standard deviations (Table~\ref{tab:m1},
-    footnote); \py{main} is switching aggregated tables to sample standard deviations.
+    footnote); \py{main} now uses sample standard deviations.
   \item The M0 spread figures and those in this report were measured under different conditions,
     and both are valid. The roadmap's figures (\VRoadmapSpreadLow{} at 1024 shots, \VRoadmapSpreadHigh{} at 4096) were taken
     \emph{with} \py{FakeGuadalupeV2} noise at the exact parameters, where noise breaks the
     cancellation of \cref{prop:zerovar}. This report's figures (\VSpreadLowReal, \VSpreadHighReal)
     are noise-free at the start point. Without noise the spread at the optimum is exactly zero,
     so the roadmap now states the conditions of its measurement.
+  \item The M2 readout + symmetry stack over-corrects by \VMxOverPct{} and is accurate only by
+    cancellation (\cref{sec:m2cancel}); \py{main} now corrects before filtering.
   \item \py{HVAnsatz}'s docstring writes $e^{-i\gamma\Hev}e^{-i\phi\Hod}$; the circuit implements
     $e^{-i\frac\gamma2\Hev}e^{-i\frac\phi2\Hod}$ (\cref{dfn:ansatz}). Only the convention differs.
 \end{itemize}

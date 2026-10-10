@@ -8,7 +8,18 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from docsgen.numbers import ANSATZ_KEYS, COMBO_KEYS, METHOD_KEYS, METHODS, Registry
+from docsgen import runs
+from docsgen.numbers import (
+    ANSATZ_KEYS,
+    COMBO_KEYS,
+    EXACT_MODE_KEYS,
+    METHOD_KEYS,
+    METHODS,
+    POINT_KEYS,
+    STACK_KEYS,
+    STACKS,
+    Registry,
+)
 from docsgen.paths import REPORT_TABLES
 
 __all__ = ["write_all"]
@@ -193,6 +204,154 @@ def m1_gradients(reg: Registry) -> list[str]:
     return rows
 
 
+STACK_TEX = {
+    "none": "none",
+    "readout": "readout",
+    "symmetry": "symmetry",
+    "readout+symmetry": r"readout + symmetry",
+    "zne": "ZNE",
+    "readout+zne": "readout + ZNE",
+    "readout+symmetry+zne": "readout + symmetry + ZNE",
+    "twin": "twin",
+    "readout+twin": "readout + twin",
+    "readout+symmetry+twin": "readout + symmetry + twin",
+}
+EXACT_MODE_TEX = {
+    "raw": "none",
+    "readout": "readout",
+    "symmetry": "symmetry",
+    "readout_symmetry": "readout + symmetry (as implemented)",
+    "correct_then_filter": "correct, then filter (sector-aware)",
+}
+
+
+def m2_stacks() -> list[str]:
+    r"""Mean energy and bias per stack at the two fixed points; ``$^\dagger$`` = below -18."""
+    rows = [
+        r"\begin{tabular}{lccccrr}",
+        r"\toprule",
+        _row(
+            "",
+            r"\multicolumn{2}{c}{HVA}",
+            r"\multicolumn{2}{c}{RVB}",
+            "",
+            "",
+        ),
+        r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}",
+        _row(
+            "stack",
+            r"$\theta=0$ (\VMtIdealHvaZero)",
+            r"$\theta=\VBoundTheta$ (\VMtIdealHvaPt)",
+            r"$\theta=0$ (\VMtIdealRvbZero)",
+            r"$\theta=\VBoundTheta$ (\VMtIdealRvbPt)",
+            "shots / energy",
+            "one-off shots",
+        ),
+        r"\midrule",
+    ]
+    setup = {
+        "none": "0",
+        "readout": r"\VMtSetupRo",
+        "symmetry": "0",
+        "readout+symmetry": r"\VMtSetupRo",
+        "zne": "0",
+        "readout+zne": r"\VMtSetupRoZne",
+        "readout+symmetry+zne": r"\VMtSetupRoZne",
+        "twin": r"\VMtSetupTwin",
+        "readout+twin": r"\VMtSetupRoTwin",
+        "readout+symmetry+twin": r"\VMtSetupRoTwin",
+    }
+    for stack in STACKS:
+        st = STACK_KEYS[stack]
+        label = "raw" if stack == "none" else stack.replace("+", "_")
+        cells = [STACK_TEX[stack]]
+        for ansatz in ("hva", "rvb"):
+            a = ANSATZ_KEYS[ansatz]
+            for name, p in POINT_KEYS.items():
+                flag = (
+                    r"$^\dagger$"
+                    if runs.evaluation(name)[f"{ansatz}_{label}"]["below_ground"]
+                    else ""
+                )
+                cells.append(f"\\VMt{a}{p}{st}{flag}\\,{{\\small(\\VMt{a}{p}{st}Rel)}}")
+        cells.append(r"\VMtShotsZne" if "zne" in stack else r"\VMtShots")
+        cells.append(setup[stack])
+        rows.append(_row(*cells))
+        if stack in ("readout+symmetry", "readout+symmetry+zne"):
+            rows.append(r"\midrule")
+    rows += [r"\bottomrule", r"\end{tabular}"]
+    return rows
+
+
+def m2_vqe() -> list[str]:
+    """Full optimisations with readout correction plus symmetry filtering."""
+    rows = [
+        r"\begin{tabular}{lcccccc}",
+        r"\toprule",
+        _row(
+            "run",
+            "iterations",
+            "final energy (re-measured)",
+            r"rel.\ error",
+            r"$\sigma$ below $-18$",
+            "noise-free energy of final params",
+            "total shots",
+        ),
+        r"\midrule",
+    ]
+    for key, label in (("HvaSpsa", "HVA, plain SPSA"), ("RvbPs", "RVB, ADAM + parameter shift")):
+        below = f"\\VMvBelow{key}" if key == "HvaSpsa" else "--"
+        rows.append(
+            _row(
+                label,
+                f"\\VMvIters{key}",
+                f"\\VMvFinal{key} $\\pm$ \\VMvStd{key}",
+                f"\\VMvErr{key}",
+                below,
+                f"\\VMvIdeal{key}\\,{{\\small(\\VMvIdealErr{key})}}",
+                f"\\VMvShots{key}",
+            )
+        )
+    rows += [r"\bottomrule", r"\end{tabular}"]
+    return rows
+
+
+def m2_exact() -> list[str]:
+    """Infinite-shot energy of each counts-level estimator, readout-only and full noise."""
+    rows = [
+        r"\begin{tabular}{lcccc}",
+        r"\toprule",
+        _row(
+            "",
+            r"\multicolumn{2}{c}{HVA, $\theta=0$ ($-18$)}",
+            r"\multicolumn{2}{c}{RVB, $\theta=\VBoundTheta$ (\VMtIdealRvbPt)}",
+        ),
+        r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}",
+        _row("estimator", "readout noise only", "full noise", "readout noise only", "full noise"),
+        r"\midrule",
+    ]
+    for mode, m in EXACT_MODE_KEYS.items():
+        cells = [EXACT_MODE_TEX[mode]]
+        for a, p in (("Hva", "Zero"), ("Rvb", "Pt")):
+            for n in ("Ro", "Full"):
+                k = f"Mx{a}{p}{n}{m}"
+                cells.append(f"\\V{k}\\,{{\\small(\\V{k}Rel)}}")
+        rows.append(_row(*cells))
+    rows += [
+        r"\midrule",
+        _row(
+            "kept fraction (symmetry)",
+            r"\VMxHvaZeroRoKept",
+            r"\VMxHvaZeroFullKept",
+            r"\VMxRvbPtRoKept",
+            r"\VMxRvbPtFullKept",
+        ),
+        r"\bottomrule",
+        r"\end{tabular}",
+    ]
+    return rows
+
+
 def write_all(reg: Registry) -> list[Path]:
     """Write every table."""
     return [
@@ -201,4 +360,7 @@ def write_all(reg: Registry) -> list[Path]:
         _write("m0_noisy", m0_noisy()),
         _write("m0_statevector", m0_statevector()),
         _write("m1_gradients", m1_gradients(reg)),
+        _write("m2_stacks", m2_stacks()),
+        _write("m2_vqe", m2_vqe()),
+        _write("m2_exact", m2_exact()),
     ]

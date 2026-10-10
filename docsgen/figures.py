@@ -397,6 +397,183 @@ def fig_m1_final() -> Figure:
     return fig
 
 
+# -- M2 ----------------------------------------------------------------------------------------
+
+STACK_LABELS = {
+    "none": "none",
+    "readout": "readout",
+    "symmetry": "symmetry",
+    "readout+symmetry": "readout + symmetry",
+    "zne": "ZNE",
+    "readout+zne": "readout + ZNE",
+    "readout+symmetry+zne": "readout + sym. + ZNE",
+    "twin": "twin",
+    "readout+twin": "readout + twin",
+    "readout+symmetry+twin": "readout + sym. + twin",
+}
+CHOSEN_STACK = "readout+symmetry"
+
+
+def fig_m2_stacks() -> Figure:
+    """Signed relative bias of every mitigation stack at the two fixed points, per ansatz."""
+    from docsgen.numbers import POINT_KEYS, STACKS
+
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.2), sharey=True, sharex=True)
+    for ax, ansatz in zip(axes, ("hva", "rvb"), strict=True):
+        color = ANSATZ_COLORS[ansatz]
+        chosen = len(STACKS) - 1 - STACKS.index(CHOSEN_STACK)
+        ax.axhspan(chosen - 0.45, chosen + 0.45, color=style.ACCENT, alpha=0.08, lw=0)
+        ax.axvline(0, color=style.INK_2, lw=1.0)
+        for j, (name, point) in enumerate(POINT_KEYS.items()):
+            rows = runs.evaluation(name)
+            for i, stack in enumerate(STACKS):
+                label = "raw" if stack == "none" else stack.replace("+", "_")
+                row = rows[f"{ansatz}_{label}"]
+                ideal = abs(row["ideal_energy"])
+                rel = 100 * row["bias"] / ideal
+                sem = 100 * row["spread"] / np.sqrt(row["repeats"]) / ideal
+                y = len(STACKS) - 1 - i + (0.14 if j == 0 else -0.14)
+                ax.errorbar(rel, y, xerr=2 * sem, color=color, lw=1.2, capsize=0, zorder=2)
+                ax.scatter(
+                    [rel],
+                    [y],
+                    s=44,
+                    marker="o" if point == "Zero" else "s",
+                    facecolor=color if point == "Zero" else "white",
+                    edgecolor=style.ACCENT if row["below_ground"] else color,
+                    linewidth=2.2 if row["below_ground"] else 1.4,
+                    zorder=3,
+                )
+        ax.set_yticks(range(len(STACKS)), [STACK_LABELS[s] for s in reversed(STACKS)])
+        ax.set_xlabel("relative bias of the mean (%)")
+        ax.set_title(ansatz.upper())
+        ax.grid(axis="y", visible=False)
+    handles = [
+        plt.Line2D([], [], ls="", marker="o", color=style.INK_2, label=r"exact parameters ($-18$)"),
+        plt.Line2D(
+            [], [], ls="", marker="s", mfc="white", mec=style.INK_2, label=r"$\theta = 0.3$"
+        ),
+        plt.Line2D(
+            [],
+            [],
+            ls="",
+            marker="o",
+            mfc="white",
+            mec=style.ACCENT,
+            mew=2.2,
+            label=r"mean significantly below $-18$",
+        ),
+    ]
+    fig.legend(handles=handles, loc="lower center", ncol=3, bbox_to_anchor=(0.5, -0.01))
+    fig.tight_layout(rect=(0, 0.07, 1, 1))
+    return fig
+
+
+EXACT_LABELS = {
+    "raw": "none",
+    "readout": "readout",
+    "symmetry": "symmetry",
+    "readout_symmetry": "readout + symmetry\n(as implemented)",
+    "correct_then_filter": "correct, then filter\n(sector-aware)",
+}
+
+
+def fig_m2_exact() -> Figure:
+    """Infinite-shot bias of each counts-level estimator, readout noise only versus full noise."""
+    ex = physics.mitigation_exact()
+    modes = tuple(EXACT_LABELS)
+    fig, axes = plt.subplots(1, 2, figsize=(11, 3.6), sharey=True, sharex=True)
+    for ax, (ansatz, theta) in zip(axes, (("hva", 0.0), ("rvb", 0.3)), strict=True):
+        exact = ex["exact"][f"{ansatz}_{theta}"]
+        ax.axvline(0, color=style.INK_2, lw=1.0)
+        for i, mode in enumerate(modes):
+            y = len(modes) - 1 - i
+            ro = 100 * (ex["energies"][f"{ansatz}_{theta}_readout_only"][mode] - exact) / abs(exact)
+            full = 100 * (ex["energies"][f"{ansatz}_{theta}_full"][mode] - exact) / abs(exact)
+            ax.annotate(
+                "",
+                xy=(full, y),
+                xytext=(ro, y),
+                arrowprops={"arrowstyle": "->", "color": style.MUTED, "lw": 1.2},
+                zorder=1,
+            )
+            ax.scatter([ro], [y], s=48, facecolor="white", edgecolor=style.INK_2, lw=1.4, zorder=3)
+            ax.scatter([full], [y], s=48, color=style.ACCENT, edgecolor="white", lw=1.0, zorder=3)
+        ax.set_yticks(range(len(modes)), [EXACT_LABELS[m] for m in reversed(modes)])
+        ax.set_xlabel("relative bias, infinite shots (%)")
+        ax.set_title(f"{ansatz.upper()}, $\\theta = {theta:g}$  (noise-free {exact:.2f})")
+        ax.grid(axis="y", visible=False)
+    handles = [
+        plt.Line2D(
+            [], [], ls="", marker="o", mfc="white", mec=style.INK_2, label="readout noise only"
+        ),
+        plt.Line2D([], [], ls="", marker="o", color=style.ACCENT, label="full device noise"),
+    ]
+    fig.legend(handles=handles, loc="lower center", ncol=2, bbox_to_anchor=(0.5, -0.01))
+    fig.tight_layout(rect=(0, 0.08, 1, 1))
+    return fig
+
+
+def fig_m2_vqe() -> Figure:
+    """Mitigated optimisations: every energy evaluated, and the noise-free energy of the iterate."""
+    loaded = {r.name.split("-", 1)[1]: r for r in runs.loaded_runs("m2_vqe")}
+    floor = runs.by_name("fake_guadalupe_m0")
+    titles = {
+        "hva_spsa": ("hva", "HVA, plain SPSA", "hva_spsa"),
+        "rvb_adam_parameter_shift": ("rvb", "RVB, ADAM + parameter shift", "rvb_adam"),
+    }
+    fig, axes = plt.subplots(1, 2, figsize=(11, 3.6), sharey=True)
+    for ax, (key, (ansatz, title, m0)) in zip(axes, titles.items(), strict=True):
+        run = loaded[key]
+        color = ANSATZ_COLORS[ansatz]
+        exact = float(run.result["exact_energy"])
+        ax.axhline(exact, color=style.INK, lw=1.0, ls=":", label="exact ground energy")
+        ax.axhline(
+            float(floor[m0]["final_energy"]),
+            color=style.MUTED,
+            lw=1.6,
+            label="unmitigated final (M0)",
+        )
+        t = run.trace
+        ax.scatter(
+            t["iteration"],
+            t["energy"],
+            s=6,
+            color=color,
+            alpha=0.35,
+            lw=0,
+            label="mitigated energies evaluated",
+        )
+        if run.ideal_trace is not None:
+            it = run.ideal_trace
+            ax.plot(
+                it["iteration"],
+                it["ideal_energy"],
+                color=color,
+                lw=2.0,
+                label="noise-free energy of the iterate",
+            )
+        final = float(run.result["final_energy"])
+        ax.errorbar(
+            [t["iteration"].max() + 1.5],
+            [final],
+            yerr=[2 * float(run.result["final_std"])],
+            fmt="o",
+            color=style.ACCENT,
+            ms=6,
+            capsize=3,
+            lw=1.4,
+            label=r"re-measured final ($\pm 2$ s.e.)",
+        )
+        ax.set_title(title)
+        ax.set_xlabel("iteration")
+    axes[0].set_ylabel("energy")
+    axes[0].set_ylim(-19.2, -12.0)
+    axes[1].legend(loc="center right", fontsize=7.5)
+    fig.tight_layout()
+    return fig
+
+
 # -- landscape ---------------------------------------------------------------------------------
 
 
@@ -457,6 +634,9 @@ ALL: dict[str, Callable[[], Figure]] = {
     "m0_before_after": fig_m0_before_after,
     "m1_ideal_vs_shots": fig_m1_ideal_vs_shots,
     "m1_final": fig_m1_final,
+    "m2_stacks": fig_m2_stacks,
+    "m2_exact": fig_m2_exact,
+    "m2_vqe": fig_m2_vqe,
 }
 
 

@@ -38,6 +38,7 @@ __all__ = [
     "facts",
     "hva_landscape",
     "hva_minimum",
+    "mitigation_exact",
     "noise_floor",
     "shot_spread",
 ]
@@ -322,3 +323,134 @@ def bound_compilation(*, recompute: bool = False) -> dict[str, Any]:
         return out
 
     return _cached("bound_compilation", recompute, compute)
+
+
+MITIGATION_MODES = ("raw", "readout", "symmetry", "readout_symmetry", "correct_then_filter")
+
+
+def _bit_table(n: int) -> np.ndarray:
+    """``(2**n, n)`` table of the bits of every outcome index, qubit 0 least significant."""
+    return ((np.arange(2**n)[:, None] >> np.arange(n)) & 1).astype(np.intp)
+
+
+def _apply_per_qubit(dist: np.ndarray, matrices: list[np.ndarray]) -> np.ndarray:
+    """Apply a 2x2 matrix to each qubit's index of a little-endian outcome vector."""
+    n = len(matrices)
+    tensor = dist.reshape([2] * n)
+    for q, mat in enumerate(matrices):
+        axis = n - 1 - q
+        tensor = np.moveaxis(np.tensordot(mat, tensor, axes=([1], [axis])), 0, axis)
+    return tensor.reshape(-1)
+
+
+def _stack_energy(
+    dists: list[np.ndarray],
+    groups: list[Any],
+    constant: float,
+    confusion: list[np.ndarray],
+    mode: str,
+) -> float:
+    """Infinite-shot energy of one counts-level stack from the measured outcome distributions.
+
+    ``readout`` and ``symmetry`` follow ``kagome_vqe.mitigation.counts`` exactly (filter the
+    shots, then weight each bit by ``[1, -1] A_q^-1``). ``correct_then_filter`` instead inverts
+    the readout channel on the whole distribution first and projects the resulting
+    quasi-probabilities onto Hamming weight ``n/2``.
+    """
+    n = len(confusion)
+    bits = _bit_table(n)
+    sector = bits.sum(axis=1) == n // 2
+    signs = np.tile([1.0, -1.0], (n, 1))
+    weights = np.stack([np.array([1.0, -1.0]) @ np.linalg.inv(a) for a in confusion])
+    inverse = [np.linalg.inv(a) for a in confusion]
+    energy = constant
+    for dist, group in zip(dists, groups, strict=True):
+        p = dist
+        w = weights if mode in ("readout", "readout_symmetry") else signs
+        if mode == "correct_then_filter":
+            p = _apply_per_qubit(p, inverse)
+        if mode in ("symmetry", "readout_symmetry", "correct_then_filter"):
+            p = np.where(sector, p, 0.0) / p[sector].sum()
+        value = np.zeros(2**n)
+        for coeff, support in zip(group.coeffs, group.supports, strict=True):
+            term = np.ones(2**n)
+            for q in support:
+                term *= w[q, bits[:, q]]
+            value += coeff * term
+        energy += float(p @ value)
+    return energy
+
+
+def mitigation_exact(*, recompute: bool = False) -> dict[str, Any]:
+    """Infinite-shot energies of the M2 counts-level stacks, under two noise models.
+
+    The transpiled circuit runs as a density matrix with the Guadalupe gate noise (``full``)
+    or without it (``readout_only``); the outcome distribution of each measurement basis is
+    read with ``save_probabilities`` and the backend's per-qubit readout channel is applied
+    analytically. Readout correction uses the same channel, i.e. an infinite-shot calibration.
+    No sampling is involved, so the numbers isolate the bias of each estimator.
+    """
+
+    def compute() -> dict[str, Any]:
+        from qiskit import QuantumCircuit
+        from qiskit.transpiler import generate_preset_pass_manager
+        from qiskit_aer import AerSimulator
+        from qiskit_aer.noise import NoiseModel
+
+        from kagome_vqe.mitigation import measurement_plan
+
+        backend = guadalupe()
+        readout_model = NoiseModel.from_backend(backend)
+        sims = {
+            "full": AerSimulator(
+                method="density_matrix",
+                noise_model=NoiseModel.from_backend(backend, readout_error=False),
+            ),
+            "readout_only": AerSimulator(method="density_matrix"),
+        }
+        out: dict[str, Any] = {"points": [0.0, 0.3], "energies": {}, "kept": {}, "exact": {}}
+        for name in ("hva", "rvb"):
+            problem = isa(name)
+            phys = problem.measurement_qubits
+            width = problem.circuit.num_qubits
+            confusion = [
+                np.asarray(readout_model._local_readout_errors[(q,)].probabilities).T for q in phys
+            ]
+            groups, constant = measurement_plan(problem.logical_observable)
+            translate = generate_preset_pass_manager(
+                optimization_level=1, backend=backend, initial_layout=list(range(width))
+            )
+            for theta in out["points"]:
+                bound = problem.circuit.assign_parameters(
+                    np.full(problem.circuit.num_parameters, theta)
+                )
+                logical = (HVAnsatz() if name == "hva" else RVBAnsatz()).build()
+                logical = logical.assign_parameters(np.full(logical.num_parameters, theta))
+                h = heisenberg_hamiltonian(kagome_unit_cell())
+                out["exact"][f"{name}_{theta}"] = float(
+                    np.real(Statevector(logical).expectation_value(h))
+                )
+                for label, sim in sims.items():
+                    dists = []
+                    for group in groups:
+                        suffix = QuantumCircuit(width)
+                        for logical_q, q in enumerate(phys):
+                            if group.basis[logical_q] == "X":
+                                suffix.h(q)
+                            elif group.basis[logical_q] == "Y":
+                                suffix.sdg(q)
+                                suffix.h(q)
+                        circuit = bound.compose(translate.run(suffix))
+                        circuit.save_probabilities(qubits=list(phys))
+                        p = np.asarray(sim.run(circuit).result().data()["probabilities"])
+                        dists.append(_apply_per_qubit(p, confusion))
+                    key = f"{name}_{theta}_{label}"
+                    out["energies"][key] = {
+                        mode: _stack_energy(dists, groups, constant, confusion, mode)
+                        for mode in MITIGATION_MODES
+                    }
+                    sector = _bit_table(len(phys)).sum(axis=1) == len(phys) // 2
+                    out["kept"][key] = float(np.mean([d[sector].sum() for d in dists]))
+        return out
+
+    return _cached("mitigation_exact", recompute, compute)

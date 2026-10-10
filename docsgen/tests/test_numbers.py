@@ -202,3 +202,67 @@ def test_noisy_baseline(registry: numbers.Registry) -> None:
     assert registry["PostFinalMax"].value == pytest.approx(-12.67, abs=0.01)
     assert registry["PreFinalRvbAdam"].value == pytest.approx(-10.76, abs=0.01)
     assert registry["MBudget"].value == 24576
+
+
+# -- M2 ----------------------------------------------------------------------------------------
+
+
+def test_exact_readout_correction_is_unbiased() -> None:
+    """With readout noise only, readout correction and correct-then-filter are exact."""
+    ex = physics.mitigation_exact()
+    for ansatz in ("hva", "rvb"):
+        for theta in (0.0, 0.3):
+            exact = ex["exact"][f"{ansatz}_{theta}"]
+            e = ex["energies"][f"{ansatz}_{theta}_readout_only"]
+            assert e["readout"] == pytest.approx(exact, abs=1e-8)
+            assert e["correct_then_filter"] == pytest.approx(exact, abs=1e-8)
+            # filtering first over-corrects: below the noise-free value by several percent
+            assert (e["readout_symmetry"] - exact) / abs(exact) < -0.08
+
+
+def test_over_correction_matches_leading_order(registry: numbers.Registry) -> None:
+    assert registry["MxOverFactor"].value == pytest.approx(
+        registry["MxOverPredicted"].value, rel=5e-3
+    )
+    assert registry["MxPredictFull"].value == pytest.approx(
+        registry["MxHvaZeroFullRoSym"].value, abs=0.05
+    )
+
+
+@needs_results
+def test_exact_study_reproduces_sampled_means() -> None:
+    """The infinite-shot values agree with the sampled M2 means within 4 standard errors."""
+    from docsgen import runs
+
+    ex = physics.mitigation_exact()
+    modes = {"raw": "raw", "readout": "readout", "symmetry": "symmetry"}
+    modes["readout_symmetry"] = "readout_symmetry"
+    for name, theta in (("m2-evaluation-0", 0.0), ("m2-evaluation-0p3", 0.3)):
+        rows = runs.evaluation(name)
+        for ansatz in ("hva", "rvb"):
+            for label, mode in modes.items():
+                row = rows[f"{ansatz}_{label}"]
+                sem = row["spread"] / np.sqrt(row["repeats"])
+                exact = ex["energies"][f"{ansatz}_{theta}_full"][mode]
+                assert abs(row["mean"] - exact) < 4 * sem, (name, ansatz, label)
+
+
+@needs_results
+def test_below_ground_flag_is_two_standard_errors() -> None:
+    from docsgen import runs
+
+    for name in ("m2-evaluation-0", "m2-evaluation-0p3"):
+        for row in runs.evaluation(name).values():
+            sem = row["spread"] / np.sqrt(row["repeats"])
+            assert row["below_ground"] == (row["exact_energy"] - row["mean"] > 2 * sem)
+
+
+@needs_results
+def test_m2_vqe_numbers(registry: numbers.Registry) -> None:
+    assert registry["MvFinalHvaSpsa"].value == pytest.approx(-18.083, abs=1e-3)
+    assert registry["MvFinalRvbPs"].value == pytest.approx(-17.967, abs=1e-3)
+    assert registry["MvBelowHvaSpsa"].value == pytest.approx(2.4, abs=0.05)
+    assert registry["MtShots"].value == 12288
+    assert registry["MtShotsZne"].value == 36864
+    assert registry["MtSetupRo"].value == 32768
+    assert registry["MtSetupRoZne"].value == 98304
