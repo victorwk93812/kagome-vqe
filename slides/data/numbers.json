@@ -1,0 +1,1227 @@
+{
+ "AdamLr": {
+  "value": 0.05,
+  "text": "0.05",
+  "math": "0.05",
+  "source": "optimizer.lr of the M1 runs",
+  "quoted": false
+ },
+ "BoundCxHva": {
+  "value": 42.0,
+  "text": "42",
+  "math": "42",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundCxRvb": {
+  "value": 42.0,
+  "text": "42",
+  "math": "42",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundDepthHva": {
+  "value": 22.0,
+  "text": "22",
+  "math": "22",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundDepthRvb": {
+  "value": 26.0,
+  "text": "26",
+  "math": "26",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundExactHva": {
+  "value": -16.656726077904807,
+  "text": "−16.66",
+  "math": "-16.66",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundExactRvb": {
+  "value": -17.615188953803678,
+  "text": "−17.62",
+  "math": "-17.62",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundKeepHva": {
+  "value": 0.7807439836046586,
+  "text": "78.1 %",
+  "math": "78.1\\%",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundKeepRvb": {
+  "value": 0.7764045964957876,
+  "text": "77.6 %",
+  "math": "77.6\\%",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundNoisyHva": {
+  "value": -13.004638671875,
+  "text": "−13.00",
+  "math": "-13.00",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundNoisyRvb": {
+  "value": -13.676513671875,
+  "text": "−13.68",
+  "math": "-13.68",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BoundTheta": {
+  "value": 0.3,
+  "text": "0.3",
+  "math": "0.3",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "BudgetCenHva": {
+  "value": 15.811388300841898,
+  "text": "15.8",
+  "math": "15.8",
+  "source": "per-component std x sqrt(energies per iteration), see report section M1",
+  "quoted": false
+ },
+ "BudgetCenRvb": {
+  "value": 35.35533905932738,
+  "text": "35.4",
+  "math": "35.4",
+  "source": "per-component std x sqrt(energies per iteration), see report section M1",
+  "quoted": false
+ },
+ "BudgetFwdHva": {
+  "value": 24.49489742783178,
+  "text": "24.5",
+  "math": "24.5",
+  "source": "per-component std x sqrt(energies per iteration), see report section M1",
+  "quoted": false
+ },
+ "BudgetFwdRvb": {
+  "value": 50.99019513592785,
+  "text": "51.0",
+  "math": "51.0",
+  "source": "per-component std x sqrt(energies per iteration), see report section M1",
+  "quoted": false
+ },
+ "BudgetPsHva": {
+  "value": 25.45584412271571,
+  "text": "25.5",
+  "math": "25.5",
+  "source": "per-component std x sqrt(energies per iteration), see report section M1",
+  "quoted": false
+ },
+ "BudgetPsRvb": {
+  "value": 3.4641016151377544,
+  "text": "3.5",
+  "math": "3.5",
+  "source": "per-component std x sqrt(energies per iteration), see report section M1",
+  "quoted": false
+ },
+ "CoveringOverlap": {
+  "value": 0.031249999999999972,
+  "text": "0.03125",
+  "math": "0.03125",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "CxHva": {
+  "value": 66.0,
+  "text": "66",
+  "math": "66",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "CxHvaNoLayout": {
+  "value": 66.0,
+  "text": "66",
+  "math": "66",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "CxHvaUnshared": {
+  "value": 66.0,
+  "text": "66",
+  "math": "66",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "CxRvb": {
+  "value": 66.0,
+  "text": "66",
+  "math": "66",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "CxRvbNoLayout": {
+  "value": 66.0,
+  "text": "66",
+  "math": "66",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "CxRvbUnshared": {
+  "value": 66.0,
+  "text": "66",
+  "math": "66",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "DepthHva": {
+  "value": 52.0,
+  "text": "52",
+  "math": "52",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "DepthRvb": {
+  "value": 51.0,
+  "text": "51",
+  "math": "51",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "ExactE": {
+  "value": -18.000000000000053,
+  "text": "−18.000",
+  "math": "-18.000",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "ExactEone": {
+  "value": -17.999999999999936,
+  "text": "−18.000",
+  "math": "-18.000",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "ExactEtwo": {
+  "value": -16.96132284070753,
+  "text": "−16.9613",
+  "math": "-16.9613",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "ExactGap": {
+  "value": 1.0386771592925221,
+  "text": "1.0387",
+  "math": "1.0387",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "EzeroHvaCycle": {
+  "value": -17.999999999999996,
+  "text": "−18.0",
+  "math": "-18.0",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "EzeroHvaIdentity": {
+  "value": -8.999999999999998,
+  "text": "−9.0",
+  "math": "-9.0",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "EzeroRvbCycle": {
+  "value": -17.999999999999996,
+  "text": "−18.0",
+  "math": "-18.0",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "EzeroRvbIdentity": {
+  "value": -8.999999999999998,
+  "text": "−9.0",
+  "math": "-9.0",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "FdEps": {
+  "value": 0.1,
+  "text": "0.1",
+  "math": "0.1",
+  "source": "optimizer.fd_eps of the M1 runs",
+  "quoted": false
+ },
+ "FloorHvaFull": {
+  "value": -12.79541015625,
+  "text": "−12.80",
+  "math": "-12.80",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "FloorHvaGate": {
+  "value": -14.059326171875,
+  "text": "−14.06",
+  "math": "-14.06",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "FloorHvaIdeal": {
+  "value": -18.0,
+  "text": "−18.00",
+  "math": "-18.00",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "FloorHvaReadout": {
+  "value": -16.435791015625,
+  "text": "−16.44",
+  "math": "-16.44",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "FloorRvbFull": {
+  "value": -12.66748046875,
+  "text": "−12.67",
+  "math": "-12.67",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "FloorRvbGate": {
+  "value": -13.926025390625,
+  "text": "−13.93",
+  "math": "-13.93",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "FloorRvbIdeal": {
+  "value": -18.0,
+  "text": "−18.00",
+  "math": "-18.00",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "FloorRvbReadout": {
+  "value": -16.435791015625,
+  "text": "−16.44",
+  "math": "-16.44",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "HvaMinIdentity": {
+  "value": -10.711944036366063,
+  "text": "−10.71",
+  "math": "-10.71",
+  "source": "docsgen.physics.hva_minimum",
+  "quoted": false
+ },
+ "KeepHvaGate": {
+  "value": 0.7810736762152778,
+  "text": "78.1 %",
+  "math": "78.1\\%",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "KeepHvaProduct": {
+  "value": -12.837563710080254,
+  "text": "−12.84",
+  "math": "-12.84",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "KeepHvaReadout": {
+  "value": 0.9130995008680556,
+  "text": "91.3 %",
+  "math": "91.3\\%",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "KeepRvbGate": {
+  "value": 0.7736680772569444,
+  "text": "77.4 %",
+  "math": "77.4\\%",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "KeepRvbProduct": {
+  "value": -12.715846833255556,
+  "text": "−12.72",
+  "math": "-12.72",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "KeepRvbReadout": {
+  "value": 0.9130995008680556,
+  "text": "91.3 %",
+  "math": "91.3\\%",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "MBudget": {
+  "value": 24576.0,
+  "text": "24576",
+  "math": "24576",
+  "source": "energies per iteration x shots per energy",
+  "quoted": false
+ },
+ "MEnergiesHvaCen": {
+  "value": 5.0,
+  "text": "5",
+  "math": "5",
+  "source": "results/20261010T082958Z-m1_ideal-hva_adam_central-s1",
+  "quoted": false
+ },
+ "MEnergiesHvaFwd": {
+  "value": 3.0,
+  "text": "3",
+  "math": "3",
+  "source": "results/20261010T082849Z-m1_ideal-hva_adam_forward-s1",
+  "quoted": false
+ },
+ "MEnergiesHvaHyb": {
+  "value": 2.0,
+  "text": "2",
+  "math": "2",
+  "source": "results/20261010T083141Z-m1_ideal-hva_adam_spsa-s1",
+  "quoted": false
+ },
+ "MEnergiesHvaPs": {
+  "value": 72.0,
+  "text": "72",
+  "math": "72",
+  "source": "results/20261010T083235Z-m1_ideal-hva_adam_parameter_shift-s1",
+  "quoted": false
+ },
+ "MEnergiesHvaSpsa": {
+  "value": 2.0,
+  "text": "2",
+  "math": "2",
+  "source": "results/20261010T085818Z-m1_ideal-hva_spsa-s1",
+  "quoted": false
+ },
+ "MEnergiesRvbCen": {
+  "value": 25.0,
+  "text": "25",
+  "math": "25",
+  "source": "results/20261010T090328Z-m1_ideal-rvb_adam_central-s1",
+  "quoted": false
+ },
+ "MEnergiesRvbFwd": {
+  "value": 13.0,
+  "text": "13",
+  "math": "13",
+  "source": "results/20261010T085909Z-m1_ideal-rvb_adam_forward-s1",
+  "quoted": false
+ },
+ "MEnergiesRvbHyb": {
+  "value": 2.0,
+  "text": "2",
+  "math": "2",
+  "source": "results/20261010T091144Z-m1_ideal-rvb_adam_spsa-s1",
+  "quoted": false
+ },
+ "MEnergiesRvbPs": {
+  "value": 24.0,
+  "text": "24",
+  "math": "24",
+  "source": "results/20261010T091232Z-m1_ideal-rvb_adam_parameter_shift-s1",
+  "quoted": false
+ },
+ "MEnergiesRvbSpsa": {
+  "value": 2.0,
+  "text": "2",
+  "math": "2",
+  "source": "results/20261010T092029Z-m1_ideal-rvb_spsa-s1",
+  "quoted": false
+ },
+ "MIdealHvaCen": {
+  "value": 0.0012489631498054485,
+  "text": "0.125 %",
+  "math": "0.125\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaCenSd": {
+  "value": 0.0014194939837099232,
+  "text": "0.142 %",
+  "math": "0.142\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaFwd": {
+  "value": 0.0025224413485259375,
+  "text": "0.252 %",
+  "math": "0.252\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaFwdSd": {
+  "value": 0.002181941099214564,
+  "text": "0.218 %",
+  "math": "0.218\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaHyb": {
+  "value": 0.0011304636821117806,
+  "text": "0.113 %",
+  "math": "0.113\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaHybSd": {
+  "value": 0.0013748277978662103,
+  "text": "0.137 %",
+  "math": "0.137\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaPs": {
+  "value": 0.0012637819006678958,
+  "text": "0.126 %",
+  "math": "0.126\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaPsSd": {
+  "value": 0.001066730443212843,
+  "text": "0.107 %",
+  "math": "0.107\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaSpsa": {
+  "value": 8.967294025355159e-06,
+  "text": "0.001 %",
+  "math": "0.001\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealHvaSpsaSd": {
+  "value": 7.18251806985279e-06,
+  "text": "0.001 %",
+  "math": "0.001\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbCen": {
+  "value": 0.00038698229884350345,
+  "text": "0.039 %",
+  "math": "0.039\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbCenSd": {
+  "value": 0.00014812173538389568,
+  "text": "0.015 %",
+  "math": "0.015\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbFwd": {
+  "value": 0.0014942687017546227,
+  "text": "0.149 %",
+  "math": "0.149\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbFwdSd": {
+  "value": 0.0011095739458043916,
+  "text": "0.111 %",
+  "math": "0.111\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbHyb": {
+  "value": 0.0017233503334230967,
+  "text": "0.172 %",
+  "math": "0.172\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbHybSd": {
+  "value": 0.001785642735766551,
+  "text": "0.179 %",
+  "math": "0.179\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbPs": {
+  "value": 0.00022239291397249252,
+  "text": "0.022 %",
+  "math": "0.022\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbPsSd": {
+  "value": 0.00012011909994327293,
+  "text": "0.012 %",
+  "math": "0.012\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbSpsa": {
+  "value": 0.017562508727017746,
+  "text": "1.756 %",
+  "math": "1.756\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MIdealRvbSpsaSd": {
+  "value": 0.005726409446210011,
+  "text": "0.573 %",
+  "math": "0.573\\%",
+  "source": "results/m1_ideal-summary (mean, sample std over seeds)",
+  "quoted": false
+ },
+ "MItersHva": {
+  "value": 40.0,
+  "text": "40",
+  "math": "40",
+  "source": "results/20261010T082849Z-m1_ideal-hva_adam_forward-s1",
+  "quoted": false
+ },
+ "MItersRvb": {
+  "value": 40.0,
+  "text": "40",
+  "math": "40",
+  "source": "results/20261010T085909Z-m1_ideal-rvb_adam_forward-s1",
+  "quoted": false
+ },
+ "MNoisyFinalRvbFwd": {
+  "value": -12.667724609375,
+  "text": "−12.67",
+  "math": "-12.67",
+  "source": "results/m1_noisy-summary",
+  "quoted": false
+ },
+ "MNoisyFinalRvbHyb": {
+  "value": -12.58447265625,
+  "text": "−12.58",
+  "math": "-12.58",
+  "source": "results/m1_noisy-summary",
+  "quoted": false
+ },
+ "MNoisyFinalRvbPs": {
+  "value": -12.736328125,
+  "text": "−12.74",
+  "math": "-12.74",
+  "source": "results/m1_noisy-summary",
+  "quoted": false
+ },
+ "MNoisyFinalRvbSpsa": {
+  "value": -12.27685546875,
+  "text": "−12.28",
+  "math": "-12.28",
+  "source": "results/m1_noisy-summary",
+  "quoted": false
+ },
+ "MNoisyIters": {
+  "value": 20.0,
+  "text": "20",
+  "math": "20",
+  "source": "results/20261010T092121Z-m1_noisy-rvb_adam_forward",
+  "quoted": false
+ },
+ "MNoisyRvbFwd": {
+  "value": 0.005033101763828546,
+  "text": "0.503 %",
+  "math": "0.503\\%",
+  "source": "results/m1_noisy-summary",
+  "quoted": false
+ },
+ "MNoisyRvbHyb": {
+  "value": 0.014280486835863686,
+  "text": "1.428 %",
+  "math": "1.428\\%",
+  "source": "results/m1_noisy-summary",
+  "quoted": false
+ },
+ "MNoisyRvbPs": {
+  "value": 0.0007859138277053446,
+  "text": "0.079 %",
+  "math": "0.079\\%",
+  "source": "results/m1_noisy-summary",
+  "quoted": false
+ },
+ "MNoisyRvbSpsa": {
+  "value": 0.037865097244273796,
+  "text": "3.787 %",
+  "math": "3.787\\%",
+  "source": "results/m1_noisy-summary",
+  "quoted": false
+ },
+ "MSeeds": {
+  "value": 5.0,
+  "text": "5",
+  "math": "5",
+  "source": "results/m1_ideal-summary",
+  "quoted": false
+ },
+ "MShotsHvaCen": {
+  "value": 4915.0,
+  "text": "4915",
+  "math": "4915",
+  "source": "results/20261010T082958Z-m1_ideal-hva_adam_central-s1",
+  "quoted": false
+ },
+ "MShotsHvaFwd": {
+  "value": 8192.0,
+  "text": "8192",
+  "math": "8192",
+  "source": "results/20261010T082849Z-m1_ideal-hva_adam_forward-s1",
+  "quoted": false
+ },
+ "MShotsHvaHyb": {
+  "value": 12288.0,
+  "text": "12288",
+  "math": "12288",
+  "source": "results/20261010T083141Z-m1_ideal-hva_adam_spsa-s1",
+  "quoted": false
+ },
+ "MShotsHvaPs": {
+  "value": 341.0,
+  "text": "341",
+  "math": "341",
+  "source": "results/20261010T083235Z-m1_ideal-hva_adam_parameter_shift-s1",
+  "quoted": false
+ },
+ "MShotsHvaSpsa": {
+  "value": 12288.0,
+  "text": "12288",
+  "math": "12288",
+  "source": "results/20261010T085818Z-m1_ideal-hva_spsa-s1",
+  "quoted": false
+ },
+ "MShotsRvbCen": {
+  "value": 983.0,
+  "text": "983",
+  "math": "983",
+  "source": "results/20261010T090328Z-m1_ideal-rvb_adam_central-s1",
+  "quoted": false
+ },
+ "MShotsRvbFwd": {
+  "value": 1890.0,
+  "text": "1890",
+  "math": "1890",
+  "source": "results/20261010T085909Z-m1_ideal-rvb_adam_forward-s1",
+  "quoted": false
+ },
+ "MShotsRvbHyb": {
+  "value": 12288.0,
+  "text": "12288",
+  "math": "12288",
+  "source": "results/20261010T091144Z-m1_ideal-rvb_adam_spsa-s1",
+  "quoted": false
+ },
+ "MShotsRvbPs": {
+  "value": 1024.0,
+  "text": "1024",
+  "math": "1024",
+  "source": "results/20261010T091232Z-m1_ideal-rvb_adam_parameter_shift-s1",
+  "quoted": false
+ },
+ "MShotsRvbSpsa": {
+  "value": 12288.0,
+  "text": "12288",
+  "math": "12288",
+  "source": "results/20261010T092029Z-m1_ideal-rvb_spsa-s1",
+  "quoted": false
+ },
+ "MeasGroups": {
+  "value": 3.0,
+  "text": "3",
+  "math": "3",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "NoiseShots": {
+  "value": 16384.0,
+  "text": "16384",
+  "math": "16384",
+  "source": "docsgen.physics.noise_floor (cache/noise_floor.json)",
+  "quoted": false
+ },
+ "NumBonds": {
+  "value": 18.0,
+  "text": "18",
+  "math": "18",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "NumMatchings": {
+  "value": 2.0,
+  "text": "2",
+  "math": "2",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "NumSites": {
+  "value": 12.0,
+  "text": "12",
+  "math": "12",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "NumTerms": {
+  "value": 54.0,
+  "text": "54",
+  "math": "54",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "ParamCxHva": {
+  "value": 66.0,
+  "text": "66",
+  "math": "66",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "ParamCxRvb": {
+  "value": 66.0,
+  "text": "66",
+  "math": "66",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "ParamDepthHva": {
+  "value": 52.0,
+  "text": "52",
+  "math": "52",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "ParamDepthRvb": {
+  "value": 51.0,
+  "text": "51",
+  "math": "51",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "ParamKeepHva": {
+  "value": 0.7128226135251725,
+  "text": "71.3 %",
+  "math": "71.3\\%",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "ParamKeepRvb": {
+  "value": 0.7080348670376803,
+  "text": "70.8 %",
+  "math": "70.8\\%",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "ParamNoisyHva": {
+  "value": -11.873291015625,
+  "text": "−11.87",
+  "math": "-11.87",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "ParamNoisyRvb": {
+  "value": -12.47216796875,
+  "text": "−12.47",
+  "math": "-12.47",
+  "source": "docsgen.physics.bound_compilation (cache/bound_compilation.json)",
+  "quoted": false
+ },
+ "ParamsHva": {
+  "value": 2.0,
+  "text": "2",
+  "math": "2",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "ParamsRvb": {
+  "value": 12.0,
+  "text": "12",
+  "math": "12",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "PostBestHvaAdam": {
+  "value": -12.91796875,
+  "text": "−12.92",
+  "math": "-12.92",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostBestHvaSpsa": {
+  "value": -12.8994140625,
+  "text": "−12.90",
+  "math": "-12.90",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostBestRvbAdam": {
+  "value": -12.841796875,
+  "text": "−12.84",
+  "math": "-12.84",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostBestRvbSpsa": {
+  "value": -12.8525390625,
+  "text": "−12.85",
+  "math": "-12.85",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostErrHvaAdam": {
+  "value": 0.2959526909722208,
+  "text": "29.6 %",
+  "math": "29.6\\%",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostErrHvaSpsa": {
+  "value": 0.285061306423611,
+  "text": "28.5 %",
+  "math": "28.5\\%",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostErrRvbAdam": {
+  "value": 0.2934027777777776,
+  "text": "29.3 %",
+  "math": "29.3\\%",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostErrRvbSpsa": {
+  "value": 0.2935112847222208,
+  "text": "29.4 %",
+  "math": "29.4\\%",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostFinalHvaAdam": {
+  "value": -12.6728515625,
+  "text": "−12.67",
+  "math": "-12.67",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostFinalHvaSpsa": {
+  "value": -12.868896484375,
+  "text": "−12.87",
+  "math": "-12.87",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostFinalMax": {
+  "value": -12.6728515625,
+  "text": "−12.67",
+  "math": "-12.67",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostFinalMin": {
+  "value": -12.868896484375,
+  "text": "−12.87",
+  "math": "-12.87",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostFinalRvbAdam": {
+  "value": -12.71875,
+  "text": "−12.72",
+  "math": "-12.72",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostFinalRvbSpsa": {
+  "value": -12.716796875,
+  "text": "−12.72",
+  "math": "-12.72",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PostFinalShots": {
+  "value": 16384.0,
+  "text": "16384",
+  "math": "16384",
+  "source": "results/fake_guadalupe_m0-summary",
+  "quoted": false
+ },
+ "PreBestHvaAdam": {
+  "value": -14.097273338604188,
+  "text": "−14.10",
+  "math": "-14.10",
+  "source": "results/fake_guadalupe-summary",
+  "quoted": false
+ },
+ "PreBestHvaSpsa": {
+  "value": -13.997128594697196,
+  "text": "−14.00",
+  "math": "-14.00",
+  "source": "results/fake_guadalupe-summary",
+  "quoted": false
+ },
+ "PreBestRvbAdam": {
+  "value": -14.078467523353893,
+  "text": "−14.08",
+  "math": "-14.08",
+  "source": "results/fake_guadalupe-summary",
+  "quoted": false
+ },
+ "PreBestRvbSpsa": {
+  "value": -14.012995695581521,
+  "text": "−14.01",
+  "math": "-14.01",
+  "source": "results/fake_guadalupe-summary",
+  "quoted": false
+ },
+ "PreFinalHvaAdam": {
+  "value": -13.998115447765231,
+  "text": "−14.00",
+  "math": "-14.00",
+  "source": "results/fake_guadalupe-summary",
+  "quoted": false
+ },
+ "PreFinalHvaSpsa": {
+  "value": -13.997128594697196,
+  "text": "−14.00",
+  "math": "-14.00",
+  "source": "results/fake_guadalupe-summary",
+  "quoted": false
+ },
+ "PreFinalRvbAdam": {
+  "value": -10.763658179347036,
+  "text": "−10.76",
+  "math": "-10.76",
+  "source": "results/fake_guadalupe-summary",
+  "quoted": false
+ },
+ "PreFinalRvbSpsa": {
+  "value": -13.862901407071249,
+  "text": "−13.86",
+  "math": "-13.86",
+  "source": "results/fake_guadalupe-summary",
+  "quoted": false
+ },
+ "PsEnergiesHva": {
+  "value": 72.0,
+  "text": "72",
+  "math": "72",
+  "source": "2 x 36 rotations",
+  "quoted": false
+ },
+ "PsEnergiesRvb": {
+  "value": 24.0,
+  "text": "24",
+  "math": "24",
+  "source": "2 x 12 eSWAPs",
+  "quoted": false
+ },
+ "RingFracCycle": {
+  "value": 1.0,
+  "text": "100 %",
+  "math": "100\\%",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "RingFracIdentity": {
+  "value": 0.5,
+  "text": "50 %",
+  "math": "50\\%",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "SecPerEnergy": {
+  "value": 2.672972753890226,
+  "text": "2.7",
+  "math": "2.7",
+  "source": "results/fake_guadalupe_m0-summary, wall time / evaluations",
+  "quoted": false
+ },
+ "SeedBugGrad": {
+  "value": 2.0,
+  "text": "2",
+  "math": "2",
+  "source": "docs/roadmap.md section 1.3, measured on commit 81bee8b",
+  "quoted": true
+ },
+ "SeedBugRows": {
+  "value": 5.0,
+  "text": "5",
+  "math": "5",
+  "source": "docs/roadmap.md section 1.3, measured on commit 81bee8b",
+  "quoted": true
+ },
+ "SeedBugSpread": {
+  "value": 0.22,
+  "text": "0.22",
+  "math": "0.22",
+  "source": "docs/roadmap.md section 1.3, measured on commit 81bee8b",
+  "quoted": true
+ },
+ "SigmaCen": {
+  "value": 7.0710678118654755,
+  "text": "7.1",
+  "math": "7.1",
+  "source": "sqrt(2)/(2 fd_eps)",
+  "quoted": false
+ },
+ "SigmaFwd": {
+  "value": 14.142135623730951,
+  "text": "14.1",
+  "math": "14.1",
+  "source": "sqrt(2)/fd_eps",
+  "quoted": false
+ },
+ "SigmaPsHva": {
+  "value": 3.0,
+  "text": "3.0",
+  "math": "3.0",
+  "source": "sqrt(36)/2, 18 occurrences",
+  "quoted": false
+ },
+ "SigmaPsRvb": {
+  "value": 0.7071067811865476,
+  "text": "0.71",
+  "math": "0.71",
+  "source": "sqrt(2)/2, one occurrence",
+  "quoted": false
+ },
+ "SingletIdentity": {
+  "value": 3.0,
+  "text": "3",
+  "math": "3",
+  "source": "docsgen.physics.facts",
+  "quoted": false
+ },
+ "SpreadHighReal": {
+  "value": 0.07036560313862057,
+  "text": "0.070",
+  "math": "0.070",
+  "source": "docsgen.physics.shot_spread (cache/shot_spread.json)",
+  "quoted": false
+ },
+ "SpreadHighReported": {
+  "value": 0.8199864608161682,
+  "text": "0.82",
+  "math": "0.82",
+  "source": "docsgen.physics.shot_spread (cache/shot_spread.json)",
+  "quoted": false
+ },
+ "SpreadHighZero": {
+  "value": 0.0,
+  "text": "0.000",
+  "math": "0.000",
+  "source": "docsgen.physics.shot_spread (cache/shot_spread.json)",
+  "quoted": false
+ },
+ "SpreadLowReal": {
+  "value": 0.1533430701559048,
+  "text": "0.153",
+  "math": "0.153",
+  "source": "docsgen.physics.shot_spread (cache/shot_spread.json)",
+  "quoted": false
+ },
+ "SpreadLowReported": {
+  "value": 1.6392958464347889,
+  "text": "1.64",
+  "math": "1.64",
+  "source": "docsgen.physics.shot_spread (cache/shot_spread.json)",
+  "quoted": false
+ },
+ "SpreadLowZero": {
+  "value": 0.0,
+  "text": "0.000",
+  "math": "0.000",
+  "source": "docsgen.physics.shot_spread (cache/shot_spread.json)",
+  "quoted": false
+ },
+ "SpreadRatio": {
+  "value": 10.690381017988667,
+  "text": "11",
+  "math": "11",
+  "source": "docsgen.physics.shot_spread (cache/shot_spread.json)",
+  "quoted": false
+ },
+ "SpreadRepeats": {
+  "value": 40.0,
+  "text": "40",
+  "math": "40",
+  "source": "docsgen.physics.shot_spread (cache/shot_spread.json)",
+  "quoted": false
+ },
+ "SpsaCalibrated": {
+  "value": 0.0,
+  "text": "constant",
+  "math": "\\text{constant}",
+  "source": "optimizer.calibrate of the M1 SPSA runs",
+  "quoted": false
+ },
+ "SpsaLr": {
+  "value": 0.01,
+  "text": "0.01",
+  "math": "0.01",
+  "source": "optimizer.lr of the M1 SPSA runs",
+  "quoted": false
+ },
+ "SvErrHvaAdam": {
+  "value": 9.100883884529913e-07,
+  "text": "0.000 %",
+  "math": "0.000\\%",
+  "source": "results/statevector_m0-summary",
+  "quoted": false
+ },
+ "SvErrHvaSpsa": {
+  "value": 2.2976692153836016e-09,
+  "text": "0.000 %",
+  "math": "0.000\\%",
+  "source": "results/statevector_m0-summary",
+  "quoted": false
+ },
+ "SvErrRvbAdam": {
+  "value": 0.00011182685779529165,
+  "text": "0.011 %",
+  "math": "0.011\\%",
+  "source": "results/statevector_m0-summary",
+  "quoted": false
+ },
+ "SvErrRvbSpsa": {
+  "value": 0.009060392904423724,
+  "text": "0.906 %",
+  "math": "0.906\\%",
+  "source": "results/statevector_m0-summary",
+  "quoted": false
+ },
+ "SvFinalHvaAdam": {
+  "value": -17.999983618409026,
+  "text": "−18.0000",
+  "math": "-18.0000",
+  "source": "results/statevector_m0-summary",
+  "quoted": false
+ },
+ "SvFinalHvaSpsa": {
+  "value": -17.999999958641908,
+  "text": "−18.0000",
+  "math": "-18.0000",
+  "source": "results/statevector_m0-summary",
+  "quoted": false
+ },
+ "SvFinalRvbAdam": {
+  "value": -17.997987116559685,
+  "text": "−17.9980",
+  "math": "-17.9980",
+  "source": "results/statevector_m0-summary",
+  "quoted": false
+ },
+ "SvFinalRvbSpsa": {
+  "value": -17.836912927720338,
+  "text": "−17.8369",
+  "math": "-17.8369",
+  "source": "results/statevector_m0-summary",
+  "quoted": false
+ },
+ "SzSector": {
+  "value": 924.0,
+  "text": "924",
+  "math": "924",
+  "source": "binomial(12, 6)",
+  "quoted": false
+ }
+}

@@ -1,0 +1,43 @@
+% Preamble for the kagome-vqe milestone report.
+\usepackage{booktabs}
+\usepackage{quantikz}
+
+\title{\texttt{kagome-vqe}: milestone report\\[0.3em]
+  \large Variational ground state of the 12-site kagome Heisenberg star}
+\author{kagome-vqe group}
+\date{Updated \today{} \quad (through milestone M1)}
+
+\fancyhead[L]{kagome-vqe milestone report}
+\fancyhead[R]{\nouppercase{\leftmark}}
+
+\graphicspath{{figures/}}
+\addbibresource{bibliography.bib}
+
+% Generated numbers: \V<key> macros, see docsgen/numbers.py
+\input{tables/numbers}
+
+% Notation
+\newcommand{\SWAP}{\mathrm{SWAP}}
+\newcommand{\eSWAP}{\mathrm{eSWAP}}
+\newcommand{\Hev}{H_{\mathrm{even}}}
+\newcommand{\Hod}{H_{\mathrm{odd}}}
+\newcommand{\sing}{\ket{s}}
+\newcommand{\py}[1]{\texttt{\detokenize{#1}}}
+
+% \cref{prefix:name}: "Theorem 3" etc. from the label prefix (cleveref does not see the
+% shared fatscience theorem counters, so the name comes from our label convention instead).
+\ExplSyntaxOn
+\seq_new:N \l__kv_prefix_seq
+\NewDocumentCommand{\cref}{m}
+  {
+    \regex_extract_once:nnN { \A[a-z]+ } {#1} \l__kv_prefix_seq
+    \str_case_e:nnF { \seq_item:Nn \l__kv_prefix_seq {1} }
+      {
+        {thm}{Theorem} {lem}{Lemma} {prop}{Proposition} {cor}{Corollary}
+        {dfn}{Definition} {rem}{Remark} {sec}{Section} {fig}{Figure} {tab}{Table}
+        {exer}{Exercise} {eq}{Equation} {app}{Appendix} {alg}{Algorithm}
+      } { }
+    \nobreakspace\ref{#1}
+  }
+\NewCommandCopy{\Cref}{\cref}
+\ExplSyntaxOff

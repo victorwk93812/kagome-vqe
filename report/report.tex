@@ -1,0 +1,38 @@
+\documentclass[nominted]{fatreport}
+\input{preamble}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{abstract}
+  We document the \texttt{kagome-vqe} package, a rebuild of the IBM Open Science Prize 2022
+  kagome VQE challenge, milestone by milestone. The benchmark instance is the 12-site open
+  kagome star with an antiferromagnetic Heisenberg Hamiltonian, whose ground energy
+  $E_0=\VExactE$ is attained by a product of six singlets. We prove this, explain why the two
+  ring ansatzes of the challenge (RVB and HVA) reach it exactly at zero parameters when their
+  qubits are laid along a Hamiltonian cycle of the lattice, and quantify how device noise turns
+  that exact state into a biased plateau near \VPostFinalMax{} on a simulated
+  \texttt{ibmq\_guadalupe}. Milestone M0 made the noisy simulation honest; milestone M1
+  compared gradient estimators at equal shot budgets. Every number in this report is generated
+  from the repository's code and result files by \texttt{docsgen}.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{sections/01-problem}
+\input{sections/02-ansatz}
+\input{sections/03-pipeline}
+\input{sections/04-noise}
+\input{sections/m0-honest-noise}
+\input{sections/m1-gradients}
+\input{sections/90-status}
+
+\printbibliography
+
+\appendix
+\input{appendices/reproduce}
+
+\end{document}

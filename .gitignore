@@ -32,3 +32,13 @@ results/
 .vscode/
 .idea/
 .DS_Store
+
+# Milestone documentation build outputs
+report/output/
+slides/node_modules/
+slides/export/out/
+docsgen/cache/*.tmp
+
+# Sibling-worktree symlinks to the main checkout's git-ignored folders
+/results
+/references
