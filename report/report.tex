@@ -16,8 +16,10 @@
   that exact state into a biased plateau near \VPostFinalMax{} on a simulated
   \texttt{ibmq\_guadalupe}. Milestone M0 made the noisy simulation honest; milestone M1
   compared gradient estimators at equal shot budgets; milestone M2 measured four error-mitigation
-  techniques and, through an exact infinite-shot analysis, showed that the apparently best stack
-  owed its accuracy to two cancelling errors. Every number in this report is generated
+  techniques. An exact infinite-shot analysis showed that the first stack chosen owed its
+  accuracy to two cancelling errors. The revised stack (readout correction, then total-spin
+  filtering, then twin rescaling) is accurate on each error source separately, to
+  \VMxTwMax{} or better in the infinite-shot limit. Every number in this report is generated
   from the repository's code and result files by \texttt{docsgen}.
 \end{abstract}
 

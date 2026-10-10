@@ -16,6 +16,7 @@ from docsgen.numbers import (
     METHOD_KEYS,
     METHODS,
     POINT_KEYS,
+    SOURCE_KEYS,
     STACK_KEYS,
     STACKS,
     Registry,
@@ -196,7 +197,7 @@ def m1_gradients(reg: Registry) -> list[str]:
             label = ansatz.upper() if i == 0 else ""
             rows.append(
                 f"{label} & {METHOD_TEX[method]} & \\VMEnergies{a}{m} & {fixed} & {budget} & "
-                f"\\VMIdeal{a}{m} $\\pm$ \\VMIdeal{a}{m}Sd & {noisy} \\\\"
+                f"\\VMIdeal{a}{m} ${{}}\\pm{{}}$ \\VMIdeal{a}{m}Sd & {noisy} \\\\"
             )
         if ansatz == "hva":
             rows.append(r"\midrule")
@@ -283,8 +284,8 @@ def m2_stacks() -> list[str]:
     return rows
 
 
-def m2_vqe() -> list[str]:
-    """Full optimisations with readout correction plus symmetry filtering."""
+def m2_vqe(prefix: str = "Mv") -> list[str]:
+    """Full optimisations with a mitigation stack (``Mv``: first study, ``Mw``: revised)."""
     rows = [
         r"\begin{tabular}{lcccccc}",
         r"\toprule",
@@ -300,18 +301,154 @@ def m2_vqe() -> list[str]:
         r"\midrule",
     ]
     for key, label in (("HvaSpsa", "HVA, plain SPSA"), ("RvbPs", "RVB, ADAM + parameter shift")):
-        below = f"\\VMvBelow{key}" if key == "HvaSpsa" else "--"
+        v = f"\\V{prefix}"
+        below = f"{v}Below{key}" if prefix == "Mv" and key == "HvaSpsa" else "--"
         rows.append(
             _row(
                 label,
-                f"\\VMvIters{key}",
-                f"\\VMvFinal{key} $\\pm$ \\VMvStd{key}",
-                f"\\VMvErr{key}",
+                f"{v}Iters{key}",
+                f"{v}Final{key} ${{}}\\pm{{}}$ {v}Std{key}",
+                f"{v}Err{key}",
                 below,
-                f"\\VMvIdeal{key}\\,{{\\small(\\VMvIdealErr{key})}}",
-                f"\\VMvShots{key}",
+                f"{v}Ideal{key}\\,{{\\small({v}IdealErr{key})}}",
+                f"{v}Shots{key}",
             )
         )
+    rows += [r"\bottomrule", r"\end{tabular}"]
+    return rows
+
+
+SOURCE_TEX = {
+    "FullZero": r"full, $\theta=0$",
+    "FullPt": r"full, $\theta=\VBoundTheta$",
+    "RoPt": r"readout, $\theta=\VBoundTheta$",
+    "GatesPt": r"gates, $\theta=\VBoundTheta$",
+}
+
+
+SOURCE_HEAD = {
+    "FullZero": r"\makecell{full\\$\theta=0$}",
+    "FullPt": r"\makecell{full\\$\theta=\VBoundTheta$}",
+    "RoPt": r"\makecell{readout\\$\theta=\VBoundTheta$}",
+    "GatesPt": r"\makecell{gates\\$\theta=\VBoundTheta$}",
+}
+
+
+def m2b_sources() -> list[str]:
+    r"""Relative bias of every stack per noise source; ``$^\dagger$``: below -18."""
+    rows = [
+        r"\begin{tabular}{lrrrrrrrrr}",
+        r"\toprule",
+        _row("", r"\multicolumn{4}{c}{HVA}", r"\multicolumn{4}{c}{RVB}", ""),
+        r"\cmidrule(lr){2-5}\cmidrule(lr){6-9}",
+        _row(
+            "stack",
+            *[SOURCE_HEAD[sk] for sk in SOURCE_KEYS.values()] * 2,
+            r"\makecell{shots /\\energy}",
+        ),
+        r"\midrule",
+    ]
+    for stack in STACKS:
+        st = STACK_KEYS[stack]
+        label = "raw" if stack == "none" else stack.replace("+", "_")
+        cells = [STACK_TEX[stack]]
+        for ansatz in ("hva", "rvb"):
+            a = ANSATZ_KEYS[ansatz]
+            for name, sk in SOURCE_KEYS.items():
+                below = runs.evaluation(name)[f"{ansatz}_{label}"]["below_ground"]
+                cells.append(f"\\VMb{a}{sk}{st}Rel" + (r"$^\dagger$" if below else ""))
+        cells.append(r"\VMbShotsZne" if "zne" in stack else r"\VMbShots")
+        if stack == "readout+symmetry+twin":
+            cells = [f"\\textbf{{{c}}}" for c in cells]
+        rows.append(_row(*cells))
+        if stack in ("readout+symmetry", "readout+symmetry+zne"):
+            rows.append(r"\midrule")
+    rows += [r"\bottomrule", r"\end{tabular}"]
+    return rows
+
+
+def m2b_errors() -> list[str]:
+    """Reported standard error against the spread between repeats, per source."""
+    rows = [
+        r"\begin{tabular}{lcccccccc}",
+        r"\toprule",
+        _row(
+            "",
+            r"\multicolumn{4}{c}{HVA}",
+            r"\multicolumn{4}{c}{RVB}",
+        ),
+        r"\cmidrule(lr){2-5}\cmidrule(lr){6-9}",
+        _row(
+            "",
+            *[
+                r"\multicolumn{2}{c}{readout + symmetry}",
+                r"\multicolumn{2}{c}{\dots{} + twin}",
+            ]
+            * 2,
+        ),
+        r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}",
+        _row("noise, point", *["SE", "spread"] * 4),
+        r"\midrule",
+    ]
+    for sk in SOURCE_KEYS.values():
+        cells = [SOURCE_TEX[sk]]
+        for a in ANSATZ_KEYS.values():
+            for st in ("RoSym", "RoSymTwin"):
+                cells += [f"\\VMb{a}{sk}{st}Se", f"\\VMb{a}{sk}{st}Spread"]
+        rows.append(_row(*cells))
+    rows += [r"\bottomrule", r"\end{tabular}"]
+    return rows
+
+
+def m2_twin() -> list[str]:
+    """Damping factor of target and twin under gate noise, before and after the filter."""
+    rows = [
+        r"\begin{tabular}{lcccccc}",
+        r"\toprule",
+        _row("", r"\multicolumn{3}{c}{HVA}", r"\multicolumn{3}{c}{RVB}"),
+        r"\cmidrule(lr){2-4}\cmidrule(lr){5-7}",
+        _row(
+            "estimator",
+            r"$\theta=0$",
+            r"$\theta=\VBoundTheta$",
+            "twin",
+            *[r"$\theta=0$", r"$\theta=\VBoundTheta$", "twin"],
+        ),
+        r"\midrule",
+    ]
+    for m, label in (("Raw", "none"), ("Ctf", "readout + symmetry (correct, then filter)")):
+        cells = [label]
+        for a in ANSATZ_KEYS.values():
+            cells += [f"\\VMxDamp{a}{p}Gt{m}" for p in ("Zero", "Pt", "Twin")]
+        rows.append(_row(*cells))
+    rows += [r"\bottomrule", r"\end{tabular}"]
+    return rows
+
+
+def m2_twin_bias() -> list[str]:
+    """Bias of the revised stack: infinite-shot limit against the sampled mean and its SE."""
+    exact_key = {
+        "FullZero": ("Zero", "Full"),
+        "FullPt": ("Pt", "Full"),
+        "RoPt": ("Pt", "Ro"),
+        "GatesPt": ("Pt", "Gt"),
+    }
+    rows = [
+        r"\begin{tabular}{lcccc}",
+        r"\toprule",
+        _row("", r"\multicolumn{2}{c}{HVA}", r"\multicolumn{2}{c}{RVB}"),
+        r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}",
+        _row("noise, point", *["infinite shots", r"sampled $\pm$ SE"] * 2),
+        r"\midrule",
+    ]
+    for sk, (p, n) in exact_key.items():
+        cells = [SOURCE_TEX[sk]]
+        for a in ANSATZ_KEYS.values():
+            cells += [
+                f"\\VMxTw{a}{p}{n}CtfRel",
+                f"\\VMb{a}{sk}RoSymTwinRel ${{}}\\pm{{}}$ \\VMb{a}{sk}RoSymTwinSeRel",
+            ]
+        rows.append(_row(*cells))
     rows += [r"\bottomrule", r"\end{tabular}"]
     return rows
 
@@ -363,4 +500,9 @@ def write_all(reg: Registry) -> list[Path]:
         _write("m2_stacks", m2_stacks()),
         _write("m2_vqe", m2_vqe()),
         _write("m2_exact", m2_exact()),
+        _write("m2b_sources", m2b_sources()),
+        _write("m2b_errors", m2b_errors()),
+        _write("m2b_vqe", m2_vqe("Mw")),
+        _write("m2_twin", m2_twin()),
+        _write("m2_twin_bias", m2_twin_bias()),
     ]

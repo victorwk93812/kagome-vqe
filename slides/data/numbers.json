@@ -189,28 +189,28 @@
   "quoted": false
  },
  "ExactE": {
-  "value": -17.999999999999964,
+  "value": -17.999999999999982,
   "text": "−18.000",
   "math": "-18.000",
   "source": "docsgen.physics.facts",
   "quoted": false
  },
  "ExactEone": {
-  "value": -17.99999999999996,
+  "value": -17.99999999999994,
   "text": "−18.000",
   "math": "-18.000",
   "source": "docsgen.physics.facts",
   "quoted": false
  },
  "ExactEtwo": {
-  "value": -16.96132284070746,
+  "value": -16.961322840707634,
   "text": "−16.9613",
   "math": "-16.9613",
   "source": "docsgen.physics.facts",
   "quoted": false
  },
  "ExactGap": {
-  "value": 1.0386771592925044,
+  "value": 1.038677159292348,
   "text": "1.0387",
   "math": "1.0387",
   "source": "docsgen.physics.facts",
@@ -727,6 +727,4465 @@
   "source": "results/20261010T092029Z-m1_ideal-rvb_spsa-s1",
   "quoted": false
  },
+ "MbHvaFullPtRaw": {
+  "value": -11.8992919921875,
+  "text": "−11.90",
+  "math": "-11.90",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRawBelow": {
+  "value": -298.1658310076668,
+  "text": "−298.2",
+  "math": "-298.2",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtRawBias": {
+  "value": 4.7574340857171755,
+  "text": "4.76",
+  "math": "4.76",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRawRel": {
+  "value": 0.2856163968517176,
+  "text": "28.56 %",
+  "math": "28.56\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRawSe": {
+  "value": 0.7836120569638014,
+  "text": "0.784",
+  "math": "0.784",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtRawSeRel": {
+  "value": 0.04704478258805439,
+  "text": "4.70 %",
+  "math": "4.70\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtRawSpread": {
+  "value": 0.05787184920263206,
+  "text": "0.058",
+  "math": "0.058",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRo": {
+  "value": -12.980840856099157,
+  "text": "−12.98",
+  "math": "-12.98",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoBelow": {
+  "value": -161.85565942327574,
+  "text": "−161.9",
+  "math": "-161.9",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtRoBias": {
+  "value": 3.675885221805519,
+  "text": "3.68",
+  "math": "3.68",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoRel": {
+  "value": 0.2206847374816123,
+  "text": "22.07 %",
+  "math": "22.07\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSe": {
+  "value": 0.08316431408455843,
+  "text": "0.083",
+  "math": "0.083",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSeRel": {
+  "value": 0.0049928367492863305,
+  "text": "0.50 %",
+  "math": "0.50\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSpread": {
+  "value": 0.08770978980043934,
+  "text": "0.088",
+  "math": "0.088",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSym": {
+  "value": -15.97707392930344,
+  "text": "−15.98",
+  "math": "-15.98",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymBelow": {
+  "value": -64.3048692647405,
+  "text": "−64.3",
+  "math": "-64.3",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymBias": {
+  "value": 0.6796521486012352,
+  "text": "0.68",
+  "math": "0.68",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymKept": {
+  "value": 0.5882880541504815,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymRel": {
+  "value": 0.04080346554433653,
+  "text": "4.08 %",
+  "math": "4.08\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymSe": {
+  "value": 0.08770648688248536,
+  "text": "0.088",
+  "math": "0.088",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymSeRel": {
+  "value": 0.005265529760907154,
+  "text": "0.53 %",
+  "math": "0.53\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymSpread": {
+  "value": 0.08897769383774608,
+  "text": "0.089",
+  "math": "0.089",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymTwin": {
+  "value": -16.713460435377925,
+  "text": "−16.71",
+  "math": "-16.71",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymTwinBelow": {
+  "value": -27.489117678270773,
+  "text": "−27.5",
+  "math": "-27.5",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymTwinBias": {
+  "value": -0.05673435747324973,
+  "text": "−0.06",
+  "math": "-0.06",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymTwinKept": {
+  "value": 0.5844163467205238,
+  "text": "58 %",
+  "math": "58\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymTwinRel": {
+  "value": -0.0034060929625605394,
+  "text": "−0.34 %",
+  "math": "-0.34\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymTwinSe": {
+  "value": 0.13690325452868907,
+  "text": "0.137",
+  "math": "0.137",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymTwinSeRel": {
+  "value": 0.008219097431775185,
+  "text": "0.82 %",
+  "math": "0.82\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymTwinSpread": {
+  "value": 0.13237541649117954,
+  "text": "0.132",
+  "math": "0.132",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymZne": {
+  "value": -18.01264742439043,
+  "text": "−18.01",
+  "math": "-18.01",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymZneBelow": {
+  "value": 0.1947417735636624,
+  "text": "0.2",
+  "math": "0.2",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymZneBias": {
+  "value": -1.3559213464857542,
+  "text": "−1.36",
+  "math": "-1.36",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymZneKept": {
+  "value": 0.5882880541504815,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymZneRel": {
+  "value": -0.08140383291074219,
+  "text": "−8.14 %",
+  "math": "-8.14\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymZneSe": {
+  "value": 0.15510241365343502,
+  "text": "0.155",
+  "math": "0.155",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymZneSeRel": {
+  "value": 0.009311698645220565,
+  "text": "0.93 %",
+  "math": "0.93\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtRoSymZneSpread": {
+  "value": 0.1836910363381006,
+  "text": "0.184",
+  "math": "0.184",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoTwin": {
+  "value": -17.582255153006678,
+  "text": "−17.58",
+  "math": "-17.58",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoTwinBelow": {
+  "value": -9.880707339244669,
+  "text": "−9.9",
+  "math": "-9.9",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtRoTwinBias": {
+  "value": -0.925529075102002,
+  "text": "−0.93",
+  "math": "-0.93",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoTwinRel": {
+  "value": -0.055564885366622324,
+  "text": "−5.56 %",
+  "math": "-5.56\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoTwinSe": {
+  "value": 0.1585144257648599,
+  "text": "0.159",
+  "math": "0.159",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtRoTwinSeRel": {
+  "value": 0.009516541547449171,
+  "text": "0.95 %",
+  "math": "0.95\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtRoTwinSpread": {
+  "value": 0.11958261852021561,
+  "text": "0.120",
+  "math": "0.120",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoZne": {
+  "value": -16.423687499155044,
+  "text": "−16.42",
+  "math": "-16.42",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoZneBelow": {
+  "value": -33.96641204408623,
+  "text": "−34.0",
+  "math": "-34.0",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtRoZneBias": {
+  "value": 0.23303857874963185,
+  "text": "0.23",
+  "math": "0.23",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoZneRel": {
+  "value": 0.013990659248383752,
+  "text": "1.40 %",
+  "math": "1.40\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtRoZneSe": {
+  "value": 0.1575135338079202,
+  "text": "0.158",
+  "math": "0.158",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtRoZneSeRel": {
+  "value": 0.009456452190617673,
+  "text": "0.95 %",
+  "math": "0.95\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtRoZneSpread": {
+  "value": 0.13126158361028734,
+  "text": "0.131",
+  "math": "0.131",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtSym": {
+  "value": -15.341819067977875,
+  "text": "−15.34",
+  "math": "-15.34",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtSymBelow": {
+  "value": -76.31146898933333,
+  "text": "−76.3",
+  "math": "-76.3",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtSymBias": {
+  "value": 1.3149070099268005,
+  "text": "1.31",
+  "math": "1.31",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtSymKept": {
+  "value": 0.49798583984375,
+  "text": "50 %",
+  "math": "50\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtSymRel": {
+  "value": 0.0789415040973171,
+  "text": "7.89 %",
+  "math": "7.89\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtSymSe": {
+  "value": 0.07527312468540252,
+  "text": "0.075",
+  "math": "0.075",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtSymSeRel": {
+  "value": 0.0045190828217589,
+  "text": "0.45 %",
+  "math": "0.45\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtSymSpread": {
+  "value": 0.09852347425870342,
+  "text": "0.099",
+  "math": "0.099",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtTwin": {
+  "value": -17.688638124757738,
+  "text": "−17.69",
+  "math": "-17.69",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtTwinBelow": {
+  "value": -7.947556640114962,
+  "text": "−7.9",
+  "math": "-7.9",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtTwinBias": {
+  "value": -1.031912046853062,
+  "text": "−1.03",
+  "math": "-1.03",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtTwinRel": {
+  "value": -0.06195167297743488,
+  "text": "−6.20 %",
+  "math": "-6.20\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtTwinSe": {
+  "value": 1.519636704662751,
+  "text": "1.520",
+  "math": "1.520",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtTwinSeRel": {
+  "value": 0.0912326166351841,
+  "text": "9.12 %",
+  "math": "9.12\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtTwinSpread": {
+  "value": 0.11080944917107069,
+  "text": "0.111",
+  "math": "0.111",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtZne": {
+  "value": -15.075244377567463,
+  "text": "−15.08",
+  "math": "-15.08",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtZneBelow": {
+  "value": -84.91447524991257,
+  "text": "−84.9",
+  "math": "-84.9",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullPtZneBias": {
+  "value": 1.5814817003372124,
+  "text": "1.58",
+  "math": "1.58",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtZneRel": {
+  "value": 0.09494553088887406,
+  "text": "9.49 %",
+  "math": "9.49\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullPtZneSe": {
+  "value": 1.4093751671051034,
+  "text": "1.409",
+  "math": "1.409",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullPtZneSeRel": {
+  "value": 0.08461297619432276,
+  "text": "8.46 %",
+  "math": "8.46\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullPtZneSpread": {
+  "value": 0.09742105938234108,
+  "text": "0.097",
+  "math": "0.097",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRaw": {
+  "value": -12.7969970703125,
+  "text": "−12.80",
+  "math": "-12.80",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRawBelow": {
+  "value": -280.4777811789233,
+  "text": "−280.5",
+  "math": "-280.5",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroRawBias": {
+  "value": 5.203002929687337,
+  "text": "5.20",
+  "math": "5.20",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRawRel": {
+  "value": 0.28905571831596577,
+  "text": "28.91 %",
+  "math": "28.91\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRawSe": {
+  "value": 0.7598025495527072,
+  "text": "0.760",
+  "math": "0.760",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroRawSeRel": {
+  "value": 0.042211252752928564,
+  "text": "4.22 %",
+  "math": "4.22\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroRawSpread": {
+  "value": 0.052468735864228906,
+  "text": "0.052",
+  "math": "0.052",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRo": {
+  "value": -14.017849757058523,
+  "text": "−14.02",
+  "math": "-14.02",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoBelow": {
+  "value": -139.6024079713529,
+  "text": "−139.6",
+  "math": "-139.6",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoBias": {
+  "value": 3.982150242941314,
+  "text": "3.98",
+  "math": "3.98",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoRel": {
+  "value": 0.22123056905229724,
+  "text": "22.12 %",
+  "math": "22.12\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSe": {
+  "value": 0.07848598532678548,
+  "text": "0.078",
+  "math": "0.078",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSeRel": {
+  "value": 0.004360332518154789,
+  "text": "0.44 %",
+  "math": "0.44\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSpread": {
+  "value": 0.08068071264402148,
+  "text": "0.081",
+  "math": "0.081",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSym": {
+  "value": -17.096606297885508,
+  "text": "−17.10",
+  "math": "-17.10",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymBelow": {
+  "value": -48.79330360584204,
+  "text": "−48.8",
+  "math": "-48.8",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymBias": {
+  "value": 0.9033937021143288,
+  "text": "0.90",
+  "math": "0.90",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymKept": {
+  "value": 0.5979595101005818,
+  "text": "60 %",
+  "math": "60\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymRel": {
+  "value": 0.050188539006352055,
+  "text": "5.02 %",
+  "math": "5.02\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymSe": {
+  "value": 0.07207695309291934,
+  "text": "0.072",
+  "math": "0.072",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymSeRel": {
+  "value": 0.004004275171828889,
+  "text": "0.40 %",
+  "math": "0.40\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymSpread": {
+  "value": 0.052367498458936595,
+  "text": "0.052",
+  "math": "0.052",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymTwin": {
+  "value": -17.951159480807455,
+  "text": "−17.95",
+  "math": "-17.95",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymTwinBelow": {
+  "value": -2.733423892223619,
+  "text": "−2.7",
+  "math": "-2.7",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymTwinBias": {
+  "value": 0.04884051919238175,
+  "text": "0.05",
+  "math": "0.05",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymTwinKept": {
+  "value": 0.5909854939343943,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymTwinRel": {
+  "value": 0.0027133621773545663,
+  "text": "0.27 %",
+  "math": "0.27\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymTwinSe": {
+  "value": 0.13347505244658928,
+  "text": "0.133",
+  "math": "0.133",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymTwinSeRel": {
+  "value": 0.007415280691477249,
+  "text": "0.74 %",
+  "math": "0.74\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymTwinSpread": {
+  "value": 0.050538026562142145,
+  "text": "0.051",
+  "math": "0.051",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymZne": {
+  "value": -19.371144977744628,
+  "text": "−19.37",
+  "math": "-19.37",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymZneBelow": {
+  "value": 26.104260765625085,
+  "text": "26.1",
+  "math": "26.1",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymZneBias": {
+  "value": -1.371144977744791,
+  "text": "−1.37",
+  "math": "-1.37",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymZneKept": {
+  "value": 0.5979595101005818,
+  "text": "60 %",
+  "math": "60\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymZneRel": {
+  "value": -0.07617472098582241,
+  "text": "−7.62 %",
+  "math": "-7.62\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymZneSe": {
+  "value": 0.13525129519023493,
+  "text": "0.135",
+  "math": "0.135",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymZneSeRel": {
+  "value": 0.007513960843902009,
+  "text": "0.75 %",
+  "math": "0.75\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoSymZneSpread": {
+  "value": 0.14856515883871804,
+  "text": "0.149",
+  "math": "0.149",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoTwin": {
+  "value": -18.980520774017673,
+  "text": "−18.98",
+  "math": "-18.98",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoTwinBelow": {
+  "value": 27.412134184371606,
+  "text": "27.4",
+  "math": "27.4",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoTwinBias": {
+  "value": -0.9805207740178368,
+  "text": "−0.98",
+  "math": "-0.98",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoTwinRel": {
+  "value": -0.05447337633432476,
+  "text": "−5.45 %",
+  "math": "-5.45\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoTwinSe": {
+  "value": 0.1608915336054233,
+  "text": "0.161",
+  "math": "0.161",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoTwinSeRel": {
+  "value": 0.00893841853363471,
+  "text": "0.89 %",
+  "math": "0.89\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoTwinSpread": {
+  "value": 0.1011716758336127,
+  "text": "0.101",
+  "math": "0.101",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoZne": {
+  "value": -17.688952940549946,
+  "text": "−17.69",
+  "math": "-17.69",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoZneBelow": {
+  "value": -5.721920184415528,
+  "text": "−5.7",
+  "math": "-5.7",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoZneBias": {
+  "value": 0.31104705944989064,
+  "text": "0.31",
+  "math": "0.31",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoZneRel": {
+  "value": 0.01728039219166075,
+  "text": "1.73 %",
+  "math": "1.73\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoZneSe": {
+  "value": 0.14942842153622474,
+  "text": "0.149",
+  "math": "0.149",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoZneSeRel": {
+  "value": 0.008301578974234784,
+  "text": "0.83 %",
+  "math": "0.83\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroRoZneSpread": {
+  "value": 0.15375501783776968,
+  "text": "0.154",
+  "math": "0.154",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroSym": {
+  "value": -16.438513345457892,
+  "text": "−16.44",
+  "math": "-16.44",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroSymBelow": {
+  "value": -89.89487316273497,
+  "text": "−89.9",
+  "math": "-89.9",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroSymBias": {
+  "value": 1.5614866545419446,
+  "text": "1.56",
+  "math": "1.56",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroSymKept": {
+  "value": 0.5036824544270834,
+  "text": "50 %",
+  "math": "50\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroSymRel": {
+  "value": 0.08674925858566437,
+  "text": "8.67 %",
+  "math": "8.67\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroSymSe": {
+  "value": 0.0618440622187214,
+  "text": "0.062",
+  "math": "0.062",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroSymSeRel": {
+  "value": 0.0034357812343734423,
+  "text": "0.34 %",
+  "math": "0.34\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroSymSpread": {
+  "value": 0.04913017898852757,
+  "text": "0.049",
+  "math": "0.049",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroTwin": {
+  "value": -19.02914325842685,
+  "text": "−19.03",
+  "math": "-19.03",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroTwinBelow": {
+  "value": 38.986865943442474,
+  "text": "39.0",
+  "math": "39.0",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroTwinBias": {
+  "value": -1.0291432584270126,
+  "text": "−1.03",
+  "math": "-1.03",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroTwinRel": {
+  "value": -0.057174625468167886,
+  "text": "−5.72 %",
+  "math": "-5.72\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroTwinSe": {
+  "value": 1.541713382457967,
+  "text": "1.542",
+  "math": "1.542",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroTwinSeRel": {
+  "value": 0.08565074346988782,
+  "text": "8.57 %",
+  "math": "8.57\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroTwinSpread": {
+  "value": 0.07466249561088022,
+  "text": "0.075",
+  "math": "0.075",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroZne": {
+  "value": -16.15568234971221,
+  "text": "−16.16",
+  "math": "-16.16",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroZneBelow": {
+  "value": -47.21230037375288,
+  "text": "−47.2",
+  "math": "-47.2",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaFullZeroZneBias": {
+  "value": 1.8443176502876248,
+  "text": "1.84",
+  "math": "1.84",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroZneRel": {
+  "value": 0.10246209168264675,
+  "text": "10.25 %",
+  "math": "10.25\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaFullZeroZneSe": {
+  "value": 1.3645802131233888,
+  "text": "1.365",
+  "math": "1.365",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaFullZeroZneSeRel": {
+  "value": 0.07581001184018896,
+  "text": "7.58 %",
+  "math": "7.58\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaFullZeroZneSpread": {
+  "value": 0.11049065661757587,
+  "text": "0.110",
+  "math": "0.110",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRaw": {
+  "value": -12.9669189453125,
+  "text": "−12.97",
+  "math": "-12.97",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRawBelow": {
+  "value": -220.81523470108093,
+  "text": "−220.8",
+  "math": "-220.8",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtRawBias": {
+  "value": 3.6898071325921755,
+  "text": "3.69",
+  "math": "3.69",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRawRel": {
+  "value": 0.22152055063730344,
+  "text": "22.15 %",
+  "math": "22.15\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRawSe": {
+  "value": 0.7698692121311819,
+  "text": "0.770",
+  "math": "0.770",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtRawSeRel": {
+  "value": 0.04621971980150538,
+  "text": "4.62 %",
+  "math": "4.62\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtRawSpread": {
+  "value": 0.06446884425975068,
+  "text": "0.064",
+  "math": "0.064",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRo": {
+  "value": -12.986031098815506,
+  "text": "−12.99",
+  "math": "-12.99",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoBelow": {
+  "value": -225.0994666582251,
+  "text": "−225.1",
+  "math": "-225.1",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoBias": {
+  "value": 3.67069497908917,
+  "text": "3.67",
+  "math": "3.67",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoRel": {
+  "value": 0.22037313706913783,
+  "text": "22.04 %",
+  "math": "22.04\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSe": {
+  "value": 0.06963718116329756,
+  "text": "0.070",
+  "math": "0.070",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSeRel": {
+  "value": 0.004180724401518016,
+  "text": "0.42 %",
+  "math": "0.42\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSpread": {
+  "value": 0.063001684780872,
+  "text": "0.063",
+  "math": "0.063",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSym": {
+  "value": -15.941009031922842,
+  "text": "−15.94",
+  "math": "-15.94",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymBelow": {
+  "value": -167.18514914080393,
+  "text": "−167.2",
+  "math": "-167.2",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymBias": {
+  "value": 0.7157170459818332,
+  "text": "0.72",
+  "math": "0.72",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymKept": {
+  "value": 0.5894450604052083,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymRel": {
+  "value": 0.04296865078013377,
+  "text": "4.30 %",
+  "math": "4.30\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymSe": {
+  "value": 0.058483478926609586,
+  "text": "0.058",
+  "math": "0.058",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymSeRel": {
+  "value": 0.00351110288138727,
+  "text": "0.35 %",
+  "math": "0.35\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymSpread": {
+  "value": 0.034833870912852095,
+  "text": "0.035",
+  "math": "0.035",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymTwin": {
+  "value": -16.611227396634987,
+  "text": "−16.61",
+  "math": "-16.61",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymTwinBelow": {
+  "value": -55.977865425448364,
+  "text": "−56.0",
+  "math": "-56.0",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymTwinBias": {
+  "value": 0.045498681269688035,
+  "text": "0.05",
+  "math": "0.05",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymTwinKept": {
+  "value": 0.5872809138582521,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymTwinRel": {
+  "value": 0.0027315500691364866,
+  "text": "0.27 %",
+  "math": "0.27\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymTwinSe": {
+  "value": 0.0997684555025323,
+  "text": "0.100",
+  "math": "0.100",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymTwinSeRel": {
+  "value": 0.005989679786766513,
+  "text": "0.60 %",
+  "math": "0.60\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymTwinSpread": {
+  "value": 0.07017134489869539,
+  "text": "0.070",
+  "math": "0.070",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymZne": {
+  "value": -17.907245221594877,
+  "text": "−17.91",
+  "math": "-17.91",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymZneBelow": {
+  "value": -2.9817935062745384,
+  "text": "−3.0",
+  "math": "-3.0",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymZneBias": {
+  "value": -1.2505191436902017,
+  "text": "−1.25",
+  "math": "-1.25",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymZneKept": {
+  "value": 0.5894450604052083,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymZneRel": {
+  "value": -0.07507592655612129,
+  "text": "−7.51 %",
+  "math": "-7.51\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymZneSe": {
+  "value": 0.10576162213834468,
+  "text": "0.106",
+  "math": "0.106",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymZneSeRel": {
+  "value": 0.006349484385088052,
+  "text": "0.63 %",
+  "math": "0.63\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoSymZneSpread": {
+  "value": 0.08798400380132032,
+  "text": "0.088",
+  "math": "0.088",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoTwin": {
+  "value": -17.51368290400243,
+  "text": "−17.51",
+  "math": "-17.51",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoTwinBelow": {
+  "value": -14.588449209613263,
+  "text": "−14.6",
+  "math": "-14.6",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoTwinBias": {
+  "value": -0.856956826097754,
+  "text": "−0.86",
+  "math": "-0.86",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoTwinRel": {
+  "value": -0.051448095027180424,
+  "text": "−5.14 %",
+  "math": "-5.14\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoTwinSe": {
+  "value": 0.13590636016175506,
+  "text": "0.136",
+  "math": "0.136",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoTwinSeRel": {
+  "value": 0.00815924807348764,
+  "text": "0.82 %",
+  "math": "0.82\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoTwinSpread": {
+  "value": 0.09428777835006834,
+  "text": "0.094",
+  "math": "0.094",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoZne": {
+  "value": -16.424837867232085,
+  "text": "−16.42",
+  "math": "-16.42",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoZneBelow": {
+  "value": -52.422994224078415,
+  "text": "−52.4",
+  "math": "-52.4",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoZneBias": {
+  "value": 0.23188821067259013,
+  "text": "0.23",
+  "math": "0.23",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoZneRel": {
+  "value": 0.013921595971983492,
+  "text": "1.39 %",
+  "math": "1.39\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoZneSe": {
+  "value": 0.13374648395075756,
+  "text": "0.134",
+  "math": "0.134",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoZneSeRel": {
+  "value": 0.008029578161111366,
+  "text": "0.80 %",
+  "math": "0.80\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtRoZneSpread": {
+  "value": 0.08498620439630145,
+  "text": "0.085",
+  "math": "0.085",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtSym": {
+  "value": -15.913283156912147,
+  "text": "−15.91",
+  "math": "-15.91",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtSymBelow": {
+  "value": -111.75099962072018,
+  "text": "−111.8",
+  "math": "-111.8",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtSymBias": {
+  "value": 0.7434429209925284,
+  "text": "0.74",
+  "math": "0.74",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtSymKept": {
+  "value": 0.5869852701822916,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtSymRel": {
+  "value": 0.04463319607439024,
+  "text": "4.46 %",
+  "math": "4.46\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtSymSe": {
+  "value": 0.0603184817020819,
+  "text": "0.060",
+  "math": "0.060",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtSymSeRel": {
+  "value": 0.0036212687547341614,
+  "text": "0.36 %",
+  "math": "0.36\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtSymSpread": {
+  "value": 0.05281497741126324,
+  "text": "0.053",
+  "math": "0.053",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtTwin": {
+  "value": -17.537143423137767,
+  "text": "−17.54",
+  "math": "-17.54",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtTwinBelow": {
+  "value": -15.37756584187572,
+  "text": "−15.4",
+  "math": "-15.4",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtTwinBias": {
+  "value": -0.8804173452330915,
+  "text": "−0.88",
+  "math": "-0.88",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtTwinRel": {
+  "value": -0.052856566237285636,
+  "text": "−5.29 %",
+  "math": "-5.29\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtTwinSe": {
+  "value": 1.3606729817844332,
+  "text": "1.361",
+  "math": "1.361",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtTwinSeRel": {
+  "value": 0.08168910117273168,
+  "text": "8.17 %",
+  "math": "8.17\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtTwinSpread": {
+  "value": 0.08513415649303906,
+  "text": "0.085",
+  "math": "0.085",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtZne": {
+  "value": -16.4149499238147,
+  "text": "−16.41",
+  "math": "-16.41",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtZneBelow": {
+  "value": -55.770242506041996,
+  "text": "−55.8",
+  "math": "-55.8",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaGatesPtZneBias": {
+  "value": 0.2417761540899761,
+  "text": "0.24",
+  "math": "0.24",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtZneRel": {
+  "value": 0.014515226639327085,
+  "text": "1.45 %",
+  "math": "1.45\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaGatesPtZneSe": {
+  "value": 1.386621164855136,
+  "text": "1.387",
+  "math": "1.387",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaGatesPtZneSeRel": {
+  "value": 0.08324692129592644,
+  "text": "8.32 %",
+  "math": "8.32\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaGatesPtZneSpread": {
+  "value": 0.08038693088124481,
+  "text": "0.080",
+  "math": "0.080",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRaw": {
+  "value": -15.3201904296875,
+  "text": "−15.32",
+  "math": "-15.32",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRawBelow": {
+  "value": -205.23994263536375,
+  "text": "−205.2",
+  "math": "-205.2",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtRawBias": {
+  "value": 1.3365356482171755,
+  "text": "1.34",
+  "math": "1.34",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRawRel": {
+  "value": 0.08023999686169446,
+  "text": "8.02 %",
+  "math": "8.02\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRawSe": {
+  "value": 0.7329495936045312,
+  "text": "0.733",
+  "math": "0.733",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtRawSeRel": {
+  "value": 0.04400322069153773,
+  "text": "4.40 %",
+  "math": "4.40\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtRawSpread": {
+  "value": 0.03693065774868474,
+  "text": "0.037",
+  "math": "0.037",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRo": {
+  "value": -16.66135751281558,
+  "text": "−16.66",
+  "math": "-16.66",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoBelow": {
+  "value": -106.10479908035852,
+  "text": "−106.1",
+  "math": "-106.1",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtRoBias": {
+  "value": -0.004631434910905341,
+  "text": "0.00",
+  "math": "0.00",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoRel": {
+  "value": -0.00027805193465053066,
+  "text": "−0.03 %",
+  "math": "-0.03\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSe": {
+  "value": 0.05479726152515839,
+  "text": "0.055",
+  "math": "0.055",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSeRel": {
+  "value": 0.0032897978431576384,
+  "text": "0.33 %",
+  "math": "0.33\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSpread": {
+  "value": 0.03568408548818452,
+  "text": "0.036",
+  "math": "0.036",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSym": {
+  "value": -16.66768057105492,
+  "text": "−16.67",
+  "math": "-16.67",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymBelow": {
+  "value": -77.73369362319971,
+  "text": "−77.7",
+  "math": "-77.7",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymBias": {
+  "value": -0.010954493150244105,
+  "text": "−0.01",
+  "math": "-0.01",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymKept": {
+  "value": 0.9970898939444016,
+  "text": "100 %",
+  "math": "100\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymRel": {
+  "value": -0.0006576618417694553,
+  "text": "−0.07 %",
+  "math": "-0.07\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymSe": {
+  "value": 0.04600777540347895,
+  "text": "0.046",
+  "math": "0.046",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymSeRel": {
+  "value": 0.002762113946540116,
+  "text": "0.28 %",
+  "math": "0.28\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymSpread": {
+  "value": 0.04847792811597436,
+  "text": "0.048",
+  "math": "0.048",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymTwin": {
+  "value": -16.66727428776452,
+  "text": "−16.67",
+  "math": "-16.67",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymTwinBelow": {
+  "value": -93.42038759512525,
+  "text": "−93.4",
+  "math": "-93.4",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymTwinBias": {
+  "value": -0.010548209859845059,
+  "text": "−0.01",
+  "math": "-0.01",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymTwinKept": {
+  "value": 0.9998512955942783,
+  "text": "100 %",
+  "math": "100\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymTwinRel": {
+  "value": -0.0006332702963661852,
+  "text": "−0.06 %",
+  "math": "-0.06\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymTwinSe": {
+  "value": 0.08762413985955611,
+  "text": "0.088",
+  "math": "0.088",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymTwinSeRel": {
+  "value": 0.0052605859908923195,
+  "text": "0.53 %",
+  "math": "0.53\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymTwinSpread": {
+  "value": 0.040350052610252304,
+  "text": "0.040",
+  "math": "0.040",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymZne": {
+  "value": -16.667680571054923,
+  "text": "−16.67",
+  "math": "-16.67",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymZneBelow": {
+  "value": -77.73369362321614,
+  "text": "−77.7",
+  "math": "-77.7",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymZneBias": {
+  "value": -0.010954493150247657,
+  "text": "−0.01",
+  "math": "-0.01",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymZneKept": {
+  "value": 0.9970898939444016,
+  "text": "100 %",
+  "math": "100\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymZneRel": {
+  "value": -0.0006576618417696685,
+  "text": "−0.07 %",
+  "math": "-0.07\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymZneSe": {
+  "value": 0.055559667218823466,
+  "text": "0.056",
+  "math": "0.056",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymZneSeRel": {
+  "value": 0.0033355694846014163,
+  "text": "0.33 %",
+  "math": "0.33\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtRoSymZneSpread": {
+  "value": 0.048477928115964505,
+  "text": "0.048",
+  "math": "0.048",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoTwin": {
+  "value": -16.766478493904966,
+  "text": "−16.77",
+  "math": "-16.77",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoTwinBelow": {
+  "value": -93.89720975154671,
+  "text": "−93.9",
+  "math": "-93.9",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtRoTwinBias": {
+  "value": -0.10975241600029051,
+  "text": "−0.11",
+  "math": "-0.11",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoTwinRel": {
+  "value": -0.006589074917061778,
+  "text": "−0.66 %",
+  "math": "-0.66\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoTwinSe": {
+  "value": 0.08983528077420555,
+  "text": "0.090",
+  "math": "0.090",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtRoTwinSeRel": {
+  "value": 0.005393333621147376,
+  "text": "0.54 %",
+  "math": "0.54\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtRoTwinSpread": {
+  "value": 0.03715686223295327,
+  "text": "0.037",
+  "math": "0.037",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoZne": {
+  "value": -16.661357512815584,
+  "text": "−16.66",
+  "math": "-16.66",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoZneBelow": {
+  "value": -106.1047990803518,
+  "text": "−106.1",
+  "math": "-106.1",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtRoZneBias": {
+  "value": -0.004631434910908894,
+  "text": "0.00",
+  "math": "0.00",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoZneRel": {
+  "value": -0.000278051934650744,
+  "text": "−0.03 %",
+  "math": "-0.03\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtRoZneSe": {
+  "value": 0.06617398011837848,
+  "text": "0.066",
+  "math": "0.066",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtRoZneSeRel": {
+  "value": 0.0039728083303332325,
+  "text": "0.40 %",
+  "math": "0.40\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtRoZneSpread": {
+  "value": 0.03568408548818631,
+  "text": "0.036",
+  "math": "0.036",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtSym": {
+  "value": -16.542136543794527,
+  "text": "−16.54",
+  "math": "-16.54",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtSymBelow": {
+  "value": -252.50896693782067,
+  "text": "−252.5",
+  "math": "-252.5",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtSymBias": {
+  "value": 0.1145895341101486,
+  "text": "0.11",
+  "math": "0.11",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtSymKept": {
+  "value": 0.7777811686197916,
+  "text": "78 %",
+  "math": "78\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtSymRel": {
+  "value": 0.006879475208645764,
+  "text": "0.69 %",
+  "math": "0.69\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtSymSe": {
+  "value": 0.04230316960454841,
+  "text": "0.042",
+  "math": "0.042",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtSymSeRel": {
+  "value": 0.0025397049460196153,
+  "text": "0.25 %",
+  "math": "0.25\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtSymSpread": {
+  "value": 0.01632995688712748,
+  "text": "0.016",
+  "math": "0.016",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtTwin": {
+  "value": -16.78845742277592,
+  "text": "−16.79",
+  "math": "-16.79",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtTwinBelow": {
+  "value": -85.4468838479051,
+  "text": "−85.4",
+  "math": "-85.4",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtTwinBias": {
+  "value": -0.13173134487124472,
+  "text": "−0.13",
+  "math": "-0.13",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtTwinRel": {
+  "value": -0.007908597659295588,
+  "text": "−0.79 %",
+  "math": "-0.79\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtTwinSe": {
+  "value": 1.0480787014673816,
+  "text": "1.048",
+  "math": "1.048",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtTwinSeRel": {
+  "value": 0.06292225114139742,
+  "text": "6.29 %",
+  "math": "6.29\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtTwinSpread": {
+  "value": 0.040103977276748595,
+  "text": "0.040",
+  "math": "0.040",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtZne": {
+  "value": -15.320190429687518,
+  "text": "−15.32",
+  "math": "-15.32",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtZneBelow": {
+  "value": -205.23994263538572,
+  "text": "−205.2",
+  "math": "-205.2",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbHvaRoPtZneBias": {
+  "value": 1.3365356482171578,
+  "text": "1.34",
+  "math": "1.34",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtZneRel": {
+  "value": 0.0802399968616934,
+  "text": "8.02 %",
+  "math": "8.02\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbHvaRoPtZneSe": {
+  "value": 0.88512072474081,
+  "text": "0.885",
+  "math": "0.885",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbHvaRoPtZneSeRel": {
+  "value": 0.05313893742389941,
+  "text": "5.31 %",
+  "math": "5.31\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbHvaRoPtZneSpread": {
+  "value": 0.03693065774868015,
+  "text": "0.037",
+  "math": "0.037",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbIdealHvaFullPt": {
+  "value": -16.656726077904676,
+  "text": "−16.66",
+  "math": "-16.66",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbIdealHvaFullZero": {
+  "value": -17.999999999999837,
+  "text": "−18.00",
+  "math": "-18.00",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbIdealHvaGatesPt": {
+  "value": -16.656726077904676,
+  "text": "−16.66",
+  "math": "-16.66",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbIdealHvaRoPt": {
+  "value": -16.656726077904676,
+  "text": "−16.66",
+  "math": "-16.66",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbIdealRvbFullPt": {
+  "value": -17.61518895380355,
+  "text": "−17.62",
+  "math": "-17.62",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbIdealRvbFullZero": {
+  "value": -17.999999999999847,
+  "text": "−18.00",
+  "math": "-18.00",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbIdealRvbGatesPt": {
+  "value": -17.61518895380355,
+  "text": "−17.62",
+  "math": "-17.62",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbIdealRvbRoPt": {
+  "value": -17.61518895380355,
+  "text": "−17.62",
+  "math": "-17.62",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbKeptMaxRoSym": {
+  "value": 0.5979595101005818,
+  "text": "60 %",
+  "math": "60\\%",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbKeptMaxSym": {
+  "value": 0.5869852701822916,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbKeptMinRoSym": {
+  "value": 0.585796390143328,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbKeptMinSym": {
+  "value": 0.4955240885416667,
+  "text": "50 %",
+  "math": "50\\%",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbMaxRoSymTwin": {
+  "value": 0.004334916819897805,
+  "text": "0.43 %",
+  "math": "0.43\\%",
+  "source": "results/m2b-*/evaluation.json: max |rel. bias|",
+  "quoted": false
+ },
+ "MbRepeats": {
+  "value": 8.0,
+  "text": "8",
+  "math": "8",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbRoSymZneMax": {
+  "value": -0.07507592655612129,
+  "text": "−7.5 %",
+  "math": "-7.5\\%",
+  "source": "results/m2b-*/evaluation.json: rel. bias over the settings with gate noise (max)",
+  "quoted": false
+ },
+ "MbRoSymZneMin": {
+  "value": -0.08191137243385051,
+  "text": "−8.2 %",
+  "math": "-8.2\\%",
+  "source": "results/m2b-*/evaluation.json: rel. bias over the settings with gate noise (min)",
+  "quoted": false
+ },
+ "MbRoZneMax": {
+  "value": 0.01728039219166075,
+  "text": "1.7 %",
+  "math": "1.7\\%",
+  "source": "results/m2b-*/evaluation.json: rel. bias over the settings with gate noise (max)",
+  "quoted": false
+ },
+ "MbRoZneMin": {
+  "value": 0.009174554535758746,
+  "text": "0.9 %",
+  "math": "0.9\\%",
+  "source": "results/m2b-*/evaluation.json: rel. bias over the settings with gate noise (min)",
+  "quoted": false
+ },
+ "MbRvbFullPtRaw": {
+  "value": -12.511962890625,
+  "text": "−12.51",
+  "math": "-12.51",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRawBelow": {
+  "value": -309.22740172949074,
+  "text": "−309.2",
+  "math": "-309.2",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtRawBias": {
+  "value": 5.10322606317855,
+  "text": "5.10",
+  "math": "5.10",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRawRel": {
+  "value": 0.289706007500796,
+  "text": "28.97 %",
+  "math": "28.97\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRawSe": {
+  "value": 0.7685744417494393,
+  "text": "0.769",
+  "math": "0.769",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtRawSeRel": {
+  "value": 0.04363134813739738,
+  "text": "4.36 %",
+  "math": "4.36\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtRawSpread": {
+  "value": 0.050197728063403425,
+  "text": "0.050",
+  "math": "0.050",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRo": {
+  "value": -13.682185438488338,
+  "text": "−13.68",
+  "math": "-13.68",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoBelow": {
+  "value": -164.89415926941703,
+  "text": "−164.9",
+  "math": "-164.9",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtRoBias": {
+  "value": 3.933003515315212,
+  "text": "3.93",
+  "math": "3.93",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoRel": {
+  "value": 0.22327342191046895,
+  "text": "22.33 %",
+  "math": "22.33\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSe": {
+  "value": 0.0796701498155355,
+  "text": "0.080",
+  "math": "0.080",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSeRel": {
+  "value": 0.004522809833290648,
+  "text": "0.45 %",
+  "math": "0.45\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSpread": {
+  "value": 0.0740634106114686,
+  "text": "0.074",
+  "math": "0.074",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSym": {
+  "value": -16.777806749610072,
+  "text": "−16.78",
+  "math": "-16.78",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymBelow": {
+  "value": -62.607635102128455,
+  "text": "−62.6",
+  "math": "-62.6",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymBias": {
+  "value": 0.837382204193478,
+  "text": "0.84",
+  "math": "0.84",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymKept": {
+  "value": 0.585796390143328,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymRel": {
+  "value": 0.0475375090434478,
+  "text": "4.75 %",
+  "math": "4.75\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymSe": {
+  "value": 0.07763918621324312,
+  "text": "0.078",
+  "math": "0.078",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymSeRel": {
+  "value": 0.004407513675661078,
+  "text": "0.44 %",
+  "math": "0.44\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymSpread": {
+  "value": 0.05521506339355296,
+  "text": "0.055",
+  "math": "0.055",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymTwin": {
+  "value": -17.64108268624213,
+  "text": "−17.64",
+  "math": "-17.64",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymTwinBelow": {
+  "value": -12.978208564614667,
+  "text": "−13.0",
+  "math": "-13.0",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymTwinBias": {
+  "value": -0.025893732438579065,
+  "text": "−0.03",
+  "math": "-0.03",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymTwinKept": {
+  "value": 0.5883822361039277,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymTwinRel": {
+  "value": -0.001469966203966718,
+  "text": "−0.15 %",
+  "math": "-0.15\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymTwinSe": {
+  "value": 0.09833683037683463,
+  "text": "0.098",
+  "math": "0.098",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymTwinSeRel": {
+  "value": 0.005582502159626355,
+  "text": "0.56 %",
+  "math": "0.56\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymTwinSpread": {
+  "value": 0.07822123220777523,
+  "text": "0.078",
+  "math": "0.078",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymZne": {
+  "value": -19.058073256691202,
+  "text": "−19.06",
+  "math": "-19.06",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymZneBelow": {
+  "value": 33.487492465414526,
+  "text": "33.5",
+  "math": "33.5",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymZneBias": {
+  "value": -1.4428843028876521,
+  "text": "−1.44",
+  "math": "-1.44",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymZneKept": {
+  "value": 0.585796390143328,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymZneRel": {
+  "value": -0.08191137243385051,
+  "text": "−8.19 %",
+  "math": "-8.19\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymZneSe": {
+  "value": 0.14379182246057998,
+  "text": "0.144",
+  "math": "0.144",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymZneSeRel": {
+  "value": 0.008162945219473892,
+  "text": "0.82 %",
+  "math": "0.82\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtRoSymZneSpread": {
+  "value": 0.08936718992276746,
+  "text": "0.089",
+  "math": "0.089",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoTwin": {
+  "value": -17.824495481984318,
+  "text": "−17.82",
+  "math": "-17.82",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoTwinBelow": {
+  "value": -5.653517184734932,
+  "text": "−5.7",
+  "math": "-5.7",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtRoTwinBias": {
+  "value": -0.20930652818076823,
+  "text": "−0.21",
+  "math": "-0.21",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoTwinRel": {
+  "value": -0.011882161964295809,
+  "text": "−1.19 %",
+  "math": "-1.19\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoTwinSe": {
+  "value": 0.12217196129323167,
+  "text": "0.122",
+  "math": "0.122",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtRoTwinSeRel": {
+  "value": 0.006935603223651584,
+  "text": "0.69 %",
+  "math": "0.69\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtRoTwinSpread": {
+  "value": 0.08780405596206835,
+  "text": "0.088",
+  "math": "0.088",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoZne": {
+  "value": -17.453577442089184,
+  "text": "−17.45",
+  "math": "-17.45",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoZneBelow": {
+  "value": -13.323446808265256,
+  "text": "−13.3",
+  "math": "-13.3",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtRoZneBias": {
+  "value": 0.16161151171436572,
+  "text": "0.16",
+  "math": "0.16",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoZneRel": {
+  "value": 0.009174554535758746,
+  "text": "0.92 %",
+  "math": "0.92\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtRoZneSe": {
+  "value": 0.15467062105233625,
+  "text": "0.155",
+  "math": "0.155",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtRoZneSeRel": {
+  "value": 0.00878052579838714,
+  "text": "0.88 %",
+  "math": "0.88\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtRoZneSpread": {
+  "value": 0.11599974140395337,
+  "text": "0.116",
+  "math": "0.116",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtSym": {
+  "value": -16.110649870098456,
+  "text": "−16.11",
+  "math": "-16.11",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtSymBelow": {
+  "value": -94.0928167996779,
+  "text": "−94.1",
+  "math": "-94.1",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtSymBias": {
+  "value": 1.5045390837050938,
+  "text": "1.50",
+  "math": "1.50",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtSymKept": {
+  "value": 0.49853515625,
+  "text": "50 %",
+  "math": "50\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtSymRel": {
+  "value": 0.08541146437036812,
+  "text": "8.54 %",
+  "math": "8.54\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtSymSe": {
+  "value": 0.06561841366477988,
+  "text": "0.066",
+  "math": "0.066",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtSymSeRel": {
+  "value": 0.0037251041607822928,
+  "text": "0.37 %",
+  "math": "0.37\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtSymSpread": {
+  "value": 0.056793805704990305,
+  "text": "0.057",
+  "math": "0.057",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtTwin": {
+  "value": -17.722191920906127,
+  "text": "−17.72",
+  "math": "-17.72",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtTwinBelow": {
+  "value": -9.110397973064135,
+  "text": "−9.1",
+  "math": "-9.1",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtTwinBias": {
+  "value": -0.10700296710257717,
+  "text": "−0.11",
+  "math": "-0.11",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtTwinRel": {
+  "value": -0.006074471717742921,
+  "text": "−0.61 %",
+  "math": "-0.61\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtTwinSe": {
+  "value": 1.2597207107501527,
+  "text": "1.260",
+  "math": "1.260",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtTwinSeRel": {
+  "value": 0.071513323760183,
+  "text": "7.15 %",
+  "math": "7.15\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtTwinSpread": {
+  "value": 0.0862486917372741,
+  "text": "0.086",
+  "math": "0.086",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtZne": {
+  "value": -15.986828792589748,
+  "text": "−15.99",
+  "math": "-15.99",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtZneBelow": {
+  "value": -72.76557973985899,
+  "text": "−72.8",
+  "math": "-72.8",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullPtZneBias": {
+  "value": 1.6283601612138021,
+  "text": "1.63",
+  "math": "1.63",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtZneRel": {
+  "value": 0.09244068658498264,
+  "text": "9.24 %",
+  "math": "9.24\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullPtZneSe": {
+  "value": 1.4079212852359002,
+  "text": "1.408",
+  "math": "1.408",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullPtZneSeRel": {
+  "value": 0.07992655025888301,
+  "text": "7.99 %",
+  "math": "7.99\\%",
+  "source": "results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullPtZneSpread": {
+  "value": 0.07825276827524717,
+  "text": "0.078",
+  "math": "0.078",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRaw": {
+  "value": -12.7060546875,
+  "text": "−12.71",
+  "math": "-12.71",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRawBelow": {
+  "value": -380.2455411792679,
+  "text": "−380.2",
+  "math": "-380.2",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroRawBias": {
+  "value": 5.293945312499847,
+  "text": "5.29",
+  "math": "5.29",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRawRel": {
+  "value": 0.2941080729166607,
+  "text": "29.41 %",
+  "math": "29.41\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRawSe": {
+  "value": 0.7608136453998213,
+  "text": "0.761",
+  "math": "0.761",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroRawSeRel": {
+  "value": 0.04226742474443488,
+  "text": "4.23 %",
+  "math": "4.23\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroRawSpread": {
+  "value": 0.039378603815734284,
+  "text": "0.039",
+  "math": "0.039",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRo": {
+  "value": -13.91117328425822,
+  "text": "−13.91",
+  "math": "-13.91",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoBelow": {
+  "value": -218.7758061731506,
+  "text": "−218.8",
+  "math": "-218.8",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoBias": {
+  "value": 4.088826715741627,
+  "text": "4.09",
+  "math": "4.09",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoRel": {
+  "value": 0.22715703976342563,
+  "text": "22.72 %",
+  "math": "22.72\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSe": {
+  "value": 0.0792238224776787,
+  "text": "0.079",
+  "math": "0.079",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSeRel": {
+  "value": 0.004401323470982188,
+  "text": "0.44 %",
+  "math": "0.44\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSpread": {
+  "value": 0.05286209930378533,
+  "text": "0.053",
+  "math": "0.053",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSym": {
+  "value": -17.067012538101263,
+  "text": "−17.07",
+  "math": "-17.07",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymBelow": {
+  "value": -29.136950702430195,
+  "text": "−29.1",
+  "math": "-29.1",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymBias": {
+  "value": 0.9329874618985841,
+  "text": "0.93",
+  "math": "0.93",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymKept": {
+  "value": 0.5881140349168588,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymRel": {
+  "value": 0.051832636772143996,
+  "text": "5.18 %",
+  "math": "5.18\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymSe": {
+  "value": 0.0724875103426804,
+  "text": "0.072",
+  "math": "0.072",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymSeRel": {
+  "value": 0.004027083907926723,
+  "text": "0.40 %",
+  "math": "0.40\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymSpread": {
+  "value": 0.09056840131394844,
+  "text": "0.091",
+  "math": "0.091",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymTwin": {
+  "value": -17.935212615043582,
+  "text": "−17.94",
+  "math": "-17.94",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymTwinBelow": {
+  "value": -4.344420781743704,
+  "text": "−4.3",
+  "math": "-4.3",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymTwinBias": {
+  "value": 0.06478738495626502,
+  "text": "0.06",
+  "math": "0.06",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymTwinKept": {
+  "value": 0.5855063915335772,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymTwinRel": {
+  "value": 0.003599299164236976,
+  "text": "0.36 %",
+  "math": "0.36\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymTwinSe": {
+  "value": 0.09771132960928311,
+  "text": "0.098",
+  "math": "0.098",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymTwinSeRel": {
+  "value": 0.005428407200515775,
+  "text": "0.54 %",
+  "math": "0.54\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymTwinSpread": {
+  "value": 0.042179707297704705,
+  "text": "0.042",
+  "math": "0.042",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymZne": {
+  "value": -19.4079489723821,
+  "text": "−19.41",
+  "math": "-19.41",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymZneBelow": {
+  "value": 25.79497403011857,
+  "text": "25.8",
+  "math": "25.8",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymZneBias": {
+  "value": -1.407948972382254,
+  "text": "−1.41",
+  "math": "-1.41",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymZneKept": {
+  "value": 0.5881140349168588,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymZneRel": {
+  "value": -0.07821938735457033,
+  "text": "−7.82 %",
+  "math": "-7.82\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymZneSe": {
+  "value": 0.13762183662245187,
+  "text": "0.138",
+  "math": "0.138",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymZneSeRel": {
+  "value": 0.007645657590136279,
+  "text": "0.76 %",
+  "math": "0.76\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoSymZneSpread": {
+  "value": 0.15438205361611504,
+  "text": "0.154",
+  "math": "0.154",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoTwin": {
+  "value": -18.14593665086833,
+  "text": "−18.15",
+  "math": "-18.15",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoTwinBelow": {
+  "value": 6.308823200841969,
+  "text": "6.3",
+  "math": "6.3",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoTwinBias": {
+  "value": -0.14593665086848162,
+  "text": "−0.15",
+  "math": "-0.15",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoTwinRel": {
+  "value": -0.008107591714915714,
+  "text": "−0.81 %",
+  "math": "-0.81\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoTwinSe": {
+  "value": 0.12213030621943596,
+  "text": "0.122",
+  "math": "0.122",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoTwinSeRel": {
+  "value": 0.006785017012190944,
+  "text": "0.68 %",
+  "math": "0.68\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoTwinSpread": {
+  "value": 0.06542760332155888,
+  "text": "0.065",
+  "math": "0.065",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoZne": {
+  "value": -17.702006597837606,
+  "text": "−17.70",
+  "math": "-17.70",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoZneBelow": {
+  "value": -8.685595533384335,
+  "text": "−8.7",
+  "math": "-8.7",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoZneBias": {
+  "value": 0.29799340216224124,
+  "text": "0.30",
+  "math": "0.30",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoZneRel": {
+  "value": 0.01655518900901354,
+  "text": "1.66 %",
+  "math": "1.66\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoZneSe": {
+  "value": 0.1531261719627108,
+  "text": "0.153",
+  "math": "0.153",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoZneSeRel": {
+  "value": 0.008507009553484006,
+  "text": "0.85 %",
+  "math": "0.85\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroRoZneSpread": {
+  "value": 0.09704027990158884,
+  "text": "0.097",
+  "math": "0.097",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroSym": {
+  "value": -16.374599593556546,
+  "text": "−16.37",
+  "math": "-16.37",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroSymBelow": {
+  "value": -54.14535874623616,
+  "text": "−54.1",
+  "math": "-54.1",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroSymBias": {
+  "value": 1.6254004064433012,
+  "text": "1.63",
+  "math": "1.63",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroSymKept": {
+  "value": 0.4955240885416667,
+  "text": "50 %",
+  "math": "50\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroSymRel": {
+  "value": 0.09030002258018417,
+  "text": "9.03 %",
+  "math": "9.03\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroSymSe": {
+  "value": 0.06333047102245003,
+  "text": "0.063",
+  "math": "0.063",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroSymSeRel": {
+  "value": 0.0035183595012472538,
+  "text": "0.35 %",
+  "math": "0.35\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroSymSpread": {
+  "value": 0.0849071223205757,
+  "text": "0.085",
+  "math": "0.085",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroTwin": {
+  "value": -18.03688747644276,
+  "text": "−18.04",
+  "math": "-18.04",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroTwinBelow": {
+  "value": 1.7798377726398862,
+  "text": "1.8",
+  "math": "1.8",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroTwinBias": {
+  "value": -0.03688747644291368,
+  "text": "−0.04",
+  "math": "-0.04",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroTwinRel": {
+  "value": -0.002049304246828555,
+  "text": "−0.20 %",
+  "math": "-0.20\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroTwinSe": {
+  "value": 1.2555693710489195,
+  "text": "1.256",
+  "math": "1.256",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroTwinSeRel": {
+  "value": 0.06975385394716278,
+  "text": "6.98 %",
+  "math": "6.98\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroTwinSpread": {
+  "value": 0.05861969025379873,
+  "text": "0.059",
+  "math": "0.059",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroZne": {
+  "value": -16.180529296752052,
+  "text": "−16.18",
+  "math": "-16.18",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroZneBelow": {
+  "value": -53.20907763828857,
+  "text": "−53.2",
+  "math": "-53.2",
+  "source": "results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbFullZeroZneBias": {
+  "value": 1.819470703247795,
+  "text": "1.82",
+  "math": "1.82",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroZneRel": {
+  "value": 0.10108170573598947,
+  "text": "10.11 %",
+  "math": "10.11\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbFullZeroZneSe": {
+  "value": 1.3874907627930748,
+  "text": "1.387",
+  "math": "1.387",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbFullZeroZneSeRel": {
+  "value": 0.07708282015517148,
+  "text": "7.71 %",
+  "math": "7.71\\%",
+  "source": "results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbFullZeroZneSpread": {
+  "value": 0.09671733693132605,
+  "text": "0.097",
+  "math": "0.097",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRaw": {
+  "value": -13.6728515625,
+  "text": "−13.67",
+  "math": "-13.67",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRawBelow": {
+  "value": -215.74335640846812,
+  "text": "−215.7",
+  "math": "-215.7",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtRawBias": {
+  "value": 3.9423373913035498,
+  "text": "3.94",
+  "math": "3.94",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRawRel": {
+  "value": 0.22380329848532807,
+  "text": "22.38 %",
+  "math": "22.38\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRawSe": {
+  "value": 0.7501686715789737,
+  "text": "0.750",
+  "math": "0.750",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtRawSeRel": {
+  "value": 0.04258646748248442,
+  "text": "4.26 %",
+  "math": "4.26\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtRawSpread": {
+  "value": 0.05672955226605371,
+  "text": "0.057",
+  "math": "0.057",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRo": {
+  "value": -13.680837727400291,
+  "text": "−13.68",
+  "math": "-13.68",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoBelow": {
+  "value": -202.12775561881563,
+  "text": "−202.1",
+  "math": "-202.1",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoBias": {
+  "value": 3.9343512264032583,
+  "text": "3.93",
+  "math": "3.93",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoRel": {
+  "value": 0.22334993037663303,
+  "text": "22.33 %",
+  "math": "22.33\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSe": {
+  "value": 0.0653242361215209,
+  "text": "0.065",
+  "math": "0.065",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSeRel": {
+  "value": 0.003708403940078985,
+  "text": "0.37 %",
+  "math": "0.37\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSpread": {
+  "value": 0.06043917961984303,
+  "text": "0.060",
+  "math": "0.060",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSym": {
+  "value": -16.750785335585878,
+  "text": "−16.75",
+  "math": "-16.75",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymBelow": {
+  "value": -64.64837026322637,
+  "text": "−64.6",
+  "math": "-64.6",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymBias": {
+  "value": 0.864403618217672,
+  "text": "0.86",
+  "math": "0.86",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymKept": {
+  "value": 0.5871936293376923,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymRel": {
+  "value": 0.04907149281705696,
+  "text": "4.91 %",
+  "math": "4.91\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymSe": {
+  "value": 0.04849911714492962,
+  "text": "0.048",
+  "math": "0.048",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymSeRel": {
+  "value": 0.0027532555723427236,
+  "text": "0.28 %",
+  "math": "0.28\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymSpread": {
+  "value": 0.054654318849387776,
+  "text": "0.055",
+  "math": "0.055",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymTwin": {
+  "value": -17.53882857492203,
+  "text": "−17.54",
+  "math": "-17.54",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymTwinBelow": {
+  "value": -31.796436936645808,
+  "text": "−31.8",
+  "math": "-31.8",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymTwinBias": {
+  "value": 0.07636037888152103,
+  "text": "0.08",
+  "math": "0.08",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymTwinKept": {
+  "value": 0.5878078230046453,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymTwinRel": {
+  "value": 0.004334916819897805,
+  "text": "0.43 %",
+  "math": "0.43\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymTwinSe": {
+  "value": 0.0644157379186954,
+  "text": "0.064",
+  "math": "0.064",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymTwinSeRel": {
+  "value": 0.003656829233431894,
+  "text": "0.37 %",
+  "math": "0.37\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymTwinSpread": {
+  "value": 0.041023142638507176,
+  "text": "0.041",
+  "math": "0.041",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymZne": {
+  "value": -18.9742780096,
+  "text": "−18.97",
+  "math": "-18.97",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymZneBelow": {
+  "value": 32.65311208806677,
+  "text": "32.7",
+  "math": "32.7",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymZneBias": {
+  "value": -1.3590890557964492,
+  "text": "−1.36",
+  "math": "-1.36",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymZneKept": {
+  "value": 0.5871936293376923,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymZneRel": {
+  "value": -0.07715438417156398,
+  "text": "−7.72 %",
+  "math": "-7.72\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymZneSe": {
+  "value": 0.09515249298541652,
+  "text": "0.095",
+  "math": "0.095",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymZneSeRel": {
+  "value": 0.005401729906784268,
+  "text": "0.54 %",
+  "math": "0.54\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoSymZneSpread": {
+  "value": 0.08439239549247957,
+  "text": "0.084",
+  "math": "0.084",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoTwin": {
+  "value": -17.792909551797315,
+  "text": "−17.79",
+  "math": "-17.79",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoTwinBelow": {
+  "value": -12.773701058790794,
+  "text": "−12.8",
+  "math": "-12.8",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoTwinBias": {
+  "value": -0.1777205979937655,
+  "text": "−0.18",
+  "math": "-0.18",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoTwinRel": {
+  "value": -0.010089054307611686,
+  "text": "−1.01 %",
+  "math": "-1.01\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoTwinSe": {
+  "value": 0.1013042650726736,
+  "text": "0.101",
+  "math": "0.101",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoTwinSeRel": {
+  "value": 0.005750961022237546,
+  "text": "0.58 %",
+  "math": "0.58\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoTwinSpread": {
+  "value": 0.04585517057870914,
+  "text": "0.046",
+  "math": "0.046",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoZne": {
+  "value": -17.44917391182171,
+  "text": "−17.45",
+  "math": "-17.45",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoZneBelow": {
+  "value": -15.932245263569385,
+  "text": "−15.9",
+  "math": "-15.9",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoZneBias": {
+  "value": 0.16601504198184003,
+  "text": "0.17",
+  "math": "0.17",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoZneRel": {
+  "value": 0.009424539380032782,
+  "text": "0.94 %",
+  "math": "0.94\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoZneSe": {
+  "value": 0.12956654414606827,
+  "text": "0.130",
+  "math": "0.130",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoZneSeRel": {
+  "value": 0.007355387698983024,
+  "text": "0.74 %",
+  "math": "0.74\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtRoZneSpread": {
+  "value": 0.0977873126510081,
+  "text": "0.098",
+  "math": "0.098",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtSym": {
+  "value": -16.736752252261525,
+  "text": "−16.74",
+  "math": "-16.74",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtSymBelow": {
+  "value": -79.6598703841745,
+  "text": "−79.7",
+  "math": "-79.7",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtSymBias": {
+  "value": 0.8784367015420251,
+  "text": "0.88",
+  "math": "0.88",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtSymKept": {
+  "value": 0.5855712890625,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtSymRel": {
+  "value": 0.04986813958372835,
+  "text": "4.99 %",
+  "math": "4.99\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtSymSe": {
+  "value": 0.04950268810845784,
+  "text": "0.050",
+  "math": "0.050",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtSymSeRel": {
+  "value": 0.002810227482559533,
+  "text": "0.28 %",
+  "math": "0.28\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtSymSpread": {
+  "value": 0.04485325142692928,
+  "text": "0.045",
+  "math": "0.045",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtTwin": {
+  "value": -17.81622227190315,
+  "text": "−17.82",
+  "math": "-17.82",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtTwinBelow": {
+  "value": -6.604231188536428,
+  "text": "−6.6",
+  "math": "-6.6",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtTwinBias": {
+  "value": -0.20103331809960068,
+  "text": "−0.20",
+  "math": "-0.20",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtTwinRel": {
+  "value": -0.011412498533329254,
+  "text": "−1.14 %",
+  "math": "-1.14\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtTwinSe": {
+  "value": 1.1342626182318227,
+  "text": "1.134",
+  "math": "1.134",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtTwinSeRel": {
+  "value": 0.06439116953025405,
+  "text": "6.44 %",
+  "math": "6.44\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtTwinSpread": {
+  "value": 0.07870740684785502,
+  "text": "0.079",
+  "math": "0.079",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtZne": {
+  "value": -17.46097798397006,
+  "text": "−17.46",
+  "math": "-17.46",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtZneBelow": {
+  "value": -18.635443731911824,
+  "text": "−18.6",
+  "math": "-18.6",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbGatesPtZneBias": {
+  "value": 0.15421096983348903,
+  "text": "0.15",
+  "math": "0.15",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtZneRel": {
+  "value": 0.008754431771235194,
+  "text": "0.88 %",
+  "math": "0.88\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbGatesPtZneSe": {
+  "value": 1.378741345091147,
+  "text": "1.379",
+  "math": "1.379",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbGatesPtZneSeRel": {
+  "value": 0.07827002870687022,
+  "text": "7.83 %",
+  "math": "7.83\\%",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbGatesPtZneSpread": {
+  "value": 0.0818110109373815,
+  "text": "0.082",
+  "math": "0.082",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRaw": {
+  "value": -16.12890625,
+  "text": "−16.13",
+  "math": "-16.13",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRawBelow": {
+  "value": -206.86547697001498,
+  "text": "−206.9",
+  "math": "-206.9",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtRawBias": {
+  "value": 1.4862827038035498,
+  "text": "1.49",
+  "math": "1.49",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRawRel": {
+  "value": 0.08437506447994275,
+  "text": "8.44 %",
+  "math": "8.44\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRawSe": {
+  "value": 0.6972732424689845,
+  "text": "0.697",
+  "math": "0.697",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtRawSeRel": {
+  "value": 0.039583636843045396,
+  "text": "3.96 %",
+  "math": "3.96\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtRawSpread": {
+  "value": 0.025583061963549314,
+  "text": "0.026",
+  "math": "0.026",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRo": {
+  "value": -17.618703811166547,
+  "text": "−17.62",
+  "math": "-17.62",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoBelow": {
+  "value": -27.91236262514558,
+  "text": "−27.9",
+  "math": "-27.9",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtRoBias": {
+  "value": -0.0035148573629975033,
+  "text": "0.00",
+  "math": "0.00",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoRel": {
+  "value": -0.00019953560374602508,
+  "text": "−0.02 %",
+  "math": "-0.02\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSe": {
+  "value": 0.04670456490945949,
+  "text": "0.047",
+  "math": "0.047",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSeRel": {
+  "value": 0.0026513802963989684,
+  "text": "0.27 %",
+  "math": "0.27\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSpread": {
+  "value": 0.03863766380303854,
+  "text": "0.039",
+  "math": "0.039",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSym": {
+  "value": -17.604828726690975,
+  "text": "−17.60",
+  "math": "-17.60",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymBelow": {
+  "value": -33.10319262511858,
+  "text": "−33.1",
+  "math": "-33.1",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymBias": {
+  "value": 0.01036022711257445,
+  "text": "0.01",
+  "math": "0.01",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymKept": {
+  "value": 1.00007220791512,
+  "text": "100 %",
+  "math": "100\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymRel": {
+  "value": 0.0005881416963362987,
+  "text": "0.06 %",
+  "math": "0.06\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymSe": {
+  "value": 0.02863635898770226,
+  "text": "0.029",
+  "math": "0.029",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymSeRel": {
+  "value": 0.0016256628902932642,
+  "text": "0.16 %",
+  "math": "0.16\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymSpread": {
+  "value": 0.03376451211233229,
+  "text": "0.034",
+  "math": "0.034",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymTwin": {
+  "value": -17.625175735385884,
+  "text": "−17.63",
+  "math": "-17.63",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymTwinBelow": {
+  "value": -39.47355860989262,
+  "text": "−39.5",
+  "math": "-39.5",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymTwinBias": {
+  "value": -0.009986781582334459,
+  "text": "−0.01",
+  "math": "-0.01",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymTwinKept": {
+  "value": 0.997622061101313,
+  "text": "100 %",
+  "math": "100\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymTwinRel": {
+  "value": -0.0005669414962578683,
+  "text": "−0.06 %",
+  "math": "-0.06\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymTwinSe": {
+  "value": 0.0410685962128841,
+  "text": "0.041",
+  "math": "0.041",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymTwinSeRel": {
+  "value": 0.002331430921381992,
+  "text": "0.23 %",
+  "math": "0.23\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymTwinSpread": {
+  "value": 0.026857551089446655,
+  "text": "0.027",
+  "math": "0.027",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymZne": {
+  "value": -17.604828726690997,
+  "text": "−17.60",
+  "math": "-17.60",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymZneBelow": {
+  "value": -33.10319262510405,
+  "text": "−33.1",
+  "math": "-33.1",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymZneBias": {
+  "value": 0.010360227112553133,
+  "text": "0.01",
+  "math": "0.01",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymZneKept": {
+  "value": 1.00007220791512,
+  "text": "100 %",
+  "math": "100\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymZneRel": {
+  "value": 0.0005881416963350885,
+  "text": "0.06 %",
+  "math": "0.06\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymZneSe": {
+  "value": 0.034581688894160176,
+  "text": "0.035",
+  "math": "0.035",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymZneSeRel": {
+  "value": 0.0019631744504615798,
+  "text": "0.20 %",
+  "math": "0.20\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtRoSymZneSpread": {
+  "value": 0.03376451211234317,
+  "text": "0.034",
+  "math": "0.034",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoTwin": {
+  "value": -17.62833688779978,
+  "text": "−17.63",
+  "math": "-17.63",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoTwinBelow": {
+  "value": -27.941065425273774,
+  "text": "−27.9",
+  "math": "-27.9",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtRoTwinBias": {
+  "value": -0.01314793399622971,
+  "text": "−0.01",
+  "math": "-0.01",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoTwinRel": {
+  "value": -0.0007463975567171393,
+  "text": "−0.07 %",
+  "math": "-0.07\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoTwinSe": {
+  "value": 0.058217388910968476,
+  "text": "0.058",
+  "math": "0.058",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtRoTwinSeRel": {
+  "value": 0.0033049539839535994,
+  "text": "0.33 %",
+  "math": "0.33\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtRoTwinSpread": {
+  "value": 0.03762283262340273,
+  "text": "0.038",
+  "math": "0.038",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoZne": {
+  "value": -17.61870381116657,
+  "text": "−17.62",
+  "math": "-17.62",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoZneBelow": {
+  "value": -27.912362625141263,
+  "text": "−27.9",
+  "math": "-27.9",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtRoZneBias": {
+  "value": -0.0035148573630188196,
+  "text": "0.00",
+  "math": "0.00",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoZneRel": {
+  "value": -0.00019953560374723518,
+  "text": "−0.02 %",
+  "math": "-0.02\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtRoZneSe": {
+  "value": 0.05640112048915313,
+  "text": "0.056",
+  "math": "0.056",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtRoZneSeRel": {
+  "value": 0.0032018458977117444,
+  "text": "0.32 %",
+  "math": "0.32\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtRoZneSpread": {
+  "value": 0.038637663803046673,
+  "text": "0.039",
+  "math": "0.039",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtSym": {
+  "value": -17.492920661055877,
+  "text": "−17.49",
+  "math": "-17.49",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtSymBelow": {
+  "value": -60.67965224764504,
+  "text": "−60.7",
+  "math": "-60.7",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtSymBias": {
+  "value": 0.12226829274767326,
+  "text": "0.12",
+  "math": "0.12",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtSymKept": {
+  "value": 0.77764892578125,
+  "text": "78 %",
+  "math": "78\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtSymRel": {
+  "value": 0.0069410718822447,
+  "text": "0.69 %",
+  "math": "0.69\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtSymSe": {
+  "value": 0.02615239854133921,
+  "text": "0.026",
+  "math": "0.026",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtSymSeRel": {
+  "value": 0.0014846504689745193,
+  "text": "0.15 %",
+  "math": "0.15\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtSymSpread": {
+  "value": 0.023636209232288374,
+  "text": "0.024",
+  "math": "0.024",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtTwin": {
+  "value": -17.538776902686656,
+  "text": "−17.54",
+  "math": "-17.54",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtTwinBelow": {
+  "value": -34.694139955169234,
+  "text": "−34.7",
+  "math": "-34.7",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtTwinBias": {
+  "value": 0.07641205111689331,
+  "text": "0.08",
+  "math": "0.08",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtTwinRel": {
+  "value": 0.004337850210820139,
+  "text": "0.43 %",
+  "math": "0.43\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtTwinSe": {
+  "value": 0.8791336026871386,
+  "text": "0.879",
+  "math": "0.879",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtTwinSeRel": {
+  "value": 0.0499077020969061,
+  "text": "4.99 %",
+  "math": "4.99\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtTwinSpread": {
+  "value": 0.03760104503775294,
+  "text": "0.038",
+  "math": "0.038",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtZne": {
+  "value": -16.128906250000025,
+  "text": "−16.13",
+  "math": "-16.13",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtZneBelow": {
+  "value": -206.86547696996706,
+  "text": "−206.9",
+  "math": "-206.9",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))",
+  "quoted": false
+ },
+ "MbRvbRoPtZneBias": {
+  "value": 1.486282703803525,
+  "text": "1.49",
+  "math": "1.49",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtZneRel": {
+  "value": 0.08437506447994134,
+  "text": "8.44 %",
+  "math": "8.44\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbRvbRoPtZneSe": {
+  "value": 0.8420374376379312,
+  "text": "0.842",
+  "math": "0.842",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MbRvbRoPtZneSeRel": {
+  "value": 0.047801782873076404,
+  "text": "4.78 %",
+  "math": "4.78\\%",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
+ "MbRvbRoPtZneSpread": {
+  "value": 0.025583061963554466,
+  "text": "0.026",
+  "math": "0.026",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbSeRatioMax": {
+  "value": 1.6789256374327286,
+  "text": "1.7",
+  "math": "1.7",
+  "source": "results/m2b-*/evaluation.json: bootstrap SE / spread",
+  "quoted": false
+ },
+ "MbSeRatioMin": {
+  "value": 0.8003620389787823,
+  "text": "0.8",
+  "math": "0.8",
+  "source": "results/m2b-*/evaluation.json: bootstrap SE / spread",
+  "quoted": false
+ },
+ "MbSetupRo": {
+  "value": 32768.0,
+  "text": "32768",
+  "math": "32768",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbSetupRoSymTwin": {
+  "value": 81920.0,
+  "text": "81920",
+  "math": "81920",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbSetupRoZne": {
+  "value": 98304.0,
+  "text": "98304",
+  "math": "98304",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbSetupTwin": {
+  "value": 49152.0,
+  "text": "49152",
+  "math": "49152",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbShots": {
+  "value": 12288.0,
+  "text": "12288",
+  "math": "12288",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbShotsZne": {
+  "value": 36864.0,
+  "text": "36864",
+  "math": "36864",
+  "source": "results/m2b-*/evaluation.json",
+  "quoted": false
+ },
+ "MbSpreadRelErr": {
+  "value": 0.2672612419124244,
+  "text": "27 %",
+  "math": "27\\%",
+  "source": "1 / sqrt(2 (R - 1)), relative error of a standard deviation from R = 8",
+  "quoted": false
+ },
+ "MbTwinExcessHvaFullZero": {
+  "value": 0.00834780598095164,
+  "text": "0.8 %",
+  "math": "0.8\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json) and results/m2b-evaluation-0: exact / sampled noisy twin energy - 1",
+  "quoted": false
+ },
+ "MbTwinHvaFullPtFilt": {
+  "value": -10.732431919469082,
+  "text": "−10.73",
+  "math": "-10.73",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinHvaFullPtRaw": {
+  "value": -7.5615234375,
+  "text": "−7.56",
+  "math": "-7.56",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinHvaFullZeroFilt": {
+  "value": -10.732431919469082,
+  "text": "−10.73",
+  "math": "-10.73",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinHvaFullZeroRaw": {
+  "value": -7.5615234375,
+  "text": "−7.56",
+  "math": "-7.56",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinHvaGatesPtFilt": {
+  "value": -10.80218055242406,
+  "text": "−10.80",
+  "math": "-10.80",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinHvaGatesPtRaw": {
+  "value": -8.31884765625,
+  "text": "−8.32",
+  "math": "-8.32",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinHvaRoPtFilt": {
+  "value": -11.22815608791389,
+  "text": "−11.23",
+  "math": "-11.23",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinHvaRoPtRaw": {
+  "value": -10.266845703125,
+  "text": "−10.27",
+  "math": "-10.27",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinRvbFullPtFilt": {
+  "value": -14.924340855444125,
+  "text": "−14.92",
+  "math": "-14.92",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinRvbFullPtRaw": {
+  "value": -11.048828125,
+  "text": "−11.05",
+  "math": "-11.05",
+  "source": "results/m2b-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinRvbFullZeroFilt": {
+  "value": -14.924340855444125,
+  "text": "−14.92",
+  "math": "-14.92",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinRvbFullZeroRaw": {
+  "value": -11.048828125,
+  "text": "−11.05",
+  "math": "-11.05",
+  "source": "results/m2b-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinRvbGatesPtFilt": {
+  "value": -14.985827832664569,
+  "text": "−14.99",
+  "math": "-14.99",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinRvbGatesPtRaw": {
+  "value": -12.02001953125,
+  "text": "−12.02",
+  "math": "-12.02",
+  "source": "results/m2b_gates-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinRvbRoPtFilt": {
+  "value": -15.673041137160336,
+  "text": "−15.67",
+  "math": "-15.67",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinRvbRoPtRaw": {
+  "value": -14.41259765625,
+  "text": "−14.41",
+  "math": "-14.41",
+  "source": "results/m2b_readout-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MbTwinShots": {
+  "value": 16384.0,
+  "text": "16384",
+  "math": "16384",
+  "source": "results/m2b-*/evaluation.json: shots per basis of the twin measurement",
+  "quoted": false
+ },
  "MeasGroups": {
   "value": 3.0,
   "text": "3",
@@ -760,6 +5219,20 @@
   "text": "28.56 %",
   "math": "28.56\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaPtRawSe": {
+  "value": 0.7836120569638014,
+  "text": "0.784",
+  "math": "0.784",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtRawSeRel": {
+  "value": 0.04704478258805439,
+  "text": "4.70 %",
+  "math": "4.70\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaPtRawSpread": {
@@ -797,6 +5270,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtHvaPtRoSe": {
+  "value": 0.08316431408455843,
+  "text": "0.083",
+  "math": "0.083",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtRoSeRel": {
+  "value": 0.0049928367492863305,
+  "text": "0.50 %",
+  "math": "0.50\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaPtRoSpread": {
   "value": 0.08770978980043934,
   "text": "0.088",
@@ -830,6 +5317,20 @@
   "text": "−0.70 %",
   "math": "-0.70\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaPtRoSymSe": {
+  "value": 0.08285026903456295,
+  "text": "0.083",
+  "math": "0.083",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtRoSymSeRel": {
+  "value": 0.00497398280112589,
+  "text": "0.50 %",
+  "math": "0.50\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaPtRoSymSpread": {
@@ -867,6 +5368,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtHvaPtRoSymTwinSe": {
+  "value": 0.12676835442108653,
+  "text": "0.127",
+  "math": "0.127",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtRoSymTwinSeRel": {
+  "value": 0.0076106405201227445,
+  "text": "0.76 %",
+  "math": "0.76\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaPtRoSymTwinSpread": {
   "value": 0.07547896760143695,
   "text": "0.075",
@@ -900,6 +5415,20 @@
   "text": "−13.79 %",
   "math": "-13.79\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaPtRoSymZneSe": {
+  "value": 0.14231260812814173,
+  "text": "0.142",
+  "math": "0.142",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtRoSymZneSeRel": {
+  "value": 0.008543852343043626,
+  "text": "0.85 %",
+  "math": "0.85\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaPtRoSymZneSpread": {
@@ -937,6 +5466,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtHvaPtRoTwinSe": {
+  "value": 0.1585144257648599,
+  "text": "0.159",
+  "math": "0.159",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtRoTwinSeRel": {
+  "value": 0.009516541547449171,
+  "text": "0.95 %",
+  "math": "0.95\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaPtRoTwinSpread": {
   "value": 0.11958261852021561,
   "text": "0.120",
@@ -970,6 +5513,20 @@
   "text": "1.40 %",
   "math": "1.40\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaPtRoZneSe": {
+  "value": 0.1575135338079202,
+  "text": "0.158",
+  "math": "0.158",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtRoZneSeRel": {
+  "value": 0.009456452190617673,
+  "text": "0.95 %",
+  "math": "0.95\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaPtRoZneSpread": {
@@ -1007,6 +5564,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtHvaPtSymSe": {
+  "value": 0.07527312468540252,
+  "text": "0.075",
+  "math": "0.075",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtSymSeRel": {
+  "value": 0.0045190828217589,
+  "text": "0.45 %",
+  "math": "0.45\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaPtSymSpread": {
   "value": 0.09852347425870342,
   "text": "0.099",
@@ -1040,6 +5611,20 @@
   "text": "−6.20 %",
   "math": "-6.20\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaPtTwinSe": {
+  "value": 1.519636704662751,
+  "text": "1.520",
+  "math": "1.520",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtTwinSeRel": {
+  "value": 0.0912326166351841,
+  "text": "9.12 %",
+  "math": "9.12\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaPtTwinSpread": {
@@ -1077,6 +5662,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtHvaPtZneSe": {
+  "value": 1.4093751671051034,
+  "text": "1.409",
+  "math": "1.409",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaPtZneSeRel": {
+  "value": 0.08461297619432276,
+  "text": "8.46 %",
+  "math": "8.46\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaPtZneSpread": {
   "value": 0.09742105938234108,
   "text": "0.097",
@@ -1110,6 +5709,20 @@
   "text": "28.91 %",
   "math": "28.91\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaZeroRawSe": {
+  "value": 0.7598025495527072,
+  "text": "0.760",
+  "math": "0.760",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroRawSeRel": {
+  "value": 0.042211252752928564,
+  "text": "4.22 %",
+  "math": "4.22\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaZeroRawSpread": {
@@ -1147,6 +5760,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtHvaZeroRoSe": {
+  "value": 0.07848598532678548,
+  "text": "0.078",
+  "math": "0.078",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroRoSeRel": {
+  "value": 0.004360332518154789,
+  "text": "0.44 %",
+  "math": "0.44\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaZeroRoSpread": {
   "value": 0.08068071264402148,
   "text": "0.081",
@@ -1180,6 +5807,20 @@
   "text": "−0.31 %",
   "math": "-0.31\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaZeroRoSymSe": {
+  "value": 0.06806673311178692,
+  "text": "0.068",
+  "math": "0.068",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroRoSymSeRel": {
+  "value": 0.0037814851728770853,
+  "text": "0.38 %",
+  "math": "0.38\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaZeroRoSymSpread": {
@@ -1217,6 +5858,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtHvaZeroRoSymTwinSe": {
+  "value": 0.1244455018426466,
+  "text": "0.124",
+  "math": "0.124",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroRoSymTwinSeRel": {
+  "value": 0.006913638991258207,
+  "text": "0.69 %",
+  "math": "0.69\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaZeroRoSymTwinSpread": {
   "value": 0.06552310746242049,
   "text": "0.066",
@@ -1250,6 +5905,20 @@
   "text": "−14.09 %",
   "math": "-14.09\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaZeroRoSymZneSe": {
+  "value": 0.12431807510286755,
+  "text": "0.124",
+  "math": "0.124",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroRoSymZneSeRel": {
+  "value": 0.0069065597279371485,
+  "text": "0.69 %",
+  "math": "0.69\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaZeroRoSymZneSpread": {
@@ -1287,6 +5956,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtHvaZeroRoTwinSe": {
+  "value": 0.1608915336054233,
+  "text": "0.161",
+  "math": "0.161",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroRoTwinSeRel": {
+  "value": 0.00893841853363471,
+  "text": "0.89 %",
+  "math": "0.89\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaZeroRoTwinSpread": {
   "value": 0.1011716758336127,
   "text": "0.101",
@@ -1320,6 +6003,20 @@
   "text": "1.73 %",
   "math": "1.73\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaZeroRoZneSe": {
+  "value": 0.14942842153622474,
+  "text": "0.149",
+  "math": "0.149",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroRoZneSeRel": {
+  "value": 0.008301578974234784,
+  "text": "0.83 %",
+  "math": "0.83\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaZeroRoZneSpread": {
@@ -1357,6 +6054,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtHvaZeroSymSe": {
+  "value": 0.0618440622187214,
+  "text": "0.062",
+  "math": "0.062",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroSymSeRel": {
+  "value": 0.0034357812343734423,
+  "text": "0.34 %",
+  "math": "0.34\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaZeroSymSpread": {
   "value": 0.04913017898852757,
   "text": "0.049",
@@ -1392,6 +6103,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtHvaZeroTwinSe": {
+  "value": 1.541713382457967,
+  "text": "1.542",
+  "math": "1.542",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroTwinSeRel": {
+  "value": 0.08565074346988782,
+  "text": "8.57 %",
+  "math": "8.57\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtHvaZeroTwinSpread": {
   "value": 0.07466249561088022,
   "text": "0.075",
@@ -1425,6 +6150,20 @@
   "text": "10.25 %",
   "math": "10.25\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtHvaZeroZneSe": {
+  "value": 1.3645802131233888,
+  "text": "1.365",
+  "math": "1.365",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtHvaZeroZneSeRel": {
+  "value": 0.07581001184018896,
+  "text": "7.58 %",
+  "math": "7.58\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtHvaZeroZneSpread": {
@@ -1525,6 +6264,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtRvbPtRawSe": {
+  "value": 0.7685744417494393,
+  "text": "0.769",
+  "math": "0.769",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtRawSeRel": {
+  "value": 0.04363134813739738,
+  "text": "4.36 %",
+  "math": "4.36\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbPtRawSpread": {
   "value": 0.050197728063403425,
   "text": "0.050",
@@ -1558,6 +6311,20 @@
   "text": "22.33 %",
   "math": "22.33\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbPtRoSe": {
+  "value": 0.0796701498155355,
+  "text": "0.080",
+  "math": "0.080",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtRoSeRel": {
+  "value": 0.004522809833290648,
+  "text": "0.45 %",
+  "math": "0.45\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbPtRoSpread": {
@@ -1595,6 +6362,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtRvbPtRoSymSe": {
+  "value": 0.07250953384279495,
+  "text": "0.073",
+  "math": "0.073",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtRoSymSeRel": {
+  "value": 0.0041163074681148035,
+  "text": "0.41 %",
+  "math": "0.41\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbPtRoSymSpread": {
   "value": 0.06478488213926858,
   "text": "0.065",
@@ -1628,6 +6409,20 @@
   "text": "0.02 %",
   "math": "0.02\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbPtRoSymTwinSe": {
+  "value": 0.08949234961624561,
+  "text": "0.089",
+  "math": "0.089",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtRoSymTwinSeRel": {
+  "value": 0.005080408155197337,
+  "text": "0.51 %",
+  "math": "0.51\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbPtRoSymTwinSpread": {
@@ -1665,6 +6460,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtRvbPtRoSymZneSe": {
+  "value": 0.1319626294345024,
+  "text": "0.132",
+  "math": "0.132",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtRoSymZneSeRel": {
+  "value": 0.007491411518807946,
+  "text": "0.75 %",
+  "math": "0.75\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbPtRoSymZneSpread": {
   "value": 0.08385765132557811,
   "text": "0.084",
@@ -1698,6 +6507,20 @@
   "text": "−1.19 %",
   "math": "-1.19\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbPtRoTwinSe": {
+  "value": 0.12217196129323167,
+  "text": "0.122",
+  "math": "0.122",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtRoTwinSeRel": {
+  "value": 0.006935603223651584,
+  "text": "0.69 %",
+  "math": "0.69\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbPtRoTwinSpread": {
@@ -1735,6 +6558,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtRvbPtRoZneSe": {
+  "value": 0.15467062105233625,
+  "text": "0.155",
+  "math": "0.155",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtRoZneSeRel": {
+  "value": 0.00878052579838714,
+  "text": "0.88 %",
+  "math": "0.88\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbPtRoZneSpread": {
   "value": 0.11599974140395337,
   "text": "0.116",
@@ -1768,6 +6605,20 @@
   "text": "8.54 %",
   "math": "8.54\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbPtSymSe": {
+  "value": 0.06561841366477988,
+  "text": "0.066",
+  "math": "0.066",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtSymSeRel": {
+  "value": 0.0037251041607822928,
+  "text": "0.37 %",
+  "math": "0.37\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbPtSymSpread": {
@@ -1805,6 +6656,20 @@
   "source": "results/m2-evaluation-0p3/evaluation.json",
   "quoted": false
  },
+ "MtRvbPtTwinSe": {
+  "value": 1.2597207107501527,
+  "text": "1.260",
+  "math": "1.260",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtTwinSeRel": {
+  "value": 0.071513323760183,
+  "text": "7.15 %",
+  "math": "7.15\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbPtTwinSpread": {
   "value": 0.0862486917372741,
   "text": "0.086",
@@ -1838,6 +6703,20 @@
   "text": "9.24 %",
   "math": "9.24\\%",
   "source": "results/m2-evaluation-0p3/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbPtZneSe": {
+  "value": 1.4079212852359002,
+  "text": "1.408",
+  "math": "1.408",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbPtZneSeRel": {
+  "value": 0.07992655025888301,
+  "text": "7.99 %",
+  "math": "7.99\\%",
+  "source": "results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbPtZneSpread": {
@@ -1875,6 +6754,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtRvbZeroRawSe": {
+  "value": 0.7608136453998213,
+  "text": "0.761",
+  "math": "0.761",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroRawSeRel": {
+  "value": 0.04226742474443488,
+  "text": "4.23 %",
+  "math": "4.23\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbZeroRawSpread": {
   "value": 0.039378603815734284,
   "text": "0.039",
@@ -1908,6 +6801,20 @@
   "text": "22.72 %",
   "math": "22.72\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbZeroRoSe": {
+  "value": 0.0792238224776787,
+  "text": "0.079",
+  "math": "0.079",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroRoSeRel": {
+  "value": 0.004401323470982188,
+  "text": "0.44 %",
+  "math": "0.44\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbZeroRoSpread": {
@@ -1945,6 +6852,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtRvbZeroRoSymSe": {
+  "value": 0.07008807813597591,
+  "text": "0.070",
+  "math": "0.070",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroRoSymSeRel": {
+  "value": 0.0038937821186653615,
+  "text": "0.39 %",
+  "math": "0.39\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbZeroRoSymSpread": {
   "value": 0.09068710267884023,
   "text": "0.091",
@@ -1978,6 +6899,20 @@
   "text": "0.36 %",
   "math": "0.36\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbZeroRoSymTwinSe": {
+  "value": 0.08777196975178321,
+  "text": "0.088",
+  "math": "0.088",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroRoSymTwinSeRel": {
+  "value": 0.004876220541765775,
+  "text": "0.49 %",
+  "math": "0.49\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbZeroRoSymTwinSpread": {
@@ -2015,6 +6950,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtRvbZeroRoSymZneSe": {
+  "value": 0.12793217397966528,
+  "text": "0.128",
+  "math": "0.128",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroRoSymZneSeRel": {
+  "value": 0.007107342998870354,
+  "text": "0.71 %",
+  "math": "0.71\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbZeroRoSymZneSpread": {
   "value": 0.1394167794760185,
   "text": "0.139",
@@ -2048,6 +6997,20 @@
   "text": "−0.81 %",
   "math": "-0.81\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbZeroRoTwinSe": {
+  "value": 0.12213030621943596,
+  "text": "0.122",
+  "math": "0.122",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroRoTwinSeRel": {
+  "value": 0.006785017012190944,
+  "text": "0.68 %",
+  "math": "0.68\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbZeroRoTwinSpread": {
@@ -2085,6 +7048,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtRvbZeroRoZneSe": {
+  "value": 0.1531261719627108,
+  "text": "0.153",
+  "math": "0.153",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroRoZneSeRel": {
+  "value": 0.008507009553484006,
+  "text": "0.85 %",
+  "math": "0.85\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbZeroRoZneSpread": {
   "value": 0.09704027990158884,
   "text": "0.097",
@@ -2118,6 +7095,20 @@
   "text": "9.03 %",
   "math": "9.03\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbZeroSymSe": {
+  "value": 0.06333047102245003,
+  "text": "0.063",
+  "math": "0.063",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroSymSeRel": {
+  "value": 0.0035183595012472538,
+  "text": "0.35 %",
+  "math": "0.35\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbZeroSymSpread": {
@@ -2155,6 +7146,20 @@
   "source": "results/m2-evaluation-0/evaluation.json",
   "quoted": false
  },
+ "MtRvbZeroTwinSe": {
+  "value": 1.2555693710489195,
+  "text": "1.256",
+  "math": "1.256",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroTwinSeRel": {
+  "value": 0.06975385394716278,
+  "text": "6.98 %",
+  "math": "6.98\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
+  "quoted": false
+ },
  "MtRvbZeroTwinSpread": {
   "value": 0.05861969025379873,
   "text": "0.059",
@@ -2188,6 +7193,20 @@
   "text": "10.11 %",
   "math": "10.11\\%",
   "source": "results/m2-evaluation-0/evaluation.json",
+  "quoted": false
+ },
+ "MtRvbZeroZneSe": {
+  "value": 1.3874907627930748,
+  "text": "1.387",
+  "math": "1.387",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error per energy",
+  "quoted": false
+ },
+ "MtRvbZeroZneSeRel": {
+  "value": 0.07708282015517148,
+  "text": "7.71 %",
+  "math": "7.71\\%",
+  "source": "results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|",
   "quoted": false
  },
  "MtRvbZeroZneSpread": {
@@ -2421,6 +7440,426 @@
   "source": "results/m2_vqe-summary",
   "quoted": false
  },
+ "MwBelowHvaSpsa": {
+  "value": -0.36091569414542224,
+  "text": "−0.4",
+  "math": "-0.4",
+  "source": "results/m2b_vqe-summary: (E0 - final) / final_std",
+  "quoted": false
+ },
+ "MwBelowRvbPs": {
+  "value": -1.5004916623178055,
+  "text": "−1.5",
+  "math": "-1.5",
+  "source": "results/m2b_vqe-summary: (E0 - final) / final_std",
+  "quoted": false
+ },
+ "MwErrHvaSpsa": {
+  "value": 0.002319042224372506,
+  "text": "0.23 %",
+  "math": "0.23\\%",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwErrRvbPs": {
+  "value": 0.005687824012580244,
+  "text": "0.57 %",
+  "math": "0.57\\%",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwFinalHvaSpsa": {
+  "value": -17.95825723996126,
+  "text": "−17.958",
+  "math": "-17.958",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwFinalRvbPs": {
+  "value": -17.897619167773545,
+  "text": "−17.898",
+  "math": "-17.898",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwIdealErrHvaSpsa": {
+  "value": 0.0002543610602088685,
+  "text": "0.03 %",
+  "math": "0.03\\%",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwIdealErrRvbPs": {
+  "value": 0.0021791139375536453,
+  "text": "0.22 %",
+  "math": "0.22\\%",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwIdealHvaSpsa": {
+  "value": -17.995421500916205,
+  "text": "−17.995",
+  "math": "-17.995",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwIdealRvbPs": {
+  "value": -17.960775949124024,
+  "text": "−17.961",
+  "math": "-17.961",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwItersHvaSpsa": {
+  "value": 50.0,
+  "text": "50",
+  "math": "50",
+  "source": "results/20261010T184146Z-m2b_vqe-hva_spsa",
+  "quoted": false
+ },
+ "MwItersRvbPs": {
+  "value": 20.0,
+  "text": "20",
+  "math": "20",
+  "source": "results/20261010T184621Z-m2b_vqe-rvb_adam_parameter_shift",
+  "quoted": false
+ },
+ "MwNfevHvaSpsa": {
+  "value": 101.0,
+  "text": "101",
+  "math": "101",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwNfevRvbPs": {
+  "value": 481.0,
+  "text": "481",
+  "math": "481",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwShotsHvaSpsa": {
+  "value": 1372160.0,
+  "text": "1372160",
+  "math": "1372160",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwShotsPerHvaSpsa": {
+  "value": 4096.0,
+  "text": "4096",
+  "math": "4096",
+  "source": "results/20261010T184146Z-m2b_vqe-hva_spsa",
+  "quoted": false
+ },
+ "MwShotsPerRvbPs": {
+  "value": 1024.0,
+  "text": "1024",
+  "math": "1024",
+  "source": "results/20261010T184621Z-m2b_vqe-rvb_adam_parameter_shift",
+  "quoted": false
+ },
+ "MwShotsRvbPs": {
+  "value": 1608704.0,
+  "text": "1608704",
+  "math": "1608704",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwStdHvaSpsa": {
+  "value": 0.11565792431815335,
+  "text": "0.116",
+  "math": "0.116",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MwStdRvbPs": {
+  "value": 0.06823152357161182,
+  "text": "0.068",
+  "math": "0.068",
+  "source": "results/m2b_vqe-summary",
+  "quoted": false
+ },
+ "MxDampHvaPtFullCtf": {
+  "value": 0.9560380751564512,
+  "text": "0.956",
+  "math": "0.956",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaPtFullRaw": {
+  "value": 0.7138739626026533,
+  "text": "0.714",
+  "math": "0.714",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaPtGtCtf": {
+  "value": 0.9560380751564512,
+  "text": "0.956",
+  "math": "0.956",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaPtGtRaw": {
+  "value": 0.7785724349914483,
+  "text": "0.779",
+  "math": "0.779",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaPtRoCtf": {
+  "value": 1.000000000000004,
+  "text": "1.000",
+  "math": "1.000",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaPtRoRaw": {
+  "value": 0.9178978003869441,
+  "text": "0.918",
+  "math": "0.918",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaTwinFullCtf": {
+  "value": 0.9619577047854759,
+  "text": "0.962",
+  "math": "0.962",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaTwinFullRaw": {
+  "value": 0.676627789662048,
+  "text": "0.677",
+  "math": "0.677",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaTwinGtCtf": {
+  "value": 0.9619577047854759,
+  "text": "0.962",
+  "math": "0.962",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaTwinGtRaw": {
+  "value": 0.7432420116293658,
+  "text": "0.743",
+  "math": "0.743",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaTwinRoCtf": {
+  "value": 1.0000000000000027,
+  "text": "1.000",
+  "math": "1.000",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaTwinRoRaw": {
+  "value": 0.910713341999988,
+  "text": "0.911",
+  "math": "0.911",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaZeroFullCtf": {
+  "value": 0.9497671864579086,
+  "text": "0.950",
+  "math": "0.950",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaZeroFullRaw": {
+  "value": 0.710456845424888,
+  "text": "0.710",
+  "math": "0.710",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaZeroGtCtf": {
+  "value": 0.9497671864579086,
+  "text": "0.950",
+  "math": "0.950",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaZeroGtRaw": {
+  "value": 0.7783712862380684,
+  "text": "0.778",
+  "math": "0.778",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaZeroRoCtf": {
+  "value": 1.0000000000000002,
+  "text": "1.000",
+  "math": "1.000",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampHvaZeroRoRaw": {
+  "value": 0.9131535266666524,
+  "text": "0.913",
+  "math": "0.913",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbPtFullCtf": {
+  "value": 0.9500970858466721,
+  "text": "0.950",
+  "math": "0.950",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbPtFullRaw": {
+  "value": 0.7083129545889497,
+  "text": "0.708",
+  "math": "0.708",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbPtGtCtf": {
+  "value": 0.9500970858466721,
+  "text": "0.950",
+  "math": "0.950",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbPtGtRaw": {
+  "value": 0.7748441120153367,
+  "text": "0.775",
+  "math": "0.775",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbPtRoCtf": {
+  "value": 0.9999999999999973,
+  "text": "1.000",
+  "math": "1.000",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbPtRoRaw": {
+  "value": 0.9147152353674308,
+  "text": "0.915",
+  "math": "0.915",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbTwinFullCtf": {
+  "value": 0.9549407201608702,
+  "text": "0.955",
+  "math": "0.955",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbTwinFullRaw": {
+  "value": 0.7033422546425517,
+  "text": "0.703",
+  "math": "0.703",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbTwinGtCtf": {
+  "value": 0.9549407201608701,
+  "text": "0.955",
+  "math": "0.955",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbTwinGtRaw": {
+  "value": 0.7647509663817487,
+  "text": "0.765",
+  "math": "0.765",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbTwinRoCtf": {
+  "value": 1.0000000000000016,
+  "text": "1.000",
+  "math": "1.000",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbTwinRoRaw": {
+  "value": 0.9199280918429028,
+  "text": "0.920",
+  "math": "0.920",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbZeroFullCtf": {
+  "value": 0.9481048938004949,
+  "text": "0.948",
+  "math": "0.948",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbZeroFullRaw": {
+  "value": 0.7067486185886472,
+  "text": "0.707",
+  "math": "0.707",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbZeroGtCtf": {
+  "value": 0.9481048938004949,
+  "text": "0.948",
+  "math": "0.948",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbZeroGtRaw": {
+  "value": 0.7742927676074323,
+  "text": "0.774",
+  "math": "0.774",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbZeroRoCtf": {
+  "value": 1.0000000000000004,
+  "text": "1.000",
+  "math": "1.000",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampRvbZeroRoRaw": {
+  "value": 0.9131535266666498,
+  "text": "0.913",
+  "math": "0.913",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy",
+  "quoted": false
+ },
+ "MxDampSpreadHvaCtf": {
+  "value": 0.012835270055002734,
+  "text": "1.3 %",
+  "math": "1.3\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max/min - 1 of the damping over target and twin, gate noise",
+  "quoted": false
+ },
+ "MxDampSpreadHvaRaw": {
+  "value": 0.04753555747559224,
+  "text": "4.8 %",
+  "math": "4.8\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max/min - 1 of the damping over target and twin, gate noise",
+  "quoted": false
+ },
+ "MxDampSpreadRvbCtf": {
+  "value": 0.007209989532881433,
+  "text": "0.7 %",
+  "math": "0.7\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max/min - 1 of the damping over target and twin, gate noise",
+  "quoted": false
+ },
+ "MxDampSpreadRvbRaw": {
+  "value": 0.013197950806576264,
+  "text": "1.3 %",
+  "math": "1.3\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max/min - 1 of the damping over target and twin, gate noise",
+  "quoted": false
+ },
  "MxHvaPtFullCtf": {
   "value": -15.924464337928377,
   "text": "−15.92",
@@ -2495,6 +7934,83 @@
   "value": 0.07892801716810113,
   "text": "7.9 %",
   "math": "7.9\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtCtf": {
+  "value": -15.924464337928377,
+  "text": "−15.92",
+  "math": "-15.92",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtCtfRel": {
+  "value": 0.04396192484354875,
+  "text": "4.4 %",
+  "math": "4.4\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtKept": {
+  "value": 0.5885244475191995,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtRaw": {
+  "value": -12.968467781459903,
+  "text": "−12.97",
+  "math": "-12.97",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtRawRel": {
+  "value": 0.22142756500855162,
+  "text": "22.1 %",
+  "math": "22.1\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtRo": {
+  "value": -12.968467781459903,
+  "text": "−12.97",
+  "math": "-12.97",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtRoRel": {
+  "value": 0.22142756500855162,
+  "text": "22.1 %",
+  "math": "22.1\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtRoSym": {
+  "value": -15.924464337928377,
+  "text": "−15.92",
+  "math": "-15.92",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtRoSymRel": {
+  "value": 0.04396192484354875,
+  "text": "4.4 %",
+  "math": "4.4\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtSym": {
+  "value": -15.924464337928377,
+  "text": "−15.92",
+  "math": "-15.92",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaPtGtSymRel": {
+  "value": 0.04396192484354875,
+  "text": "4.4 %",
+  "math": "4.4\\%",
   "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
   "quoted": false
  },
@@ -2575,6 +8091,237 @@
   "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
   "quoted": false
  },
+ "MxHvaTwinFullCtf": {
+  "value": -10.822024178836582,
+  "text": "−10.82",
+  "math": "-10.82",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullCtfRel": {
+  "value": 0.03804229521452408,
+  "text": "3.8 %",
+  "math": "3.8\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullKept": {
+  "value": 0.4831249377107434,
+  "text": "48 %",
+  "math": "48\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullRaw": {
+  "value": -7.612062633698024,
+  "text": "−7.61",
+  "math": "-7.61",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullRawRel": {
+  "value": 0.32337221033795205,
+  "text": "32.3 %",
+  "math": "32.3\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullRo": {
+  "value": -8.361472630830347,
+  "text": "−8.36",
+  "math": "-8.36",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullRoRel": {
+  "value": 0.2567579883706343,
+  "text": "25.7 %",
+  "math": "25.7\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullRoSym": {
+  "value": -11.543450849512569,
+  "text": "−11.54",
+  "math": "-11.54",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullRoSymRel": {
+  "value": -0.026084519956674882,
+  "text": "−2.6 %",
+  "math": "-2.6\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullSym": {
+  "value": -10.49249299231634,
+  "text": "−10.49",
+  "math": "-10.49",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinFullSymRel": {
+  "value": 0.06733395623854567,
+  "text": "6.7 %",
+  "math": "6.7\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtCtf": {
+  "value": -10.822024178836582,
+  "text": "−10.82",
+  "math": "-10.82",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtCtfRel": {
+  "value": 0.03804229521452408,
+  "text": "3.8 %",
+  "math": "3.8\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtKept": {
+  "value": 0.5688983569139694,
+  "text": "57 %",
+  "math": "57\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtRaw": {
+  "value": -8.361472630830347,
+  "text": "−8.36",
+  "math": "-8.36",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtRawRel": {
+  "value": 0.2567579883706343,
+  "text": "25.7 %",
+  "math": "25.7\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtRo": {
+  "value": -8.361472630830347,
+  "text": "−8.36",
+  "math": "-8.36",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtRoRel": {
+  "value": 0.2567579883706343,
+  "text": "25.7 %",
+  "math": "25.7\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtRoSym": {
+  "value": -10.822024178836582,
+  "text": "−10.82",
+  "math": "-10.82",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtRoSymRel": {
+  "value": 0.03804229521452408,
+  "text": "3.8 %",
+  "math": "3.8\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtSym": {
+  "value": -10.822024178836582,
+  "text": "−10.82",
+  "math": "-10.82",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinGtSymRel": {
+  "value": 0.03804229521452408,
+  "text": "3.8 %",
+  "math": "3.8\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoCtf": {
+  "value": -11.250000000000007,
+  "text": "−11.25",
+  "math": "-11.25",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoCtfRel": {
+  "value": -2.6842725573159395e-15,
+  "text": "0.0 %",
+  "math": "0.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoKept": {
+  "value": 0.7773481765222212,
+  "text": "78 %",
+  "math": "78\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoRaw": {
+  "value": -10.245525097499844,
+  "text": "−10.25",
+  "math": "-10.25",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoRawRel": {
+  "value": 0.08928665800001204,
+  "text": "8.9 %",
+  "math": "8.9\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoRo": {
+  "value": -11.24999999999983,
+  "text": "−11.25",
+  "math": "-11.25",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoRoRel": {
+  "value": 1.3105566015130764e-14,
+  "text": "0.0 %",
+  "math": "0.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoRoSym": {
+  "value": -12.291702178939836,
+  "text": "−12.29",
+  "math": "-12.29",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoRoSymRel": {
+  "value": -0.09259574923909879,
+  "text": "−9.3 %",
+  "math": "-9.3\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoSym": {
+  "value": -11.179015366576566,
+  "text": "−11.18",
+  "math": "-11.18",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaTwinRoSymRel": {
+  "value": 0.0063097451931920815,
+  "text": "0.6 %",
+  "math": "0.6\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
  "MxHvaZeroFullCtf": {
   "value": -17.095809356242352,
   "text": "−17.10",
@@ -2652,6 +8399,83 @@
   "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
   "quoted": false
  },
+ "MxHvaZeroGtCtf": {
+  "value": -17.095809356242352,
+  "text": "−17.10",
+  "math": "-17.10",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtCtfRel": {
+  "value": 0.050232813542091366,
+  "text": "5.0 %",
+  "math": "5.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtKept": {
+  "value": 0.5941590682299988,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtRaw": {
+  "value": -14.010683152285228,
+  "text": "−14.01",
+  "math": "-14.01",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtRawRel": {
+  "value": 0.2216287137619316,
+  "text": "22.2 %",
+  "math": "22.2\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtRo": {
+  "value": -14.010683152285228,
+  "text": "−14.01",
+  "math": "-14.01",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtRoRel": {
+  "value": 0.2216287137619316,
+  "text": "22.2 %",
+  "math": "22.2\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtRoSym": {
+  "value": -17.095809356242352,
+  "text": "−17.10",
+  "math": "-17.10",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtRoSymRel": {
+  "value": 0.050232813542091366,
+  "text": "5.0 %",
+  "math": "5.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtSym": {
+  "value": -17.095809356242352,
+  "text": "−17.10",
+  "math": "-17.10",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxHvaZeroGtSymRel": {
+  "value": 0.050232813542091366,
+  "text": "5.0 %",
+  "math": "5.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
  "MxHvaZeroRoCtf": {
   "value": -18.0,
   "text": "−18.00",
@@ -2726,6 +8550,20 @@
   "value": 0.007961818635401723,
   "text": "0.8 %",
   "math": "0.8\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxIdealHvaTwin": {
+  "value": -11.249999999999977,
+  "text": "−11.25",
+  "math": "-11.25",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxIdealRvbTwin": {
+  "value": -15.676237822087144,
+  "text": "−15.68",
+  "math": "-15.68",
   "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
   "quoted": false
  },
@@ -2834,6 +8672,83 @@
   "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
   "quoted": false
  },
+ "MxRvbPtGtCtf": {
+  "value": -16.736139691647363,
+  "text": "−16.74",
+  "math": "-16.74",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtCtfRel": {
+  "value": 0.04990291415332789,
+  "text": "5.0 %",
+  "math": "5.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtKept": {
+  "value": 0.5863075782590754,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtRaw": {
+  "value": -13.649025442892377,
+  "text": "−13.65",
+  "math": "-13.65",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtRawRel": {
+  "value": 0.22515588798466338,
+  "text": "22.5 %",
+  "math": "22.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtRo": {
+  "value": -13.649025442892377,
+  "text": "−13.65",
+  "math": "-13.65",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtRoRel": {
+  "value": 0.22515588798466338,
+  "text": "22.5 %",
+  "math": "22.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtRoSym": {
+  "value": -16.736139691647363,
+  "text": "−16.74",
+  "math": "-16.74",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtRoSymRel": {
+  "value": 0.04990291415332789,
+  "text": "5.0 %",
+  "math": "5.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtSym": {
+  "value": -16.736139691647363,
+  "text": "−16.74",
+  "math": "-16.74",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbPtGtSymRel": {
+  "value": 0.04990291415332789,
+  "text": "5.0 %",
+  "math": "5.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
  "MxRvbPtRoCtf": {
   "value": -17.61518895380363,
   "text": "−17.62",
@@ -2908,6 +8823,237 @@
   "value": 0.007771257143956147,
   "text": "0.8 %",
   "math": "0.8\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullCtf": {
+  "value": -14.969877835236968,
+  "text": "−14.97",
+  "math": "-14.97",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullCtfRel": {
+  "value": 0.04505927983912983,
+  "text": "4.5 %",
+  "math": "4.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullKept": {
+  "value": 0.4933342361061735,
+  "text": "49 %",
+  "math": "49\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullRaw": {
+  "value": -11.025760454099617,
+  "text": "−11.03",
+  "math": "-11.03",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullRawRel": {
+  "value": 0.29665774535744827,
+  "text": "29.7 %",
+  "math": "29.7\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullRo": {
+  "value": -11.988418023671263,
+  "text": "−11.99",
+  "math": "-11.99",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullRoRel": {
+  "value": 0.23524903361825125,
+  "text": "23.5 %",
+  "math": "23.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullRoSym": {
+  "value": -15.729013210938193,
+  "text": "−15.73",
+  "math": "-15.73",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullRoSymRel": {
+  "value": -0.003366585111173253,
+  "text": "−0.3 %",
+  "math": "-0.3\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullSym": {
+  "value": -14.437303657813306,
+  "text": "−14.44",
+  "math": "-14.44",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinFullSymRel": {
+  "value": 0.07903262111322608,
+  "text": "7.9 %",
+  "math": "7.9\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtCtf": {
+  "value": -14.969877835236966,
+  "text": "−14.97",
+  "math": "-14.97",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtCtfRel": {
+  "value": 0.04505927983912995,
+  "text": "4.5 %",
+  "math": "4.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtKept": {
+  "value": 0.58066026221032,
+  "text": "58 %",
+  "math": "58\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtRaw": {
+  "value": -11.988418023671262,
+  "text": "−11.99",
+  "math": "-11.99",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtRawRel": {
+  "value": 0.23524903361825136,
+  "text": "23.5 %",
+  "math": "23.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtRo": {
+  "value": -11.988418023671262,
+  "text": "−11.99",
+  "math": "-11.99",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtRoRel": {
+  "value": 0.23524903361825136,
+  "text": "23.5 %",
+  "math": "23.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtRoSym": {
+  "value": -14.969877835236966,
+  "text": "−14.97",
+  "math": "-14.97",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtRoSymRel": {
+  "value": 0.04505927983912995,
+  "text": "4.5 %",
+  "math": "4.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtSym": {
+  "value": -14.969877835236966,
+  "text": "−14.97",
+  "math": "-14.97",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinGtSymRel": {
+  "value": 0.04505927983912995,
+  "text": "4.5 %",
+  "math": "4.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoCtf": {
+  "value": -15.676237822087167,
+  "text": "−15.68",
+  "math": "-15.68",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoCtfRel": {
+  "value": -1.4730982761480387e-15,
+  "text": "0.0 %",
+  "math": "0.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoKept": {
+  "value": 0.7773009382411958,
+  "text": "78 %",
+  "math": "78\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoRaw": {
+  "value": -14.421011546948169,
+  "text": "−14.42",
+  "math": "-14.42",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoRawRel": {
+  "value": 0.0800719081570972,
+  "text": "8.0 %",
+  "math": "8.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoRo": {
+  "value": -15.676237822086867,
+  "text": "−15.68",
+  "math": "-15.68",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoRoRel": {
+  "value": 1.7677179313776465e-14,
+  "text": "0.0 %",
+  "math": "0.0\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoRoSym": {
+  "value": -16.93852756666781,
+  "text": "−16.94",
+  "math": "-16.94",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoRoSymRel": {
+  "value": -0.08052249263545573,
+  "text": "−8.1 %",
+  "math": "-8.1\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoSym": {
+  "value": -15.570734362351402,
+  "text": "−15.57",
+  "math": "-15.57",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbTwinRoSymRel": {
+  "value": 0.006730151770668583,
+  "text": "0.7 %",
+  "math": "0.7\\%",
   "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
   "quoted": false
  },
@@ -2988,6 +9134,83 @@
   "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
   "quoted": false
  },
+ "MxRvbZeroGtCtf": {
+  "value": -17.065888088408904,
+  "text": "−17.07",
+  "math": "-17.07",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtCtfRel": {
+  "value": 0.051895106199505124,
+  "text": "5.2 %",
+  "math": "5.2\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtKept": {
+  "value": 0.587473257729937,
+  "text": "59 %",
+  "math": "59\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtRaw": {
+  "value": -13.937269816933778,
+  "text": "−13.94",
+  "math": "-13.94",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtRawRel": {
+  "value": 0.22570723239256774,
+  "text": "22.6 %",
+  "math": "22.6\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtRo": {
+  "value": -13.937269816933778,
+  "text": "−13.94",
+  "math": "-13.94",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtRoRel": {
+  "value": 0.22570723239256774,
+  "text": "22.6 %",
+  "math": "22.6\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtRoSym": {
+  "value": -17.065888088408904,
+  "text": "−17.07",
+  "math": "-17.07",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtRoSymRel": {
+  "value": 0.051895106199505124,
+  "text": "5.2 %",
+  "math": "5.2\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtSym": {
+  "value": -17.065888088408904,
+  "text": "−17.07",
+  "math": "-17.07",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxRvbZeroGtSymRel": {
+  "value": 0.051895106199505124,
+  "text": "5.2 %",
+  "math": "5.2\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
  "MxRvbZeroRoCtf": {
   "value": -18.000000000000004,
   "text": "−18.00",
@@ -3063,6 +9286,188 @@
   "text": "0.8 %",
   "math": "0.8\\%",
   "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)",
+  "quoted": false
+ },
+ "MxTwHvaPtFullCtfRel": {
+  "value": 0.006153731707305078,
+  "text": "0.62 %",
+  "math": "0.62\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaPtFullRawRel": {
+  "value": -0.05504676797151443,
+  "text": "−5.50 %",
+  "math": "-5.50\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaPtGtCtfRel": {
+  "value": 0.006153731707305078,
+  "text": "0.62 %",
+  "math": "0.62\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaPtGtRawRel": {
+  "value": -0.047535557475592585,
+  "text": "−4.75 %",
+  "math": "-4.75\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaPtRoCtfRel": {
+  "value": -1.4930302410743428e-15,
+  "text": "0.00 %",
+  "math": "0.00\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaPtRoRawRel": {
+  "value": -0.00788882522702333,
+  "text": "−0.79 %",
+  "math": "-0.79\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaZeroFullCtfRel": {
+  "value": 0.012672613636673173,
+  "text": "1.27 %",
+  "math": "1.27\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaZeroFullRawRel": {
+  "value": -0.04999655095416107,
+  "text": "−5.00 %",
+  "math": "-5.00\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaZeroGtCtfRel": {
+  "value": 0.012672613636673173,
+  "text": "1.27 %",
+  "math": "1.27\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaZeroGtRawRel": {
+  "value": -0.047264920522577476,
+  "text": "−4.73 %",
+  "math": "-4.73\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaZeroRoCtfRel": {
+  "value": 2.5658487680225844e-15,
+  "text": "0.00 %",
+  "math": "0.00\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwHvaZeroRoRawRel": {
+  "value": -0.002679421234024797,
+  "text": "−0.27 %",
+  "math": "-0.27\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwMax": {
+  "value": 0.012672613636673173,
+  "text": "1.3 %",
+  "math": "1.3\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max |twin-rescaled bias|",
+  "quoted": false
+ },
+ "MxTwMin": {
+  "value": 0.005072183238119795,
+  "text": "0.5 %",
+  "math": "0.5\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): min |twin-rescaled bias|",
+  "quoted": false
+ },
+ "MxTwRvbPtFullCtfRel": {
+  "value": 0.005072183238119795,
+  "text": "0.51 %",
+  "math": "0.51\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbPtFullRawRel": {
+  "value": -0.0070672562519709945,
+  "text": "−0.71 %",
+  "math": "-0.71\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbPtGtCtfRel": {
+  "value": 0.005072183238119795,
+  "text": "0.51 %",
+  "math": "0.51\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbPtGtRawRel": {
+  "value": -0.013197950806576328,
+  "text": "−1.32 %",
+  "math": "-1.32\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbPtRoCtfRel": {
+  "value": 4.033693522241052e-15,
+  "text": "0.00 %",
+  "math": "0.00\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbPtRoRawRel": {
+  "value": 0.005666591249571516,
+  "text": "0.57 %",
+  "math": "0.57\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbZeroFullCtfRel": {
+  "value": 0.0071583777045592335,
+  "text": "0.72 %",
+  "math": "0.72\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbZeroFullRawRel": {
+  "value": -0.004843110055753208,
+  "text": "−0.48 %",
+  "math": "-0.48\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbZeroGtCtfRel": {
+  "value": 0.0071583777045592335,
+  "text": "0.72 %",
+  "math": "0.72\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbZeroGtRawRel": {
+  "value": -0.012477004469609991,
+  "text": "−1.25 %",
+  "math": "-1.25\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbZeroRoCtfRel": {
+  "value": 9.868649107779172e-16,
+  "text": "0.00 %",
+  "math": "0.00\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
+  "quoted": false
+ },
+ "MxTwRvbZeroRoRawRel": {
+  "value": 0.0073642333964182675,
+  "text": "0.74 %",
+  "math": "0.74\\%",
+  "source": "docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)",
   "quoted": false
  },
  "NoiseShots": {

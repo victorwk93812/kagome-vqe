@@ -192,7 +192,7 @@
 <!-- ============================== act VI: M2 ============================== -->
 <section>
   <p class="act">VI · milestone M2 · error mitigation</p>
-  <h2>Ten mitigation stacks at fixed parameters: two look accurate, three overshoot</h2>
+  <h2>First study: ten stacks at fixed parameters, two look accurate, three overshoot</h2>
   <img class="fig-img wide" src="media/m2_stacks.svg" alt="relative bias of every mitigation stack">
   <div class="fragment math-anchor">
     <span class="theorem-name">Every RVB/HVA state is a singlet.</span>
@@ -212,19 +212,44 @@
   <div class="fragment math-anchor">
     \[ \text{filter strips single flips}\ \Rightarrow\ E_{\mathrm{ro+sym}}\approx\sum_t c_t\langle P_t\rangle\!\prod_{q\in S_t}\!\frac{1}{1-e_0^{(q)}-e_1^{(q)}}:\quad \text{factor } {{MxOverFactor:m}}\ \text{(predicted } {{MxOverPredicted:m}}) \]
   </div>
-  <div class="fragment finding">Confirmed by the dev session; chosen stack withdrawn; main now corrects, then filters (56aadd3). Reruns pending.</div>
+  <div class="fragment finding">Confirmed by the dev session; stack withdrawn; main now corrects, then filters (56aadd3), and every stack is rerun with one error source at a time.</div>
   <aside class="notes">Infinite-shot computation: density matrix of the transpiled circuit, outcome distribution per basis without sampling, device readout channel applied analytically, estimators evaluated exactly (docsgen.physics.mitigation_exact). Reproduces the sampled means (HVA theta=0 full: {{MxHvaZeroFullRaw}}, {{MxHvaZeroFullRo}}, {{MxHvaZeroFullSym}}, {{MxHvaZeroFullRoSym}}). Readout correction alone is exactly unbiased under readout noise. Filtering first already removes every single-flip error to O(e^2); the per-qubit weights then still divide each two-body term by (1-e0-e1)^2, an over-correction of {{MxOverPct}}. Under full noise: {{MxOverFactor}} x {{MxHvaZeroFullSym}} = {{MxPredictFull}}, versus {{MxHvaZeroFullRoSym}} exact. The symmetry-only bias ({{MxHvaZeroFullSymRel}}) and the over-correction happen to match on FakeGuadalupeV2; less gate noise (M4) would push readings further below -18.</aside>
 </section>
 
 <section>
-  <h2>Mitigated runs find good parameters; readings below −18 are artefacts</h2>
-  <img class="fig-img wide" src="media/m2_vqe.svg" alt="mitigated optimisation traces">
+  <h2>Revised study: only readout → symmetry → twin is right on every error source</h2>
+  <img class="fig-img wide" src="media/m2b_sources.svg" alt="relative bias of every stack under full, readout-only and gate-only noise" style="max-height:380px">
+  <div class="tiles fragment">
+    <div class="tile"><span class="k">readout + symmetry, readout noise only</span><span class="v">{{MbHvaRoPtRoSymRel}}</span></div>
+    <div class="tile"><span class="k">readout + symmetry, gate noise only</span><span class="v">{{MbHvaGatesPtRoSymRel}}</span></div>
+    <div class="tile"><span class="k">+ twin, worst of all eight columns</span><span class="v accent">{{MbMaxRoSymTwin}}</span></div>
+  </div>
+  <div class="fragment math-anchor">
+    \[ \hat p = A^{-1}\tilde p = q\ \ \Rightarrow\ \ \text{correct, then filter} = \text{filtered gate-only energy; exact under readout noise} \]
+  </div>
+  <aside class="notes">results/m2b-*: corrected estimator (56aadd3), {{MbRepeats}} repeats, full noise at theta 0 and {{BoundTheta}}, readout-only and gate-only at {{BoundTheta}} (backend.noise). Readout + symmetry now shows its honest gate residual ({{MbHvaFullZeroRoSymRel}} full, theta 0; predicted {{MxHvaZeroFullCtfRel}} by the infinite-shot study before the rerun). Readout + ZNE fallback {{MbRoZneMin}}-{{MbRoZneMax}} with gate noise, {{MbShotsZne}} shots per energy. Symmetry + ZNE {{MbRoSymZneMin}} to {{MbRoSymZneMax}}: never combine. Twin without the filter overshoots on gate noise alone for HVA ({{MbHvaGatesPtTwinRel}}). Revised stack: {{MbShots}} shots per energy, {{MbSetupRoSymTwin}} one-off. Kept quasi-weight {{MbKeptMinRoSym}}-{{MbKeptMaxRoSym}} under gate noise.</aside>
+</section>
+
+<section>
+  <h2>Why the filter rescues the twin, and what is left</h2>
+  <img class="fig-img wide" src="media/m2_twin.svg" alt="damping factors of target and twin, and revised-stack bias" style="max-height:340px">
+  <div class="fragment math-anchor">
+    <span class="theorem-name">Rescaling error.</span>
+    \[ \frac{E_{\mathrm{mit}}-E_{\mathrm{ideal}}}{|E_{\mathrm{ideal}}|} = 1-\frac{D}{D_{\mathrm t}},\qquad D=\frac{E_{\mathrm{noisy}}}{E_{\mathrm{ideal}}}:\quad \text{damping spread (HVA) } {{MxDampSpreadHvaRaw:m}} \to {{MxDampSpreadHvaCtf:m}} \]
+  </div>
+  <div class="fragment finding">Infinite-shot limit of the revised stack: {{MxTwMin}}–{{MxTwMax}} under gate noise, 0 under readout noise. The m2b repeats shared one twin, so their spread understated the error; reruns with a fresh set-up per repeat are in progress (2116da4).</div>
+  <aside class="notes">Exact density-matrix computation extended to gate noise alone and to the twin parameters. Gate noise, infinite shots: HVA damping {{MxDampHvaZeroGtRaw}} / {{MxDampHvaPtGtRaw}} / twin {{MxDampHvaTwinGtRaw}} unfiltered, {{MxDampHvaZeroGtCtf}} / {{MxDampHvaPtGtCtf}} / {{MxDampHvaTwinGtCtf}} filtered. The dev session's hypothesis (post-filter residual damps singlet states near-uniformly) is supported, not proved: the mismatch shrinks but does not vanish, and the twin is damped slightly less, so a small positive bias remains. Sampled HVA theta 0: {{MbHvaFullZeroRoSymTwinRel}} ± {{MbHvaFullZeroRoSymTwinSeRel}} (reported SE incl. twin), spread only {{MbHvaFullZeroRoSymTwinSpread}}; the twin there was {{MbTwinHvaFullZeroFilt}} against exact {{MxHvaTwinFullCtf}}.</aside>
+</section>
+
+<section>
+  <h2>Revised-stack runs: good parameters, readings within error, none below −18</h2>
+  <img class="fig-img wide" src="media/m2b_vqe.svg" alt="optimisation traces with the revised stack">
   <table class="num fragment">
     <tr><th></th><th>re-measured final</th><th>noise-free energy of final params</th><th>total shots</th></tr>
-    <tr><td>HVA, plain SPSA</td><td>{{MvFinalHvaSpsa}} ± {{MvStdHvaSpsa}} ({{MvBelowHvaSpsa}} σ below −18)</td><td class="best">{{MvIdealHvaSpsa}}</td><td>{{MvShotsHvaSpsa}}</td></tr>
-    <tr><td>RVB, ADAM + parameter shift</td><td>{{MvFinalRvbPs}} ± {{MvStdRvbPs}}</td><td class="best">{{MvIdealRvbPs}}</td><td>{{MvShotsRvbPs}}</td></tr>
+    <tr><td>HVA, plain SPSA</td><td>{{MwFinalHvaSpsa}} ± {{MwStdHvaSpsa}}</td><td class="best">{{MwIdealHvaSpsa}}</td><td>{{MwShotsHvaSpsa}}</td></tr>
+    <tr><td>RVB, ADAM + parameter shift</td><td>{{MwFinalRvbPs}} ± {{MwStdRvbPs}}</td><td class="best">{{MwIdealRvbPs}}</td><td>{{MwShotsRvbPs}}</td></tr>
   </table>
-  <aside class="notes">configs/m2_mitigated_vqe.toml, readout + symmetry as in c9272e3 (filter first). Unmitigated the same runs end near {{PostFinalRvbAdam}}. The parameters are within {{MvIdealErrHvaSpsa}} (HVA) and {{MvIdealErrRvbPs}} (RVB) of the ground energy; the reading differs by the stack's bias. By the variational principle for mixed states nothing physical is below -18.</aside>
+  <aside class="notes">configs/m2_mitigated_vqe.toml with rescale twin = auto. Unmitigated the same runs end near {{PostFinalRvbAdam}}. Parameters within {{MwIdealErrHvaSpsa}} (HVA) and {{MwIdealErrRvbPs}} (RVB) of the ground energy. The first study's runs (filter first) read HVA {{MvFinalHvaSpsa}}, {{MvBelowHvaSpsa}} standard errors below -18: the over-correction, not a better state.</aside>
 </section>
 
 <!-- ============================== closing ============================== -->
@@ -234,13 +259,13 @@
     <tr><th>milestone</th><th>question</th><th>answer so far</th><th>status</th></tr>
     <tr><td>M0</td><td>Are the noisy numbers real?</td><td>Not before M0. Floor {{PostFinalMin}} to {{PostFinalMax}}: a bias.</td><td>done</td></tr>
     <tr><td>M1</td><td>Most precision per shot?</td><td>RVB: ADAM + shift ({{MIdealRvbPs}}). HVA: SPSA ({{MIdealHvaSpsa}}).</td><td>done</td></tr>
-    <tr><td>M2</td><td>How much bias can mitigation remove?</td><td>Looked like {{MtHvaZeroRoSymRel}}, but by cancellation; consistent correction leaves {{MxHvaZeroFullCtfRel}}.</td><td>reopened</td></tr>
+    <tr><td>M2</td><td>How much bias can mitigation remove?</td><td>Readout → symmetry → twin: ≤ {{MbMaxRoSymTwin}} sampled, {{MxTwMin}}–{{MxTwMax}} limit, per error source. First stack: a cancellation.</td><td>done</td></tr>
     <tr><td>M3</td><td>Is the benchmark testing anything?</td><td>Barely: exact at zero parameters.</td><td>planned</td></tr>
     <tr><td>M4</td><td>How far can depth fall?</td><td>Free step: bind parameters, {{CxHva}} → {{BoundCxHva}} CX.</td><td>planned</td></tr>
     <tr><td>M5</td><td>Can subspace methods remove the rest?</td><td>—</td><td>planned</td></tr>
   </table>
   <div class="fragment finding" style="max-width:1100px;margin:0.6em auto 0">
-    Open: about {{MxHvaZeroFullCtfRel}} gate residual after consistent readout + symmetry (M2 reruns, M4); hardware checks H0/H1 deferred; the instance is easy, so conclusions need M3.
+    Open: {{MxTwMin}}–{{MxTwMax}} residual from unequal twin damping; correct-then-filter and the auto twin stop near 20 qubits (M3); hardware checks H0/H1 deferred; the instance is easy, so conclusions need M3.
   </div>
 </section>
 

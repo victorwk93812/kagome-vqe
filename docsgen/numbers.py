@@ -16,9 +16,12 @@ from __future__ import annotations
 import json
 import math
 import re
+from collections.abc import Callable
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Literal
+from typing import Any, Literal
+
+import numpy as np
 
 from docsgen import physics, runs
 from docsgen.paths import REPORT_TABLES, ROOT, SLIDES_DATA
@@ -63,6 +66,13 @@ STACK_KEYS = {
     "readout+symmetry+twin": "RoSymTwin",
 }
 POINT_KEYS = {"m2-evaluation-0": "Zero", "m2-evaluation-0p3": "Pt"}
+# M2 reruns with the corrected estimator (56aadd3), one error source at a time
+SOURCE_KEYS = {
+    "m2b-evaluation-0": "FullZero",
+    "m2b-evaluation-0p3": "FullPt",
+    "m2b_readout-evaluation-0p3": "RoPt",
+    "m2b_gates-evaluation-0p3": "GatesPt",
+}
 EXACT_MODE_KEYS = {
     "raw": "Raw",
     "readout": "Ro",
@@ -165,7 +175,9 @@ def collect(*, recompute: bool = False) -> Registry:
     _m0(reg)
     _m1(reg)
     _m2_fixed_point(reg)
-    _m2_vqe(reg)
+    _m2_sources(reg)
+    _m2_vqe(reg, "m2_vqe", "Mv")
+    _m2_vqe(reg, "m2b_vqe", "Mw")
     _m2_exact(reg, recompute=recompute)
     return reg
 
@@ -437,37 +449,62 @@ def _stack_label(row: dict[str, object]) -> str:
     )
 
 
+def _stack_numbers(
+    reg: Registry, name: str, prefix: Callable[[str], str]
+) -> dict[str, dict[str, Any]]:
+    """Mean, bias, spread and kept fraction of every stack in one fixed-point evaluation."""
+    rows = runs.evaluation(name)
+    src = f"results/{name}/evaluation.json"
+    for ansatz in ("hva", "rvb"):
+        a = ANSATZ_KEYS[ansatz]
+        for stack in STACKS:
+            label = "raw" if stack == "none" else stack.replace("+", "_")
+            row = rows[f"{ansatz}_{label}"]
+            if _stack_label(row) != stack or row["mitigation"] != stack:
+                msg = f"{src}: row {row['name']} is not stack {stack}"
+                raise ValueError(msg)
+            k = f"{prefix(a)}{STACK_KEYS[stack]}"
+            reg.add(k, row["mean"], decimals=2, source=src)
+            reg.add(f"{k}Bias", row["bias"], decimals=2, source=src)
+            reg.add(
+                f"{k}Rel",
+                row["bias"] / abs(row["ideal_energy"]),
+                kind="pct",
+                decimals=2,
+                source=src,
+            )
+            reg.add(f"{k}Spread", row["spread"], decimals=3, source=src)
+            reg.add(
+                f"{k}Below",
+                (row["exact_energy"] - row["mean"]) / (row["spread"] / math.sqrt(row["repeats"])),
+                decimals=1,
+                source=f"{src}: (E0 - mean) / (spread / sqrt(repeats))",
+            )
+            reg.add(
+                f"{k}Se",
+                float(np.mean(row["reported_stds"])),
+                decimals=3,
+                source=f"{src}: mean reported standard error per energy",
+            )
+            reg.add(
+                f"{k}SeRel",
+                float(np.mean(row["reported_stds"])) / abs(row["ideal_energy"]),
+                kind="pct",
+                decimals=2,
+                source=f"{src}: mean reported standard error / |noise-free energy|",
+            )
+            if row.get("kept_fraction") is not None:
+                reg.add(f"{k}Kept", row["kept_fraction"], kind="pct", decimals=0, source=src)
+    return rows
+
+
 def _m2_fixed_point(reg: Registry) -> None:
     """Each mitigation stack at fixed parameters (``kagome-vqe benchmark --point``)."""
     for name, p in POINT_KEYS.items():
-        rows = runs.evaluation(name)
-        src = f"results/{name}/evaluation.json"
+        rows = _stack_numbers(reg, name, lambda a, p=p: f"Mt{a}{p}")
         for ansatz in ("hva", "rvb"):
             a = ANSATZ_KEYS[ansatz]
-            for stack in STACKS:
-                label = "raw" if stack == "none" else stack.replace("+", "_")
-                row = rows[f"{ansatz}_{label}"]
-                if _stack_label(row) != stack or row["mitigation"] != stack:
-                    msg = f"{src}: row {row['name']} is not stack {stack}"
-                    raise ValueError(msg)
-                k = f"Mt{a}{p}{STACK_KEYS[stack]}"
-                reg.add(k, row["mean"], decimals=2, source=src)
-                reg.add(f"{k}Bias", row["bias"], decimals=2, source=src)
-                reg.add(
-                    f"{k}Rel",
-                    row["bias"] / abs(row["ideal_energy"]),
-                    kind="pct",
-                    decimals=2,
-                    source=src,
-                )
-                reg.add(f"{k}Spread", row["spread"], decimals=3, source=src)
-                reg.add(
-                    f"{k}Below",
-                    (row["exact_energy"] - row["mean"])
-                    / (row["spread"] / math.sqrt(row["repeats"])),
-                    decimals=1,
-                    source=f"{src}: (E0 - mean) / (spread / sqrt(repeats))",
-                )
+            src = f"results/{name}/evaluation.json"
             reg.add(f"MtIdeal{a}{p}", rows[f"{ansatz}_raw"]["ideal_energy"], decimals=2, source=src)
         reg.add(f"MtRepeats{p}", rows["hva_raw"]["repeats"], kind="int", source=src)
     rows = runs.evaluation("m2-evaluation-0")
@@ -505,28 +542,120 @@ def _m2_fixed_point(reg: Registry) -> None:
         )
 
 
-def _m2_vqe(reg: Registry) -> None:
-    """Full optimisations with readout correction plus symmetry filtering."""
-    vqe = runs.by_name("m2_vqe")
-    src = "results/m2_vqe-summary"
+def _m2_sources(reg: Registry) -> None:
+    """Reruns with correct-then-filter, under full, readout-only and gate-only noise."""
+    rows: dict[str, dict[str, dict[str, Any]]] = {}
+    for name, sk in SOURCE_KEYS.items():
+        rows[name] = _stack_numbers(reg, name, lambda a, sk=sk: f"Mb{a}{sk}")
+        src = f"results/{name}/evaluation.json"
+        for ansatz in ("hva", "rvb"):
+            a = ANSATZ_KEYS[ansatz]
+            reg.add(
+                f"MbIdeal{a}{sk}",
+                rows[name][f"{ansatz}_raw"]["ideal_energy"],
+                decimals=2,
+                source=src,
+            )
+            for stack, st in (("twin", "Raw"), ("readout_symmetry_twin", "Filt")):
+                twin = rows[name][f"{ansatz}_{stack}"]["estimator"]
+                reg.add(f"MbTwin{a}{sk}{st}", twin["noisy_twin_energy"], decimals=2, source=src)
+            order = rows[name][f"{ansatz}_readout_symmetry"]["estimator"]["readout_symmetry_order"]
+            if order != "correct_then_filter":
+                msg = f"{src}: readout + symmetry ran as {order!r}, expected correct_then_filter"
+                raise ValueError(msg)
+    src = "results/m2b-*/evaluation.json"
+    full = rows["m2b-evaluation-0"]
+    reg.add("MbRepeats", full["hva_raw"]["repeats"], kind="int", source=src)
+    reg.add("MbShots", full["hva_raw"]["shots_per_evaluation"], kind="int", source=src)
+    reg.add("MbShotsZne", full["hva_zne"]["shots_per_evaluation"], kind="int", source=src)
+    for label, key in (
+        ("readout", "Ro"),
+        ("readout_zne", "RoZne"),
+        ("twin", "Twin"),
+        ("readout_symmetry_twin", "RoSymTwin"),
+    ):
+        reg.add(f"MbSetup{key}", full[f"hva_{label}"]["setup_shots"], kind="int", source=src)
+    reg.add(
+        "MbTwinShots",
+        full["hva_twin"]["estimator"]["twin_shots"],
+        kind="int",
+        source=f"{src}: shots per basis of the twin measurement",
+    )
+    chosen = [
+        abs(reg[f"Mb{a}{sk}RoSymTwinRel"].value)
+        for a in ANSATZ_KEYS.values()
+        for sk in SOURCE_KEYS.values()
+    ]
+    reg.add("MbMaxRoSymTwin", max(chosen), kind="pct", decimals=2, source=f"{src}: max |rel. bias|")
+    for st in ("RoZne", "RoSymZne"):
+        vals = [
+            reg[f"Mb{a}{sk}{st}Rel"].value
+            for a in ANSATZ_KEYS.values()
+            for sk in SOURCE_KEYS.values()
+            if sk != "RoPt"  # no gate noise there, so ZNE has nothing to extrapolate
+        ]
+        note = f"{src}: rel. bias over the settings with gate noise"
+        reg.add(f"Mb{st}Min", min(vals), kind="pct", decimals=1, source=f"{note} (min)")
+        reg.add(f"Mb{st}Max", max(vals), kind="pct", decimals=1, source=f"{note} (max)")
+    for stack, st in (("readout_symmetry", "RoSym"), ("symmetry", "Sym")):
+        kept = [
+            rows[name][f"{ansatz}_{stack}"]["kept_fraction"]
+            for name in ("m2b-evaluation-0", "m2b-evaluation-0p3", "m2b_gates-evaluation-0p3")
+            for ansatz in ("hva", "rvb")
+        ]
+        reg.add(f"MbKeptMin{st}", min(kept), kind="pct", decimals=0, source=src)
+        reg.add(f"MbKeptMax{st}", max(kept), kind="pct", decimals=0, source=src)
+    ratios = [
+        reg[f"Mb{a}{sk}RoSymSe"].value / reg[f"Mb{a}{sk}RoSymSpread"].value
+        for a in ANSATZ_KEYS.values()
+        for sk in SOURCE_KEYS.values()
+    ]
+    reg.add("MbSeRatioMin", min(ratios), decimals=1, source=f"{src}: bootstrap SE / spread")
+    reg.add("MbSeRatioMax", max(ratios), decimals=1, source=f"{src}: bootstrap SE / spread")
+    r = full["hva_raw"]["repeats"]
+    reg.add(
+        "MbSpreadRelErr",
+        1 / math.sqrt(2 * (r - 1)),
+        kind="pct",
+        decimals=0,
+        source=f"1 / sqrt(2 (R - 1)), relative error of a standard deviation from R = {r}",
+    )
+
+
+def _m2_vqe(reg: Registry, name: str, prefix: str) -> None:
+    """Full optimisations with a mitigation stack (``Mv``: first study, ``Mw``: revised)."""
+    vqe = runs.by_name(name)
+    src = f"results/{name}-summary"
     for combo, key in (("hva_spsa", "HvaSpsa"), ("rvb_adam_parameter_shift", "RvbPs")):
         row = vqe[combo]
-        reg.add(f"MvFinal{key}", row["final_energy"], decimals=3, source=src)
-        reg.add(f"MvStd{key}", row["final_std"], decimals=3, source=src)
-        reg.add(f"MvErr{key}", row["final_relative_error"], kind="pct", decimals=2, source=src)
-        reg.add(f"MvIdeal{key}", row["ideal_energy"], decimals=3, source=src)
-        reg.add(f"MvIdealErr{key}", row["ideal_relative_error"], kind="pct", decimals=2, source=src)
-        reg.add(f"MvShots{key}", row["total_shots"], kind="int", source=src)
-        reg.add(f"MvNfev{key}", row["nfev"], kind="int", source=src)
+        reg.add(f"{prefix}Final{key}", row["final_energy"], decimals=3, source=src)
+        reg.add(f"{prefix}Std{key}", row["final_std"], decimals=3, source=src)
         reg.add(
-            f"MvBelow{key}",
+            f"{prefix}Err{key}", row["final_relative_error"], kind="pct", decimals=2, source=src
+        )
+        reg.add(f"{prefix}Ideal{key}", row["ideal_energy"], decimals=3, source=src)
+        reg.add(
+            f"{prefix}IdealErr{key}",
+            row["ideal_relative_error"],
+            kind="pct",
+            decimals=2,
+            source=src,
+        )
+        reg.add(f"{prefix}Shots{key}", row["total_shots"], kind="int", source=src)
+        reg.add(f"{prefix}Nfev{key}", row["nfev"], kind="int", source=src)
+        reg.add(
+            f"{prefix}Below{key}",
             (row["exact_energy"] - row["final_energy"]) / row["final_std"],
             decimals=1,
             source=f"{src}: (E0 - final) / final_std",
         )
         run = load_run(ROOT / row["path"])
-        reg.add(f"MvIters{key}", int(run.config.optimizer.maxiter), kind="int", source=row["path"])
-        reg.add(f"MvShotsPer{key}", int(run.config.backend.shots), kind="int", source=row["path"])
+        reg.add(
+            f"{prefix}Iters{key}", int(run.config.optimizer.maxiter), kind="int", source=row["path"]
+        )
+        reg.add(
+            f"{prefix}ShotsPer{key}", int(run.config.backend.shots), kind="int", source=row["path"]
+        )
 
 
 def _m2_exact(reg: Registry, *, recompute: bool) -> None:
@@ -535,10 +664,12 @@ def _m2_exact(reg: Registry, *, recompute: bool) -> None:
     src = "docsgen.physics.mitigation_exact (cache/mitigation_exact.json)"
     for ansatz in ("hva", "rvb"):
         a = ANSATZ_KEYS[ansatz]
-        for theta, p in ((0.0, "Zero"), (0.3, "Pt")):
-            exact = ex["exact"][f"{ansatz}_{theta}"]
-            for noise, n in (("full", "Full"), ("readout_only", "Ro")):
-                key = f"{ansatz}_{theta}_{noise}"
+        for point, p in ((0.0, "Zero"), (0.3, "Pt"), ("twin", "Twin")):
+            exact = ex["exact"][f"{ansatz}_{point}"]
+            if point == "twin":
+                reg.add(f"MxIdeal{a}Twin", exact, decimals=2, source=src)
+            for noise, n in (("full", "Full"), ("readout_only", "Ro"), ("gates_only", "Gt")):
+                key = f"{ansatz}_{point}_{noise}"
                 for mode, m in EXACT_MODE_KEYS.items():
                     e = ex["energies"][key][mode]
                     reg.add(f"Mx{a}{p}{n}{m}", e, decimals=2, source=src)
@@ -550,6 +681,55 @@ def _m2_exact(reg: Registry, *, recompute: bool) -> None:
                         source=src,
                     )
                 reg.add(f"Mx{a}{p}{n}Kept", ex["kept"][key], kind="pct", decimals=0, source=src)
+                for mode, m in (("raw", "Raw"), ("correct_then_filter", "Ctf")):
+                    reg.add(
+                        f"MxDamp{a}{p}{n}{m}",
+                        ex["energies"][key][mode] / exact,
+                        decimals=3,
+                        source=f"{src}: noisy / noise-free energy",
+                    )
+        # twin rescaling in the infinite-shot limit: what the chosen stack converges to
+        twin = ex["exact"][f"{ansatz}_twin"]
+        for point, p in ((0.0, "Zero"), (0.3, "Pt")):
+            exact = ex["exact"][f"{ansatz}_{point}"]
+            for noise, n in (("full", "Full"), ("readout_only", "Ro"), ("gates_only", "Gt")):
+                for mode, m in (("raw", "Raw"), ("correct_then_filter", "Ctf")):
+                    target = ex["energies"][f"{ansatz}_{point}_{noise}"][mode]
+                    noisy_twin = ex["energies"][f"{ansatz}_twin_{noise}"][mode]
+                    e = target * twin / noisy_twin
+                    reg.add(
+                        f"MxTw{a}{p}{n}{m}Rel",
+                        (e - exact) / abs(exact),
+                        kind="pct",
+                        decimals=2,
+                        source=f"{src}: E(target) x E_ideal(twin) / E(twin)",
+                    )
+    for a in ANSATZ_KEYS.values():
+        for m in ("Raw", "Ctf"):
+            d = [reg[f"MxDamp{a}{p}Gt{m}"].value for p in ("Zero", "Pt", "Twin")]
+            reg.add(
+                f"MxDampSpread{a}{m}",
+                max(d) / min(d) - 1,
+                kind="pct",
+                decimals=1,
+                source=f"{src}: max/min - 1 of the damping over target and twin, gate noise",
+            )
+    sampled = runs.evaluation("m2b-evaluation-0")["hva_readout_symmetry_twin"]["estimator"]
+    reg.add(
+        "MbTwinExcessHvaFullZero",
+        ex["energies"]["hva_twin_full"]["correct_then_filter"] / sampled["noisy_twin_energy"] - 1,
+        kind="pct",
+        decimals=1,
+        source=f"{src} and results/m2b-evaluation-0: exact / sampled noisy twin energy - 1",
+    )
+    tw = [
+        abs(reg[f"MxTw{a}{p}{n}CtfRel"].value)
+        for a in ANSATZ_KEYS.values()
+        for p in ("Zero", "Pt")
+        for n in ("Full", "Gt")
+    ]
+    reg.add("MxTwMin", min(tw), kind="pct", decimals=1, source=f"{src}: min |twin-rescaled bias|")
+    reg.add("MxTwMax", max(tw), kind="pct", decimals=1, source=f"{src}: max |twin-rescaled bias|")
     # leading-order over-correction factor: filtered value times prod 1/(1 - e0 - e1) per pair
     k = ex["energies"]["hva_0.0_readout_only"]
     reg.add(

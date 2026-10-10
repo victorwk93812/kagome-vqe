@@ -266,3 +266,87 @@ def test_m2_vqe_numbers(registry: numbers.Registry) -> None:
     assert registry["MtShotsZne"].value == 36864
     assert registry["MtSetupRo"].value == 32768
     assert registry["MtSetupRoZne"].value == 98304
+
+
+def test_correct_then_filter_sees_only_gate_noise() -> None:
+    """Proposition ctf: exact under readout noise; full noise gives the gate-only value."""
+    ex = physics.mitigation_exact()
+    for ansatz in ("hva", "rvb"):
+        for point in ex["points"]:
+            exact = ex["exact"][f"{ansatz}_{point}"]
+            ro = ex["energies"][f"{ansatz}_{point}_readout_only"]["correct_then_filter"]
+            full = ex["energies"][f"{ansatz}_{point}_full"]["correct_then_filter"]
+            gates = ex["energies"][f"{ansatz}_{point}_gates_only"]["correct_then_filter"]
+            assert ro == pytest.approx(exact, abs=1e-9)
+            assert full == pytest.approx(gates, abs=1e-9)
+
+
+def test_twin_bias_is_one_minus_damping_ratio(registry: numbers.Registry) -> None:
+    """Proposition twinerr, evaluated on the registry's own damping factors."""
+    for a in ("Hva", "Rvb"):
+        for p in ("Zero", "Pt"):
+            for n in ("Full", "Gt", "Ro"):
+                for m in ("Raw", "Ctf"):
+                    d = registry[f"MxDamp{a}{p}{n}{m}"].value
+                    dt = registry[f"MxDamp{a}Twin{n}{m}"].value
+                    assert registry[f"MxTw{a}{p}{n}{m}Rel"].value == pytest.approx(1 - d / dt)
+
+
+@needs_results
+def test_exact_study_predicts_corrected_reruns() -> None:
+    """The m2b readout + symmetry means agree with the infinite-shot values (4 standard errors)."""
+    from docsgen import runs
+
+    ex = physics.mitigation_exact()
+    settings = {
+        "m2b-evaluation-0": (0.0, "full"),
+        "m2b-evaluation-0p3": (0.3, "full"),
+        "m2b_readout-evaluation-0p3": (0.3, "readout_only"),
+        "m2b_gates-evaluation-0p3": (0.3, "gates_only"),
+    }
+    for name, (point, noise) in settings.items():
+        rows = runs.evaluation(name)
+        for ansatz in ("hva", "rvb"):
+            for label, mode in (
+                ("raw", "raw"),
+                ("symmetry", "symmetry"),
+                ("readout_symmetry", "correct_then_filter"),
+            ):
+                row = rows[f"{ansatz}_{label}"]
+                assert row["point"] == [point, point] or np.allclose(row["point"], point)
+                sem = row["spread"] / np.sqrt(row["repeats"])
+                exact = ex["energies"][f"{ansatz}_{point}_{noise}"][mode]
+                assert abs(row["mean"] - exact) < 4 * sem, (name, ansatz, label)
+
+
+@needs_results
+def test_revised_stack_within_reported_error_of_its_limit(registry: numbers.Registry) -> None:
+    """Sampled readout + symmetry + twin vs the infinite-shot limit, within 2 reported errors."""
+    exact_key = {"FullZero": ("Zero", "Full"), "FullPt": ("Pt", "Full"),
+                 "RoPt": ("Pt", "Ro"), "GatesPt": ("Pt", "Gt")}  # fmt: skip
+    for a in ("Hva", "Rvb"):
+        for sk, (p, n) in exact_key.items():
+            sampled = registry[f"Mb{a}{sk}RoSymTwinRel"].value
+            se = registry[f"Mb{a}{sk}RoSymTwinSeRel"].value
+            limit = registry[f"MxTw{a}{p}{n}CtfRel"].value
+            assert abs(sampled - limit) < 2 * se, (a, sk)
+    assert registry["MbMaxRoSymTwin"].value < 0.005
+    assert 0.004 < registry["MxTwMin"].value < registry["MxTwMax"].value < 0.014
+
+
+@needs_results
+def test_m2b_noise_settings_are_what_the_report_says() -> None:
+    from docsgen import runs
+
+    tags = {
+        "m2b-evaluation-0": "",
+        "m2b-evaluation-0p3": "",
+        "m2b_readout-evaluation-0p3": "[readout noise]",
+        "m2b_gates-evaluation-0p3": "[gates noise]",
+    }
+    for name, tag in tags.items():
+        for row in runs.evaluation(name).values():
+            assert row["backend"] == f"aer_noisy:FakeGuadalupeV2{tag}"
+            assert row["repeats"] == 8
+            sem = row["spread"] / np.sqrt(row["repeats"])
+            assert row["below_ground"] == (row["exact_energy"] - row["mean"] > 2 * sem)

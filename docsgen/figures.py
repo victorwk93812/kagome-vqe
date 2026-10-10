@@ -514,9 +514,187 @@ def fig_m2_exact() -> Figure:
     return fig
 
 
-def fig_m2_vqe() -> Figure:
+SOURCE_MARKERS = {
+    # setting key -> (legend label, marker, filled)
+    "FullZero": (r"full noise, $\theta = 0$", "o", True),
+    "FullPt": (r"full noise, $\theta = 0.3$", "s", False),
+    "RoPt": (r"readout only, $\theta = 0.3$", "^", False),
+    "GatesPt": (r"gates only, $\theta = 0.3$", "D", True),
+}
+REVISED_STACK = "readout+symmetry+twin"
+
+
+def fig_m2b_sources() -> Figure:
+    """Relative bias of every stack with the corrected estimator, one marker per noise source."""
+    from docsgen.numbers import SOURCE_KEYS, STACKS
+
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.6), sharey=True, sharex=True)
+    offsets = (0.27, 0.09, -0.09, -0.27)
+    for ax, ansatz in zip(axes, ("hva", "rvb"), strict=True):
+        color = ANSATZ_COLORS[ansatz]
+        chosen = len(STACKS) - 1 - STACKS.index(REVISED_STACK)
+        ax.axhspan(chosen - 0.45, chosen + 0.45, color=style.ACCENT, alpha=0.08, lw=0)
+        ax.axvline(0, color=style.INK_2, lw=1.0)
+        for off, (name, sk) in zip(offsets, SOURCE_KEYS.items(), strict=True):
+            rows = runs.evaluation(name)
+            _, marker, filled = SOURCE_MARKERS[sk]
+            for i, stack in enumerate(STACKS):
+                label = "raw" if stack == "none" else stack.replace("+", "_")
+                row = rows[f"{ansatz}_{label}"]
+                ideal = abs(row["ideal_energy"])
+                rel = 100 * row["bias"] / ideal
+                sem = 100 * row["spread"] / np.sqrt(row["repeats"]) / ideal
+                y = len(STACKS) - 1 - i + off
+                ax.errorbar(rel, y, xerr=2 * sem, color=color, lw=1.1, capsize=0, zorder=2)
+                ax.scatter(
+                    [rel],
+                    [y],
+                    s=34,
+                    marker=marker,
+                    facecolor=color if filled else "white",
+                    edgecolor=style.ACCENT if row["below_ground"] else color,
+                    linewidth=2.0 if row["below_ground"] else 1.3,
+                    zorder=3,
+                )
+        ax.set_yticks(range(len(STACKS)), [STACK_LABELS[s] for s in reversed(STACKS)])
+        ax.set_xlabel("relative bias of the mean (%)")
+        ax.set_title(ansatz.upper())
+        ax.grid(axis="y", visible=False)
+    handles = [
+        plt.Line2D(
+            [],
+            [],
+            ls="",
+            marker=marker,
+            mfc=style.INK_2 if filled else "white",
+            mec=style.INK_2,
+            label=label,
+        )
+        for label, marker, filled in SOURCE_MARKERS.values()
+    ]
+    handles.append(
+        plt.Line2D(
+            [], [], ls="", marker="o", mfc="white", mec=style.ACCENT, mew=2.0, label="below $-18$"
+        )
+    )
+    fig.legend(handles=handles, loc="lower center", ncol=5, bbox_to_anchor=(0.5, -0.01))
+    fig.tight_layout(rect=(0, 0.07, 1, 1))
+    return fig
+
+
+def fig_m2_twin() -> Figure:
+    """Why the filter rescues the twin, and where the revised stack converges."""
+    from docsgen.numbers import ANSATZ_KEYS, SOURCE_KEYS, collect
+
+    reg = collect()
+    fig, (left, right) = plt.subplots(1, 2, figsize=(11, 3.9))
+    points = (
+        ("Zero", r"target $\theta=0$", "o"),
+        ("Pt", r"target $\theta=0.3$", "s"),
+        ("Twin", "twin", "*"),
+    )
+    for row, (ansatz, a) in enumerate(ANSATZ_KEYS.items()):
+        color = ANSATZ_COLORS[ansatz]
+        for col, m in enumerate(("Raw", "Ctf")):
+            y = 3 - (2 * col + row)
+            vals = [reg[f"MxDamp{a}{p}Gt{m}"].value for p, _, _ in points]
+            left.plot(
+                [min(vals), max(vals)], [y, y], color=color, lw=3, alpha=0.3, solid_capstyle="round"
+            )
+            for (_, _, marker), v in zip(points, vals, strict=True):
+                left.scatter(
+                    [v],
+                    [y],
+                    marker=marker,
+                    s=90 if marker == "*" else 40,
+                    color="white" if marker == "s" else color,
+                    edgecolor=color,
+                    lw=1.3,
+                    zorder=3,
+                )
+            spread = 100 * (max(vals) / min(vals) - 1)
+            left.annotate(
+                f"{spread:.1f} %",
+                (max(vals), y),
+                xytext=(8, -3),
+                textcoords="offset points",
+                fontsize=8.5,
+                color=style.INK_2,
+            )
+    left.set_yticks([3, 2, 1, 0], ["HVA, none", "RVB, none", "HVA, filtered", "RVB, filtered"])
+    left.set_xlabel(r"damping $E_{\mathrm{noisy}}/E_{\mathrm{ideal}}$, gate noise, infinite shots")
+    left.set_xlim(0.72, 1.0)
+    left.set_ylim(-0.6, 3.6)
+    left.grid(axis="y", visible=False)
+    left.set_title("rescaling needs equal damping")
+    left.legend(
+        handles=[
+            plt.Line2D(
+                [],
+                [],
+                ls="",
+                marker=mk,
+                mfc="white" if mk == "s" else style.INK_2,
+                mec=style.INK_2,
+                ms=9 if mk == "*" else 6,
+                label=lab,
+            )
+            for _, lab, mk in points
+        ],
+        loc="upper center",
+        fontsize=8,
+    )
+
+    exact_key = {
+        "FullZero": ("Zero", "Full"),
+        "FullPt": ("Pt", "Full"),
+        "RoPt": ("Pt", "Ro"),
+        "GatesPt": ("Pt", "Gt"),
+    }
+    right.axvline(0, color=style.INK_2, lw=1.0)
+    labels = []
+    for i, sk in enumerate(SOURCE_KEYS.values()):
+        p, n = exact_key[sk]
+        labels.append(SOURCE_MARKERS[sk][0])
+        for j, (ansatz, a) in enumerate(ANSATZ_KEYS.items()):
+            color = ANSATZ_COLORS[ansatz]
+            y = len(SOURCE_KEYS) - 1 - i + (0.14 if j == 0 else -0.14)
+            sampled = 100 * reg[f"Mb{a}{sk}RoSymTwinRel"].value
+            se = 100 * reg[f"Mb{a}{sk}RoSymTwinSeRel"].value
+            exact = 100 * reg[f"MxTw{a}{p}{n}CtfRel"].value
+            right.errorbar(sampled, y, xerr=2 * se, fmt="o", color=color, ms=5, lw=1.1)
+            right.scatter([exact], [y], marker="|", s=160, color=style.ACCENT, lw=2.2, zorder=4)
+    right.set_yticks(range(len(labels)), list(reversed(labels)))
+    right.set_xlabel("relative bias of readout + symmetry + twin (%)")
+    right.set_title("revised stack: sampled vs infinite shots")
+    right.grid(axis="y", visible=False)
+    right.legend(
+        handles=[
+            plt.Line2D([], [], ls="", marker="o", color=ANSATZ_COLORS["hva"], label="HVA sampled"),
+            plt.Line2D([], [], ls="", marker="o", color=ANSATZ_COLORS["rvb"], label="RVB sampled"),
+            plt.Line2D(
+                [],
+                [],
+                ls="",
+                marker="|",
+                color=style.ACCENT,
+                ms=12,
+                mew=2.2,
+                label="infinite shots",
+            ),
+        ],
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.17),
+        ncol=3,
+        fontsize=8,
+    )
+    fig.tight_layout()
+    return fig
+
+
+def fig_m2_vqe(name: str = "m2_vqe") -> Figure:
     """Mitigated optimisations: every energy evaluated, and the noise-free energy of the iterate."""
-    loaded = {r.name.split("-", 1)[1]: r for r in runs.loaded_runs("m2_vqe")}
+    loaded = {r.name.split("-", 1)[1]: r for r in runs.loaded_runs(name)}
     floor = runs.by_name("fake_guadalupe_m0")
     titles = {
         "hva_spsa": ("hva", "HVA, plain SPSA", "hva_spsa"),
@@ -569,7 +747,7 @@ def fig_m2_vqe() -> Figure:
         ax.set_xlabel("iteration")
     axes[0].set_ylabel("energy")
     axes[0].set_ylim(-19.2, -12.0)
-    axes[1].legend(loc="center right", fontsize=7.5)
+    axes[0].legend(loc="center right", fontsize=7.5)
     fig.tight_layout()
     return fig
 
@@ -637,6 +815,9 @@ ALL: dict[str, Callable[[], Figure]] = {
     "m2_stacks": fig_m2_stacks,
     "m2_exact": fig_m2_exact,
     "m2_vqe": fig_m2_vqe,
+    "m2b_sources": fig_m2b_sources,
+    "m2_twin": fig_m2_twin,
+    "m2b_vqe": lambda: fig_m2_vqe("m2b_vqe"),
 }
 
 

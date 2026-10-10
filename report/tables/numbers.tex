@@ -104,106 +104,783 @@
 \providecommand{\VMShotsRvbHyb}{\ensuremath{12288}}  % results/20261010T091144Z-m1_ideal-rvb_adam_spsa-s1
 \providecommand{\VMShotsRvbPs}{\ensuremath{1024}}  % results/20261010T091232Z-m1_ideal-rvb_adam_parameter_shift-s1
 \providecommand{\VMShotsRvbSpsa}{\ensuremath{12288}}  % results/20261010T092029Z-m1_ideal-rvb_spsa-s1
+\providecommand{\VMbHvaFullPtRaw}{\ensuremath{-11.90}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRawBelow}{\ensuremath{-298.2}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtRawBias}{\ensuremath{4.76}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRawRel}{\ensuremath{28.56\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRawSe}{\ensuremath{0.784}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtRawSeRel}{\ensuremath{4.70\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtRawSpread}{\ensuremath{0.058}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRo}{\ensuremath{-12.98}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoBelow}{\ensuremath{-161.9}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtRoBias}{\ensuremath{3.68}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoRel}{\ensuremath{22.07\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSe}{\ensuremath{0.083}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtRoSeRel}{\ensuremath{0.50\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtRoSpread}{\ensuremath{0.088}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSym}{\ensuremath{-15.98}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymBelow}{\ensuremath{-64.3}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtRoSymBias}{\ensuremath{0.68}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymRel}{\ensuremath{4.08\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymSe}{\ensuremath{0.088}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtRoSymSeRel}{\ensuremath{0.53\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtRoSymSpread}{\ensuremath{0.089}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymTwin}{\ensuremath{-16.71}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymTwinBelow}{\ensuremath{-27.5}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtRoSymTwinBias}{\ensuremath{-0.06}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymTwinKept}{\ensuremath{58\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymTwinRel}{\ensuremath{-0.34\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymTwinSe}{\ensuremath{0.137}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtRoSymTwinSeRel}{\ensuremath{0.82\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtRoSymTwinSpread}{\ensuremath{0.132}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymZne}{\ensuremath{-18.01}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymZneBelow}{\ensuremath{0.2}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtRoSymZneBias}{\ensuremath{-1.36}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymZneKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymZneRel}{\ensuremath{-8.14\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoSymZneSe}{\ensuremath{0.155}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtRoSymZneSeRel}{\ensuremath{0.93\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtRoSymZneSpread}{\ensuremath{0.184}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoTwin}{\ensuremath{-17.58}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoTwinBelow}{\ensuremath{-9.9}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtRoTwinBias}{\ensuremath{-0.93}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoTwinRel}{\ensuremath{-5.56\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoTwinSe}{\ensuremath{0.159}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtRoTwinSeRel}{\ensuremath{0.95\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtRoTwinSpread}{\ensuremath{0.120}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoZne}{\ensuremath{-16.42}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoZneBelow}{\ensuremath{-34.0}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtRoZneBias}{\ensuremath{0.23}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoZneRel}{\ensuremath{1.40\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtRoZneSe}{\ensuremath{0.158}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtRoZneSeRel}{\ensuremath{0.95\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtRoZneSpread}{\ensuremath{0.131}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtSym}{\ensuremath{-15.34}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtSymBelow}{\ensuremath{-76.3}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtSymBias}{\ensuremath{1.31}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtSymKept}{\ensuremath{50\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtSymRel}{\ensuremath{7.89\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtSymSe}{\ensuremath{0.075}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtSymSeRel}{\ensuremath{0.45\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtSymSpread}{\ensuremath{0.099}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtTwin}{\ensuremath{-17.69}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtTwinBelow}{\ensuremath{-7.9}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtTwinBias}{\ensuremath{-1.03}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtTwinRel}{\ensuremath{-6.20\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtTwinSe}{\ensuremath{1.520}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtTwinSeRel}{\ensuremath{9.12\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtTwinSpread}{\ensuremath{0.111}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtZne}{\ensuremath{-15.08}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtZneBelow}{\ensuremath{-84.9}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullPtZneBias}{\ensuremath{1.58}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtZneRel}{\ensuremath{9.49\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullPtZneSe}{\ensuremath{1.409}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullPtZneSeRel}{\ensuremath{8.46\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullPtZneSpread}{\ensuremath{0.097}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaFullZeroRaw}{\ensuremath{-12.80}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRawBelow}{\ensuremath{-280.5}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroRawBias}{\ensuremath{5.20}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRawRel}{\ensuremath{28.91\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRawSe}{\ensuremath{0.760}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroRawSeRel}{\ensuremath{4.22\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroRawSpread}{\ensuremath{0.052}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRo}{\ensuremath{-14.02}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoBelow}{\ensuremath{-139.6}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroRoBias}{\ensuremath{3.98}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoRel}{\ensuremath{22.12\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSe}{\ensuremath{0.078}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroRoSeRel}{\ensuremath{0.44\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroRoSpread}{\ensuremath{0.081}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSym}{\ensuremath{-17.10}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymBelow}{\ensuremath{-48.8}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroRoSymBias}{\ensuremath{0.90}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymKept}{\ensuremath{60\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymRel}{\ensuremath{5.02\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymSe}{\ensuremath{0.072}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroRoSymSeRel}{\ensuremath{0.40\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroRoSymSpread}{\ensuremath{0.052}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymTwin}{\ensuremath{-17.95}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymTwinBelow}{\ensuremath{-2.7}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroRoSymTwinBias}{\ensuremath{0.05}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymTwinKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymTwinRel}{\ensuremath{0.27\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymTwinSe}{\ensuremath{0.133}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroRoSymTwinSeRel}{\ensuremath{0.74\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroRoSymTwinSpread}{\ensuremath{0.051}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymZne}{\ensuremath{-19.37}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymZneBelow}{\ensuremath{26.1}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroRoSymZneBias}{\ensuremath{-1.37}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymZneKept}{\ensuremath{60\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymZneRel}{\ensuremath{-7.62\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoSymZneSe}{\ensuremath{0.135}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroRoSymZneSeRel}{\ensuremath{0.75\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroRoSymZneSpread}{\ensuremath{0.149}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoTwin}{\ensuremath{-18.98}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoTwinBelow}{\ensuremath{27.4}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroRoTwinBias}{\ensuremath{-0.98}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoTwinRel}{\ensuremath{-5.45\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoTwinSe}{\ensuremath{0.161}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroRoTwinSeRel}{\ensuremath{0.89\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroRoTwinSpread}{\ensuremath{0.101}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoZne}{\ensuremath{-17.69}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoZneBelow}{\ensuremath{-5.7}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroRoZneBias}{\ensuremath{0.31}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoZneRel}{\ensuremath{1.73\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroRoZneSe}{\ensuremath{0.149}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroRoZneSeRel}{\ensuremath{0.83\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroRoZneSpread}{\ensuremath{0.154}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroSym}{\ensuremath{-16.44}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroSymBelow}{\ensuremath{-89.9}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroSymBias}{\ensuremath{1.56}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroSymKept}{\ensuremath{50\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroSymRel}{\ensuremath{8.67\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroSymSe}{\ensuremath{0.062}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroSymSeRel}{\ensuremath{0.34\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroSymSpread}{\ensuremath{0.049}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroTwin}{\ensuremath{-19.03}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroTwinBelow}{\ensuremath{39.0}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroTwinBias}{\ensuremath{-1.03}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroTwinRel}{\ensuremath{-5.72\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroTwinSe}{\ensuremath{1.542}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroTwinSeRel}{\ensuremath{8.57\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroTwinSpread}{\ensuremath{0.075}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroZne}{\ensuremath{-16.16}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroZneBelow}{\ensuremath{-47.2}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaFullZeroZneBias}{\ensuremath{1.84}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroZneRel}{\ensuremath{10.25\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaFullZeroZneSe}{\ensuremath{1.365}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaFullZeroZneSeRel}{\ensuremath{7.58\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaFullZeroZneSpread}{\ensuremath{0.110}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbHvaGatesPtRaw}{\ensuremath{-12.97}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRawBelow}{\ensuremath{-220.8}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtRawBias}{\ensuremath{3.69}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRawRel}{\ensuremath{22.15\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRawSe}{\ensuremath{0.770}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtRawSeRel}{\ensuremath{4.62\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtRawSpread}{\ensuremath{0.064}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRo}{\ensuremath{-12.99}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoBelow}{\ensuremath{-225.1}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtRoBias}{\ensuremath{3.67}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoRel}{\ensuremath{22.04\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSe}{\ensuremath{0.070}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtRoSeRel}{\ensuremath{0.42\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtRoSpread}{\ensuremath{0.063}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSym}{\ensuremath{-15.94}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymBelow}{\ensuremath{-167.2}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtRoSymBias}{\ensuremath{0.72}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymKept}{\ensuremath{59\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymRel}{\ensuremath{4.30\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymSe}{\ensuremath{0.058}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtRoSymSeRel}{\ensuremath{0.35\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtRoSymSpread}{\ensuremath{0.035}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymTwin}{\ensuremath{-16.61}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymTwinBelow}{\ensuremath{-56.0}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtRoSymTwinBias}{\ensuremath{0.05}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymTwinKept}{\ensuremath{59\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymTwinRel}{\ensuremath{0.27\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymTwinSe}{\ensuremath{0.100}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtRoSymTwinSeRel}{\ensuremath{0.60\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtRoSymTwinSpread}{\ensuremath{0.070}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymZne}{\ensuremath{-17.91}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymZneBelow}{\ensuremath{-3.0}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtRoSymZneBias}{\ensuremath{-1.25}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymZneKept}{\ensuremath{59\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymZneRel}{\ensuremath{-7.51\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoSymZneSe}{\ensuremath{0.106}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtRoSymZneSeRel}{\ensuremath{0.63\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtRoSymZneSpread}{\ensuremath{0.088}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoTwin}{\ensuremath{-17.51}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoTwinBelow}{\ensuremath{-14.6}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtRoTwinBias}{\ensuremath{-0.86}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoTwinRel}{\ensuremath{-5.14\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoTwinSe}{\ensuremath{0.136}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtRoTwinSeRel}{\ensuremath{0.82\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtRoTwinSpread}{\ensuremath{0.094}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoZne}{\ensuremath{-16.42}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoZneBelow}{\ensuremath{-52.4}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtRoZneBias}{\ensuremath{0.23}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoZneRel}{\ensuremath{1.39\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtRoZneSe}{\ensuremath{0.134}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtRoZneSeRel}{\ensuremath{0.80\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtRoZneSpread}{\ensuremath{0.085}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtSym}{\ensuremath{-15.91}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtSymBelow}{\ensuremath{-111.8}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtSymBias}{\ensuremath{0.74}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtSymKept}{\ensuremath{59\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtSymRel}{\ensuremath{4.46\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtSymSe}{\ensuremath{0.060}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtSymSeRel}{\ensuremath{0.36\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtSymSpread}{\ensuremath{0.053}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtTwin}{\ensuremath{-17.54}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtTwinBelow}{\ensuremath{-15.4}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtTwinBias}{\ensuremath{-0.88}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtTwinRel}{\ensuremath{-5.29\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtTwinSe}{\ensuremath{1.361}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtTwinSeRel}{\ensuremath{8.17\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtTwinSpread}{\ensuremath{0.085}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtZne}{\ensuremath{-16.41}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtZneBelow}{\ensuremath{-55.8}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaGatesPtZneBias}{\ensuremath{0.24}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtZneRel}{\ensuremath{1.45\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaGatesPtZneSe}{\ensuremath{1.387}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaGatesPtZneSeRel}{\ensuremath{8.32\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaGatesPtZneSpread}{\ensuremath{0.080}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRaw}{\ensuremath{-15.32}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRawBelow}{\ensuremath{-205.2}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtRawBias}{\ensuremath{1.34}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRawRel}{\ensuremath{8.02\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRawSe}{\ensuremath{0.733}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtRawSeRel}{\ensuremath{4.40\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtRawSpread}{\ensuremath{0.037}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRo}{\ensuremath{-16.66}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoBelow}{\ensuremath{-106.1}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtRoBias}{\ensuremath{0.00}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoRel}{\ensuremath{-0.03\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSe}{\ensuremath{0.055}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtRoSeRel}{\ensuremath{0.33\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtRoSpread}{\ensuremath{0.036}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSym}{\ensuremath{-16.67}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymBelow}{\ensuremath{-77.7}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtRoSymBias}{\ensuremath{-0.01}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymKept}{\ensuremath{100\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymRel}{\ensuremath{-0.07\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymSe}{\ensuremath{0.046}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtRoSymSeRel}{\ensuremath{0.28\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtRoSymSpread}{\ensuremath{0.048}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymTwin}{\ensuremath{-16.67}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymTwinBelow}{\ensuremath{-93.4}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtRoSymTwinBias}{\ensuremath{-0.01}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymTwinKept}{\ensuremath{100\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymTwinRel}{\ensuremath{-0.06\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymTwinSe}{\ensuremath{0.088}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtRoSymTwinSeRel}{\ensuremath{0.53\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtRoSymTwinSpread}{\ensuremath{0.040}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymZne}{\ensuremath{-16.67}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymZneBelow}{\ensuremath{-77.7}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtRoSymZneBias}{\ensuremath{-0.01}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymZneKept}{\ensuremath{100\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymZneRel}{\ensuremath{-0.07\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoSymZneSe}{\ensuremath{0.056}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtRoSymZneSeRel}{\ensuremath{0.33\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtRoSymZneSpread}{\ensuremath{0.048}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoTwin}{\ensuremath{-16.77}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoTwinBelow}{\ensuremath{-93.9}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtRoTwinBias}{\ensuremath{-0.11}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoTwinRel}{\ensuremath{-0.66\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoTwinSe}{\ensuremath{0.090}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtRoTwinSeRel}{\ensuremath{0.54\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtRoTwinSpread}{\ensuremath{0.037}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoZne}{\ensuremath{-16.66}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoZneBelow}{\ensuremath{-106.1}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtRoZneBias}{\ensuremath{0.00}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoZneRel}{\ensuremath{-0.03\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtRoZneSe}{\ensuremath{0.066}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtRoZneSeRel}{\ensuremath{0.40\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtRoZneSpread}{\ensuremath{0.036}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtSym}{\ensuremath{-16.54}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtSymBelow}{\ensuremath{-252.5}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtSymBias}{\ensuremath{0.11}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtSymKept}{\ensuremath{78\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtSymRel}{\ensuremath{0.69\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtSymSe}{\ensuremath{0.042}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtSymSeRel}{\ensuremath{0.25\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtSymSpread}{\ensuremath{0.016}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtTwin}{\ensuremath{-16.79}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtTwinBelow}{\ensuremath{-85.4}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtTwinBias}{\ensuremath{-0.13}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtTwinRel}{\ensuremath{-0.79\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtTwinSe}{\ensuremath{1.048}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtTwinSeRel}{\ensuremath{6.29\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtTwinSpread}{\ensuremath{0.040}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtZne}{\ensuremath{-15.32}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtZneBelow}{\ensuremath{-205.2}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbHvaRoPtZneBias}{\ensuremath{1.34}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtZneRel}{\ensuremath{8.02\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbHvaRoPtZneSe}{\ensuremath{0.885}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbHvaRoPtZneSeRel}{\ensuremath{5.31\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbHvaRoPtZneSpread}{\ensuremath{0.037}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbIdealHvaFullPt}{\ensuremath{-16.66}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbIdealHvaFullZero}{\ensuremath{-18.00}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbIdealHvaGatesPt}{\ensuremath{-16.66}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbIdealHvaRoPt}{\ensuremath{-16.66}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbIdealRvbFullPt}{\ensuremath{-17.62}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbIdealRvbFullZero}{\ensuremath{-18.00}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbIdealRvbGatesPt}{\ensuremath{-17.62}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbIdealRvbRoPt}{\ensuremath{-17.62}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbKeptMaxRoSym}{\ensuremath{60\,\%}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbKeptMaxSym}{\ensuremath{59\,\%}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbKeptMinRoSym}{\ensuremath{59\,\%}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbKeptMinSym}{\ensuremath{50\,\%}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbMaxRoSymTwin}{\ensuremath{0.43\,\%}}  % results/m2b-*/evaluation.json: max |rel. bias|
+\providecommand{\VMbRepeats}{\ensuremath{8}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbRoSymZneMax}{\ensuremath{-7.5\,\%}}  % results/m2b-*/evaluation.json: rel. bias over the settings with gate noise (max)
+\providecommand{\VMbRoSymZneMin}{\ensuremath{-8.2\,\%}}  % results/m2b-*/evaluation.json: rel. bias over the settings with gate noise (min)
+\providecommand{\VMbRoZneMax}{\ensuremath{1.7\,\%}}  % results/m2b-*/evaluation.json: rel. bias over the settings with gate noise (max)
+\providecommand{\VMbRoZneMin}{\ensuremath{0.9\,\%}}  % results/m2b-*/evaluation.json: rel. bias over the settings with gate noise (min)
+\providecommand{\VMbRvbFullPtRaw}{\ensuremath{-12.51}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRawBelow}{\ensuremath{-309.2}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtRawBias}{\ensuremath{5.10}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRawRel}{\ensuremath{28.97\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRawSe}{\ensuremath{0.769}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtRawSeRel}{\ensuremath{4.36\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtRawSpread}{\ensuremath{0.050}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRo}{\ensuremath{-13.68}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoBelow}{\ensuremath{-164.9}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtRoBias}{\ensuremath{3.93}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoRel}{\ensuremath{22.33\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSe}{\ensuremath{0.080}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtRoSeRel}{\ensuremath{0.45\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtRoSpread}{\ensuremath{0.074}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSym}{\ensuremath{-16.78}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymBelow}{\ensuremath{-62.6}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtRoSymBias}{\ensuremath{0.84}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymRel}{\ensuremath{4.75\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymSe}{\ensuremath{0.078}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtRoSymSeRel}{\ensuremath{0.44\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtRoSymSpread}{\ensuremath{0.055}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymTwin}{\ensuremath{-17.64}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymTwinBelow}{\ensuremath{-13.0}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtRoSymTwinBias}{\ensuremath{-0.03}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymTwinKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymTwinRel}{\ensuremath{-0.15\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymTwinSe}{\ensuremath{0.098}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtRoSymTwinSeRel}{\ensuremath{0.56\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtRoSymTwinSpread}{\ensuremath{0.078}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymZne}{\ensuremath{-19.06}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymZneBelow}{\ensuremath{33.5}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtRoSymZneBias}{\ensuremath{-1.44}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymZneKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymZneRel}{\ensuremath{-8.19\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoSymZneSe}{\ensuremath{0.144}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtRoSymZneSeRel}{\ensuremath{0.82\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtRoSymZneSpread}{\ensuremath{0.089}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoTwin}{\ensuremath{-17.82}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoTwinBelow}{\ensuremath{-5.7}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtRoTwinBias}{\ensuremath{-0.21}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoTwinRel}{\ensuremath{-1.19\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoTwinSe}{\ensuremath{0.122}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtRoTwinSeRel}{\ensuremath{0.69\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtRoTwinSpread}{\ensuremath{0.088}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoZne}{\ensuremath{-17.45}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoZneBelow}{\ensuremath{-13.3}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtRoZneBias}{\ensuremath{0.16}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoZneRel}{\ensuremath{0.92\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtRoZneSe}{\ensuremath{0.155}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtRoZneSeRel}{\ensuremath{0.88\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtRoZneSpread}{\ensuremath{0.116}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtSym}{\ensuremath{-16.11}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtSymBelow}{\ensuremath{-94.1}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtSymBias}{\ensuremath{1.50}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtSymKept}{\ensuremath{50\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtSymRel}{\ensuremath{8.54\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtSymSe}{\ensuremath{0.066}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtSymSeRel}{\ensuremath{0.37\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtSymSpread}{\ensuremath{0.057}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtTwin}{\ensuremath{-17.72}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtTwinBelow}{\ensuremath{-9.1}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtTwinBias}{\ensuremath{-0.11}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtTwinRel}{\ensuremath{-0.61\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtTwinSe}{\ensuremath{1.260}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtTwinSeRel}{\ensuremath{7.15\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtTwinSpread}{\ensuremath{0.086}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtZne}{\ensuremath{-15.99}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtZneBelow}{\ensuremath{-72.8}}  % results/m2b-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullPtZneBias}{\ensuremath{1.63}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtZneRel}{\ensuremath{9.24\,\%}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullPtZneSe}{\ensuremath{1.408}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullPtZneSeRel}{\ensuremath{7.99\,\%}}  % results/m2b-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullPtZneSpread}{\ensuremath{0.078}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbFullZeroRaw}{\ensuremath{-12.71}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRawBelow}{\ensuremath{-380.2}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroRawBias}{\ensuremath{5.29}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRawRel}{\ensuremath{29.41\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRawSe}{\ensuremath{0.761}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroRawSeRel}{\ensuremath{4.23\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroRawSpread}{\ensuremath{0.039}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRo}{\ensuremath{-13.91}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoBelow}{\ensuremath{-218.8}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroRoBias}{\ensuremath{4.09}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoRel}{\ensuremath{22.72\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSe}{\ensuremath{0.079}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroRoSeRel}{\ensuremath{0.44\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroRoSpread}{\ensuremath{0.053}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSym}{\ensuremath{-17.07}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymBelow}{\ensuremath{-29.1}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroRoSymBias}{\ensuremath{0.93}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymRel}{\ensuremath{5.18\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymSe}{\ensuremath{0.072}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroRoSymSeRel}{\ensuremath{0.40\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroRoSymSpread}{\ensuremath{0.091}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymTwin}{\ensuremath{-17.94}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymTwinBelow}{\ensuremath{-4.3}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroRoSymTwinBias}{\ensuremath{0.06}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymTwinKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymTwinRel}{\ensuremath{0.36\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymTwinSe}{\ensuremath{0.098}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroRoSymTwinSeRel}{\ensuremath{0.54\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroRoSymTwinSpread}{\ensuremath{0.042}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymZne}{\ensuremath{-19.41}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymZneBelow}{\ensuremath{25.8}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroRoSymZneBias}{\ensuremath{-1.41}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymZneKept}{\ensuremath{59\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymZneRel}{\ensuremath{-7.82\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoSymZneSe}{\ensuremath{0.138}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroRoSymZneSeRel}{\ensuremath{0.76\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroRoSymZneSpread}{\ensuremath{0.154}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoTwin}{\ensuremath{-18.15}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoTwinBelow}{\ensuremath{6.3}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroRoTwinBias}{\ensuremath{-0.15}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoTwinRel}{\ensuremath{-0.81\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoTwinSe}{\ensuremath{0.122}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroRoTwinSeRel}{\ensuremath{0.68\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroRoTwinSpread}{\ensuremath{0.065}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoZne}{\ensuremath{-17.70}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoZneBelow}{\ensuremath{-8.7}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroRoZneBias}{\ensuremath{0.30}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoZneRel}{\ensuremath{1.66\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroRoZneSe}{\ensuremath{0.153}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroRoZneSeRel}{\ensuremath{0.85\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroRoZneSpread}{\ensuremath{0.097}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroSym}{\ensuremath{-16.37}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroSymBelow}{\ensuremath{-54.1}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroSymBias}{\ensuremath{1.63}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroSymKept}{\ensuremath{50\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroSymRel}{\ensuremath{9.03\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroSymSe}{\ensuremath{0.063}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroSymSeRel}{\ensuremath{0.35\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroSymSpread}{\ensuremath{0.085}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroTwin}{\ensuremath{-18.04}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroTwinBelow}{\ensuremath{1.8}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroTwinBias}{\ensuremath{-0.04}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroTwinRel}{\ensuremath{-0.20\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroTwinSe}{\ensuremath{1.256}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroTwinSeRel}{\ensuremath{6.98\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroTwinSpread}{\ensuremath{0.059}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroZne}{\ensuremath{-16.18}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroZneBelow}{\ensuremath{-53.2}}  % results/m2b-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbFullZeroZneBias}{\ensuremath{1.82}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroZneRel}{\ensuremath{10.11\,\%}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbFullZeroZneSe}{\ensuremath{1.387}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbFullZeroZneSeRel}{\ensuremath{7.71\,\%}}  % results/m2b-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbFullZeroZneSpread}{\ensuremath{0.097}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbRvbGatesPtRaw}{\ensuremath{-13.67}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRawBelow}{\ensuremath{-215.7}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtRawBias}{\ensuremath{3.94}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRawRel}{\ensuremath{22.38\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRawSe}{\ensuremath{0.750}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtRawSeRel}{\ensuremath{4.26\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtRawSpread}{\ensuremath{0.057}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRo}{\ensuremath{-13.68}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoBelow}{\ensuremath{-202.1}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtRoBias}{\ensuremath{3.93}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoRel}{\ensuremath{22.33\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSe}{\ensuremath{0.065}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtRoSeRel}{\ensuremath{0.37\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtRoSpread}{\ensuremath{0.060}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSym}{\ensuremath{-16.75}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymBelow}{\ensuremath{-64.6}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtRoSymBias}{\ensuremath{0.86}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymKept}{\ensuremath{59\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymRel}{\ensuremath{4.91\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymSe}{\ensuremath{0.048}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtRoSymSeRel}{\ensuremath{0.28\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtRoSymSpread}{\ensuremath{0.055}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymTwin}{\ensuremath{-17.54}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymTwinBelow}{\ensuremath{-31.8}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtRoSymTwinBias}{\ensuremath{0.08}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymTwinKept}{\ensuremath{59\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymTwinRel}{\ensuremath{0.43\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymTwinSe}{\ensuremath{0.064}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtRoSymTwinSeRel}{\ensuremath{0.37\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtRoSymTwinSpread}{\ensuremath{0.041}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymZne}{\ensuremath{-18.97}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymZneBelow}{\ensuremath{32.7}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtRoSymZneBias}{\ensuremath{-1.36}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymZneKept}{\ensuremath{59\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymZneRel}{\ensuremath{-7.72\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoSymZneSe}{\ensuremath{0.095}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtRoSymZneSeRel}{\ensuremath{0.54\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtRoSymZneSpread}{\ensuremath{0.084}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoTwin}{\ensuremath{-17.79}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoTwinBelow}{\ensuremath{-12.8}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtRoTwinBias}{\ensuremath{-0.18}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoTwinRel}{\ensuremath{-1.01\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoTwinSe}{\ensuremath{0.101}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtRoTwinSeRel}{\ensuremath{0.58\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtRoTwinSpread}{\ensuremath{0.046}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoZne}{\ensuremath{-17.45}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoZneBelow}{\ensuremath{-15.9}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtRoZneBias}{\ensuremath{0.17}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoZneRel}{\ensuremath{0.94\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtRoZneSe}{\ensuremath{0.130}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtRoZneSeRel}{\ensuremath{0.74\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtRoZneSpread}{\ensuremath{0.098}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtSym}{\ensuremath{-16.74}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtSymBelow}{\ensuremath{-79.7}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtSymBias}{\ensuremath{0.88}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtSymKept}{\ensuremath{59\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtSymRel}{\ensuremath{4.99\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtSymSe}{\ensuremath{0.050}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtSymSeRel}{\ensuremath{0.28\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtSymSpread}{\ensuremath{0.045}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtTwin}{\ensuremath{-17.82}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtTwinBelow}{\ensuremath{-6.6}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtTwinBias}{\ensuremath{-0.20}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtTwinRel}{\ensuremath{-1.14\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtTwinSe}{\ensuremath{1.134}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtTwinSeRel}{\ensuremath{6.44\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtTwinSpread}{\ensuremath{0.079}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtZne}{\ensuremath{-17.46}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtZneBelow}{\ensuremath{-18.6}}  % results/m2b_gates-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbGatesPtZneBias}{\ensuremath{0.15}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtZneRel}{\ensuremath{0.88\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbGatesPtZneSe}{\ensuremath{1.379}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbGatesPtZneSeRel}{\ensuremath{7.83\,\%}}  % results/m2b_gates-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbGatesPtZneSpread}{\ensuremath{0.082}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRaw}{\ensuremath{-16.13}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRawBelow}{\ensuremath{-206.9}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtRawBias}{\ensuremath{1.49}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRawRel}{\ensuremath{8.44\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRawSe}{\ensuremath{0.697}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtRawSeRel}{\ensuremath{3.96\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtRawSpread}{\ensuremath{0.026}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRo}{\ensuremath{-17.62}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoBelow}{\ensuremath{-27.9}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtRoBias}{\ensuremath{0.00}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoRel}{\ensuremath{-0.02\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSe}{\ensuremath{0.047}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtRoSeRel}{\ensuremath{0.27\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtRoSpread}{\ensuremath{0.039}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSym}{\ensuremath{-17.60}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymBelow}{\ensuremath{-33.1}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtRoSymBias}{\ensuremath{0.01}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymKept}{\ensuremath{100\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymRel}{\ensuremath{0.06\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymSe}{\ensuremath{0.029}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtRoSymSeRel}{\ensuremath{0.16\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtRoSymSpread}{\ensuremath{0.034}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymTwin}{\ensuremath{-17.63}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymTwinBelow}{\ensuremath{-39.5}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtRoSymTwinBias}{\ensuremath{-0.01}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymTwinKept}{\ensuremath{100\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymTwinRel}{\ensuremath{-0.06\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymTwinSe}{\ensuremath{0.041}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtRoSymTwinSeRel}{\ensuremath{0.23\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtRoSymTwinSpread}{\ensuremath{0.027}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymZne}{\ensuremath{-17.60}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymZneBelow}{\ensuremath{-33.1}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtRoSymZneBias}{\ensuremath{0.01}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymZneKept}{\ensuremath{100\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymZneRel}{\ensuremath{0.06\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoSymZneSe}{\ensuremath{0.035}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtRoSymZneSeRel}{\ensuremath{0.20\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtRoSymZneSpread}{\ensuremath{0.034}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoTwin}{\ensuremath{-17.63}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoTwinBelow}{\ensuremath{-27.9}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtRoTwinBias}{\ensuremath{-0.01}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoTwinRel}{\ensuremath{-0.07\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoTwinSe}{\ensuremath{0.058}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtRoTwinSeRel}{\ensuremath{0.33\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtRoTwinSpread}{\ensuremath{0.038}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoZne}{\ensuremath{-17.62}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoZneBelow}{\ensuremath{-27.9}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtRoZneBias}{\ensuremath{0.00}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoZneRel}{\ensuremath{-0.02\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtRoZneSe}{\ensuremath{0.056}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtRoZneSeRel}{\ensuremath{0.32\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtRoZneSpread}{\ensuremath{0.039}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtSym}{\ensuremath{-17.49}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtSymBelow}{\ensuremath{-60.7}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtSymBias}{\ensuremath{0.12}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtSymKept}{\ensuremath{78\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtSymRel}{\ensuremath{0.69\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtSymSe}{\ensuremath{0.026}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtSymSeRel}{\ensuremath{0.15\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtSymSpread}{\ensuremath{0.024}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtTwin}{\ensuremath{-17.54}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtTwinBelow}{\ensuremath{-34.7}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtTwinBias}{\ensuremath{0.08}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtTwinRel}{\ensuremath{0.43\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtTwinSe}{\ensuremath{0.879}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtTwinSeRel}{\ensuremath{4.99\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtTwinSpread}{\ensuremath{0.038}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtZne}{\ensuremath{-16.13}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtZneBelow}{\ensuremath{-206.9}}  % results/m2b_readout-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
+\providecommand{\VMbRvbRoPtZneBias}{\ensuremath{1.49}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtZneRel}{\ensuremath{8.44\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbRvbRoPtZneSe}{\ensuremath{0.842}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMbRvbRoPtZneSeRel}{\ensuremath{4.78\,\%}}  % results/m2b_readout-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
+\providecommand{\VMbRvbRoPtZneSpread}{\ensuremath{0.026}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbSeRatioMax}{\ensuremath{1.7}}  % results/m2b-*/evaluation.json: bootstrap SE / spread
+\providecommand{\VMbSeRatioMin}{\ensuremath{0.8}}  % results/m2b-*/evaluation.json: bootstrap SE / spread
+\providecommand{\VMbSetupRo}{\ensuremath{32768}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbSetupRoSymTwin}{\ensuremath{81920}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbSetupRoZne}{\ensuremath{98304}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbSetupTwin}{\ensuremath{49152}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbShots}{\ensuremath{12288}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbShotsZne}{\ensuremath{36864}}  % results/m2b-*/evaluation.json
+\providecommand{\VMbSpreadRelErr}{\ensuremath{27\,\%}}  % 1 / sqrt(2 (R - 1)), relative error of a standard deviation from R = 8
+\providecommand{\VMbTwinExcessHvaFullZero}{\ensuremath{0.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json) and results/m2b-evaluation-0: exact / sampled noisy twin energy - 1
+\providecommand{\VMbTwinHvaFullPtFilt}{\ensuremath{-10.73}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinHvaFullPtRaw}{\ensuremath{-7.56}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinHvaFullZeroFilt}{\ensuremath{-10.73}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbTwinHvaFullZeroRaw}{\ensuremath{-7.56}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbTwinHvaGatesPtFilt}{\ensuremath{-10.80}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinHvaGatesPtRaw}{\ensuremath{-8.32}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinHvaRoPtFilt}{\ensuremath{-11.23}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinHvaRoPtRaw}{\ensuremath{-10.27}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinRvbFullPtFilt}{\ensuremath{-14.92}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinRvbFullPtRaw}{\ensuremath{-11.05}}  % results/m2b-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinRvbFullZeroFilt}{\ensuremath{-14.92}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbTwinRvbFullZeroRaw}{\ensuremath{-11.05}}  % results/m2b-evaluation-0/evaluation.json
+\providecommand{\VMbTwinRvbGatesPtFilt}{\ensuremath{-14.99}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinRvbGatesPtRaw}{\ensuremath{-12.02}}  % results/m2b_gates-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinRvbRoPtFilt}{\ensuremath{-15.67}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinRvbRoPtRaw}{\ensuremath{-14.41}}  % results/m2b_readout-evaluation-0p3/evaluation.json
+\providecommand{\VMbTwinShots}{\ensuremath{16384}}  % results/m2b-*/evaluation.json: shots per basis of the twin measurement
 \providecommand{\VMeasGroups}{\ensuremath{3}}  % docsgen.physics.facts
 \providecommand{\VMtHvaPtRaw}{\ensuremath{-11.90}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRawBelow}{\ensuremath{-298.2}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtRawBias}{\ensuremath{4.76}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRawRel}{\ensuremath{28.56\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtRawSe}{\ensuremath{0.784}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtRawSeRel}{\ensuremath{4.70\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtRawSpread}{\ensuremath{0.058}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRo}{\ensuremath{-12.98}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoBelow}{\ensuremath{-161.9}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtRoBias}{\ensuremath{3.68}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoRel}{\ensuremath{22.07\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtRoSe}{\ensuremath{0.083}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtRoSeRel}{\ensuremath{0.50\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtRoSpread}{\ensuremath{0.088}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSym}{\ensuremath{-16.77}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSymBelow}{\ensuremath{-39.1}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtRoSymBias}{\ensuremath{-0.12}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSymRel}{\ensuremath{-0.70\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtRoSymSe}{\ensuremath{0.083}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtRoSymSeRel}{\ensuremath{0.50\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtRoSymSpread}{\ensuremath{0.089}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSymTwin}{\ensuremath{-16.47}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSymTwinBelow}{\ensuremath{-57.4}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtRoSymTwinBias}{\ensuremath{0.19}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSymTwinRel}{\ensuremath{1.13\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtRoSymTwinSe}{\ensuremath{0.127}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtRoSymTwinSeRel}{\ensuremath{0.76\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtRoSymTwinSpread}{\ensuremath{0.075}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSymZne}{\ensuremath{-18.95}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSymZneBelow}{\ensuremath{21.1}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtRoSymZneBias}{\ensuremath{-2.30}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoSymZneRel}{\ensuremath{-13.79\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtRoSymZneSe}{\ensuremath{0.142}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtRoSymZneSeRel}{\ensuremath{0.85\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtRoSymZneSpread}{\ensuremath{0.128}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoTwin}{\ensuremath{-17.58}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoTwinBelow}{\ensuremath{-9.9}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtRoTwinBias}{\ensuremath{-0.93}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoTwinRel}{\ensuremath{-5.56\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtRoTwinSe}{\ensuremath{0.159}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtRoTwinSeRel}{\ensuremath{0.95\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtRoTwinSpread}{\ensuremath{0.120}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoZne}{\ensuremath{-16.42}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoZneBelow}{\ensuremath{-34.0}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtRoZneBias}{\ensuremath{0.23}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtRoZneRel}{\ensuremath{1.40\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtRoZneSe}{\ensuremath{0.158}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtRoZneSeRel}{\ensuremath{0.95\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtRoZneSpread}{\ensuremath{0.131}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtSym}{\ensuremath{-15.34}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtSymBelow}{\ensuremath{-76.3}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtSymBias}{\ensuremath{1.31}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtSymRel}{\ensuremath{7.89\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtSymSe}{\ensuremath{0.075}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtSymSeRel}{\ensuremath{0.45\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtSymSpread}{\ensuremath{0.099}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtTwin}{\ensuremath{-17.69}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtTwinBelow}{\ensuremath{-7.9}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtTwinBias}{\ensuremath{-1.03}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtTwinRel}{\ensuremath{-6.20\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtTwinSe}{\ensuremath{1.520}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtTwinSeRel}{\ensuremath{9.12\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtTwinSpread}{\ensuremath{0.111}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtZne}{\ensuremath{-15.08}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtZneBelow}{\ensuremath{-84.9}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaPtZneBias}{\ensuremath{1.58}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaPtZneRel}{\ensuremath{9.49\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtHvaPtZneSe}{\ensuremath{1.409}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaPtZneSeRel}{\ensuremath{8.46\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaPtZneSpread}{\ensuremath{0.097}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtHvaZeroRaw}{\ensuremath{-12.80}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRawBelow}{\ensuremath{-280.5}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroRawBias}{\ensuremath{5.20}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRawRel}{\ensuremath{28.91\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroRawSe}{\ensuremath{0.760}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroRawSeRel}{\ensuremath{4.22\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroRawSpread}{\ensuremath{0.052}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRo}{\ensuremath{-14.02}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoBelow}{\ensuremath{-139.6}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroRoBias}{\ensuremath{3.98}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoRel}{\ensuremath{22.12\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroRoSe}{\ensuremath{0.078}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroRoSeRel}{\ensuremath{0.44\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroRoSpread}{\ensuremath{0.081}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSym}{\ensuremath{-18.06}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSymBelow}{\ensuremath{2.5}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroRoSymBias}{\ensuremath{-0.06}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSymRel}{\ensuremath{-0.31\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroRoSymSe}{\ensuremath{0.068}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroRoSymSeRel}{\ensuremath{0.38\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroRoSymSpread}{\ensuremath{0.063}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSymTwin}{\ensuremath{-17.72}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSymTwinBelow}{\ensuremath{-11.9}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroRoSymTwinBias}{\ensuremath{0.28}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSymTwinRel}{\ensuremath{1.54\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroRoSymTwinSe}{\ensuremath{0.124}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroRoSymTwinSeRel}{\ensuremath{0.69\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroRoSymTwinSpread}{\ensuremath{0.066}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSymZne}{\ensuremath{-20.54}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSymZneBelow}{\ensuremath{50.3}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroRoSymZneBias}{\ensuremath{-2.54}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoSymZneRel}{\ensuremath{-14.09\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroRoSymZneSe}{\ensuremath{0.124}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroRoSymZneSeRel}{\ensuremath{0.69\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroRoSymZneSpread}{\ensuremath{0.143}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoTwin}{\ensuremath{-18.98}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoTwinBelow}{\ensuremath{27.4}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroRoTwinBias}{\ensuremath{-0.98}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoTwinRel}{\ensuremath{-5.45\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroRoTwinSe}{\ensuremath{0.161}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroRoTwinSeRel}{\ensuremath{0.89\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroRoTwinSpread}{\ensuremath{0.101}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoZne}{\ensuremath{-17.69}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoZneBelow}{\ensuremath{-5.7}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroRoZneBias}{\ensuremath{0.31}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroRoZneRel}{\ensuremath{1.73\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroRoZneSe}{\ensuremath{0.149}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroRoZneSeRel}{\ensuremath{0.83\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroRoZneSpread}{\ensuremath{0.154}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroSym}{\ensuremath{-16.44}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroSymBelow}{\ensuremath{-89.9}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroSymBias}{\ensuremath{1.56}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroSymRel}{\ensuremath{8.67\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroSymSe}{\ensuremath{0.062}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroSymSeRel}{\ensuremath{0.34\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroSymSpread}{\ensuremath{0.049}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroTwin}{\ensuremath{-19.03}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroTwinBelow}{\ensuremath{39.0}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroTwinBias}{\ensuremath{-1.03}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroTwinRel}{\ensuremath{-5.72\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroTwinSe}{\ensuremath{1.542}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroTwinSeRel}{\ensuremath{8.57\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroTwinSpread}{\ensuremath{0.075}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroZne}{\ensuremath{-16.16}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroZneBelow}{\ensuremath{-47.2}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtHvaZeroZneBias}{\ensuremath{1.84}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtHvaZeroZneRel}{\ensuremath{10.25\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtHvaZeroZneSe}{\ensuremath{1.365}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtHvaZeroZneSeRel}{\ensuremath{7.58\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtHvaZeroZneSpread}{\ensuremath{0.110}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtIdealHvaPt}{\ensuremath{-16.66}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtIdealHvaZero}{\ensuremath{-18.00}}  % results/m2-evaluation-0/evaluation.json
@@ -218,101 +895,141 @@
 \providecommand{\VMtRvbPtRawBelow}{\ensuremath{-309.2}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtRawBias}{\ensuremath{5.10}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRawRel}{\ensuremath{28.97\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtRawSe}{\ensuremath{0.769}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtRawSeRel}{\ensuremath{4.36\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtRawSpread}{\ensuremath{0.050}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRo}{\ensuremath{-13.68}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoBelow}{\ensuremath{-164.9}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtRoBias}{\ensuremath{3.93}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoRel}{\ensuremath{22.33\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtRoSe}{\ensuremath{0.080}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtRoSeRel}{\ensuremath{0.45\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtRoSpread}{\ensuremath{0.074}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSym}{\ensuremath{-17.66}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSymBelow}{\ensuremath{-14.9}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtRoSymBias}{\ensuremath{-0.04}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSymRel}{\ensuremath{-0.25\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtRoSymSe}{\ensuremath{0.073}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtRoSymSeRel}{\ensuremath{0.41\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtRoSymSpread}{\ensuremath{0.065}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSymTwin}{\ensuremath{-17.61}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSymTwinBelow}{\ensuremath{-19.6}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtRoSymTwinBias}{\ensuremath{0.00}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSymTwinRel}{\ensuremath{0.02\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtRoSymTwinSe}{\ensuremath{0.089}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtRoSymTwinSeRel}{\ensuremath{0.51\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtRoSymTwinSpread}{\ensuremath{0.056}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSymZne}{\ensuremath{-20.17}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSymZneBelow}{\ensuremath{73.3}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtRoSymZneBias}{\ensuremath{-2.56}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoSymZneRel}{\ensuremath{-14.52\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtRoSymZneSe}{\ensuremath{0.132}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtRoSymZneSeRel}{\ensuremath{0.75\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtRoSymZneSpread}{\ensuremath{0.084}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoTwin}{\ensuremath{-17.82}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoTwinBelow}{\ensuremath{-5.7}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtRoTwinBias}{\ensuremath{-0.21}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoTwinRel}{\ensuremath{-1.19\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtRoTwinSe}{\ensuremath{0.122}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtRoTwinSeRel}{\ensuremath{0.69\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtRoTwinSpread}{\ensuremath{0.088}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoZne}{\ensuremath{-17.45}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoZneBelow}{\ensuremath{-13.3}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtRoZneBias}{\ensuremath{0.16}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtRoZneRel}{\ensuremath{0.92\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtRoZneSe}{\ensuremath{0.155}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtRoZneSeRel}{\ensuremath{0.88\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtRoZneSpread}{\ensuremath{0.116}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtSym}{\ensuremath{-16.11}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtSymBelow}{\ensuremath{-94.1}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtSymBias}{\ensuremath{1.50}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtSymRel}{\ensuremath{8.54\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtSymSe}{\ensuremath{0.066}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtSymSeRel}{\ensuremath{0.37\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtSymSpread}{\ensuremath{0.057}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtTwin}{\ensuremath{-17.72}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtTwinBelow}{\ensuremath{-9.1}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtTwinBias}{\ensuremath{-0.11}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtTwinRel}{\ensuremath{-0.61\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtTwinSe}{\ensuremath{1.260}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtTwinSeRel}{\ensuremath{7.15\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtTwinSpread}{\ensuremath{0.086}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtZne}{\ensuremath{-15.99}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtZneBelow}{\ensuremath{-72.8}}  % results/m2-evaluation-0p3/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbPtZneBias}{\ensuremath{1.63}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbPtZneRel}{\ensuremath{9.24\,\%}}  % results/m2-evaluation-0p3/evaluation.json
+\providecommand{\VMtRvbPtZneSe}{\ensuremath{1.408}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbPtZneSeRel}{\ensuremath{7.99\,\%}}  % results/m2-evaluation-0p3/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbPtZneSpread}{\ensuremath{0.078}}  % results/m2-evaluation-0p3/evaluation.json
 \providecommand{\VMtRvbZeroRaw}{\ensuremath{-12.71}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRawBelow}{\ensuremath{-380.2}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroRawBias}{\ensuremath{5.29}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRawRel}{\ensuremath{29.41\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroRawSe}{\ensuremath{0.761}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroRawSeRel}{\ensuremath{4.23\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroRawSpread}{\ensuremath{0.039}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRo}{\ensuremath{-13.91}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoBelow}{\ensuremath{-218.8}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroRoBias}{\ensuremath{4.09}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoRel}{\ensuremath{22.72\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroRoSe}{\ensuremath{0.079}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroRoSeRel}{\ensuremath{0.44\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroRoSpread}{\ensuremath{0.053}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSym}{\ensuremath{-17.98}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSymBelow}{\ensuremath{-0.8}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroRoSymBias}{\ensuremath{0.02}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSymRel}{\ensuremath{0.14\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroRoSymSe}{\ensuremath{0.070}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroRoSymSeRel}{\ensuremath{0.39\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroRoSymSpread}{\ensuremath{0.091}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSymTwin}{\ensuremath{-17.94}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSymTwinBelow}{\ensuremath{-2.1}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroRoSymTwinBias}{\ensuremath{0.06}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSymTwinRel}{\ensuremath{0.36\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroRoSymTwinSe}{\ensuremath{0.088}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroRoSymTwinSeRel}{\ensuremath{0.49\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroRoSymTwinSpread}{\ensuremath{0.088}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSymZne}{\ensuremath{-20.52}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSymZneBelow}{\ensuremath{51.0}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroRoSymZneBias}{\ensuremath{-2.52}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoSymZneRel}{\ensuremath{-13.97\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroRoSymZneSe}{\ensuremath{0.128}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroRoSymZneSeRel}{\ensuremath{0.71\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroRoSymZneSpread}{\ensuremath{0.139}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoTwin}{\ensuremath{-18.15}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoTwinBelow}{\ensuremath{6.3}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroRoTwinBias}{\ensuremath{-0.15}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoTwinRel}{\ensuremath{-0.81\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroRoTwinSe}{\ensuremath{0.122}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroRoTwinSeRel}{\ensuremath{0.68\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroRoTwinSpread}{\ensuremath{0.065}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoZne}{\ensuremath{-17.70}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoZneBelow}{\ensuremath{-8.7}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroRoZneBias}{\ensuremath{0.30}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroRoZneRel}{\ensuremath{1.66\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroRoZneSe}{\ensuremath{0.153}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroRoZneSeRel}{\ensuremath{0.85\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroRoZneSpread}{\ensuremath{0.097}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroSym}{\ensuremath{-16.37}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroSymBelow}{\ensuremath{-54.1}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroSymBias}{\ensuremath{1.63}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroSymRel}{\ensuremath{9.03\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroSymSe}{\ensuremath{0.063}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroSymSeRel}{\ensuremath{0.35\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroSymSpread}{\ensuremath{0.085}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroTwin}{\ensuremath{-18.04}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroTwinBelow}{\ensuremath{1.8}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroTwinBias}{\ensuremath{-0.04}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroTwinRel}{\ensuremath{-0.20\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroTwinSe}{\ensuremath{1.256}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroTwinSeRel}{\ensuremath{6.98\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroTwinSpread}{\ensuremath{0.059}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroZne}{\ensuremath{-16.18}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroZneBelow}{\ensuremath{-53.2}}  % results/m2-evaluation-0/evaluation.json: (E0 - mean) / (spread / sqrt(repeats))
 \providecommand{\VMtRvbZeroZneBias}{\ensuremath{1.82}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtRvbZeroZneRel}{\ensuremath{10.11\,\%}}  % results/m2-evaluation-0/evaluation.json
+\providecommand{\VMtRvbZeroZneSe}{\ensuremath{1.387}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error per energy
+\providecommand{\VMtRvbZeroZneSeRel}{\ensuremath{7.71\,\%}}  % results/m2-evaluation-0/evaluation.json: mean reported standard error / |noise-free energy|
 \providecommand{\VMtRvbZeroZneSpread}{\ensuremath{0.097}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtSetupRo}{\ensuremath{32768}}  % results/m2-evaluation-0/evaluation.json
 \providecommand{\VMtSetupRoTwin}{\ensuremath{81920}}  % results/m2-evaluation-0/evaluation.json
@@ -346,6 +1063,66 @@
 \providecommand{\VMvShotsRvbPs}{\ensuremath{1559552}}  % results/m2_vqe-summary
 \providecommand{\VMvStdHvaSpsa}{\ensuremath{0.034}}  % results/m2_vqe-summary
 \providecommand{\VMvStdRvbPs}{\ensuremath{0.035}}  % results/m2_vqe-summary
+\providecommand{\VMwBelowHvaSpsa}{\ensuremath{-0.4}}  % results/m2b_vqe-summary: (E0 - final) / final_std
+\providecommand{\VMwBelowRvbPs}{\ensuremath{-1.5}}  % results/m2b_vqe-summary: (E0 - final) / final_std
+\providecommand{\VMwErrHvaSpsa}{\ensuremath{0.23\,\%}}  % results/m2b_vqe-summary
+\providecommand{\VMwErrRvbPs}{\ensuremath{0.57\,\%}}  % results/m2b_vqe-summary
+\providecommand{\VMwFinalHvaSpsa}{\ensuremath{-17.958}}  % results/m2b_vqe-summary
+\providecommand{\VMwFinalRvbPs}{\ensuremath{-17.898}}  % results/m2b_vqe-summary
+\providecommand{\VMwIdealErrHvaSpsa}{\ensuremath{0.03\,\%}}  % results/m2b_vqe-summary
+\providecommand{\VMwIdealErrRvbPs}{\ensuremath{0.22\,\%}}  % results/m2b_vqe-summary
+\providecommand{\VMwIdealHvaSpsa}{\ensuremath{-17.995}}  % results/m2b_vqe-summary
+\providecommand{\VMwIdealRvbPs}{\ensuremath{-17.961}}  % results/m2b_vqe-summary
+\providecommand{\VMwItersHvaSpsa}{\ensuremath{50}}  % results/20261010T184146Z-m2b_vqe-hva_spsa
+\providecommand{\VMwItersRvbPs}{\ensuremath{20}}  % results/20261010T184621Z-m2b_vqe-rvb_adam_parameter_shift
+\providecommand{\VMwNfevHvaSpsa}{\ensuremath{101}}  % results/m2b_vqe-summary
+\providecommand{\VMwNfevRvbPs}{\ensuremath{481}}  % results/m2b_vqe-summary
+\providecommand{\VMwShotsHvaSpsa}{\ensuremath{1372160}}  % results/m2b_vqe-summary
+\providecommand{\VMwShotsPerHvaSpsa}{\ensuremath{4096}}  % results/20261010T184146Z-m2b_vqe-hva_spsa
+\providecommand{\VMwShotsPerRvbPs}{\ensuremath{1024}}  % results/20261010T184621Z-m2b_vqe-rvb_adam_parameter_shift
+\providecommand{\VMwShotsRvbPs}{\ensuremath{1608704}}  % results/m2b_vqe-summary
+\providecommand{\VMwStdHvaSpsa}{\ensuremath{0.116}}  % results/m2b_vqe-summary
+\providecommand{\VMwStdRvbPs}{\ensuremath{0.068}}  % results/m2b_vqe-summary
+\providecommand{\VMxDampHvaPtFullCtf}{\ensuremath{0.956}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaPtFullRaw}{\ensuremath{0.714}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaPtGtCtf}{\ensuremath{0.956}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaPtGtRaw}{\ensuremath{0.779}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaPtRoCtf}{\ensuremath{1.000}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaPtRoRaw}{\ensuremath{0.918}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaTwinFullCtf}{\ensuremath{0.962}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaTwinFullRaw}{\ensuremath{0.677}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaTwinGtCtf}{\ensuremath{0.962}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaTwinGtRaw}{\ensuremath{0.743}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaTwinRoCtf}{\ensuremath{1.000}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaTwinRoRaw}{\ensuremath{0.911}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaZeroFullCtf}{\ensuremath{0.950}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaZeroFullRaw}{\ensuremath{0.710}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaZeroGtCtf}{\ensuremath{0.950}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaZeroGtRaw}{\ensuremath{0.778}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaZeroRoCtf}{\ensuremath{1.000}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampHvaZeroRoRaw}{\ensuremath{0.913}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbPtFullCtf}{\ensuremath{0.950}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbPtFullRaw}{\ensuremath{0.708}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbPtGtCtf}{\ensuremath{0.950}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbPtGtRaw}{\ensuremath{0.775}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbPtRoCtf}{\ensuremath{1.000}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbPtRoRaw}{\ensuremath{0.915}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbTwinFullCtf}{\ensuremath{0.955}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbTwinFullRaw}{\ensuremath{0.703}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbTwinGtCtf}{\ensuremath{0.955}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbTwinGtRaw}{\ensuremath{0.765}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbTwinRoCtf}{\ensuremath{1.000}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbTwinRoRaw}{\ensuremath{0.920}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbZeroFullCtf}{\ensuremath{0.948}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbZeroFullRaw}{\ensuremath{0.707}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbZeroGtCtf}{\ensuremath{0.948}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbZeroGtRaw}{\ensuremath{0.774}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbZeroRoCtf}{\ensuremath{1.000}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampRvbZeroRoRaw}{\ensuremath{0.913}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): noisy / noise-free energy
+\providecommand{\VMxDampSpreadHvaCtf}{\ensuremath{1.3\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max/min - 1 of the damping over target and twin, gate noise
+\providecommand{\VMxDampSpreadHvaRaw}{\ensuremath{4.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max/min - 1 of the damping over target and twin, gate noise
+\providecommand{\VMxDampSpreadRvbCtf}{\ensuremath{0.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max/min - 1 of the damping over target and twin, gate noise
+\providecommand{\VMxDampSpreadRvbRaw}{\ensuremath{1.3\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max/min - 1 of the damping over target and twin, gate noise
 \providecommand{\VMxHvaPtFullCtf}{\ensuremath{-15.92}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtFullCtfRel}{\ensuremath{4.4\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtFullKept}{\ensuremath{50\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
@@ -357,6 +1134,17 @@
 \providecommand{\VMxHvaPtFullRoSymRel}{\ensuremath{-0.6\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtFullSym}{\ensuremath{-15.34}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtFullSymRel}{\ensuremath{7.9\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtCtf}{\ensuremath{-15.92}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtCtfRel}{\ensuremath{4.4\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtKept}{\ensuremath{59\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtRaw}{\ensuremath{-12.97}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtRawRel}{\ensuremath{22.1\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtRo}{\ensuremath{-12.97}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtRoRel}{\ensuremath{22.1\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtRoSym}{\ensuremath{-15.92}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtRoSymRel}{\ensuremath{4.4\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtSym}{\ensuremath{-15.92}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaPtGtSymRel}{\ensuremath{4.4\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtRoCtf}{\ensuremath{-16.66}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtRoCtfRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtRoKept}{\ensuremath{78\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
@@ -368,6 +1156,39 @@
 \providecommand{\VMxHvaPtRoRoSymRel}{\ensuremath{-8.2\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtRoSym}{\ensuremath{-16.53}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaPtRoSymRel}{\ensuremath{0.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullCtf}{\ensuremath{-10.82}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullCtfRel}{\ensuremath{3.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullKept}{\ensuremath{48\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullRaw}{\ensuremath{-7.61}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullRawRel}{\ensuremath{32.3\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullRo}{\ensuremath{-8.36}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullRoRel}{\ensuremath{25.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullRoSym}{\ensuremath{-11.54}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullRoSymRel}{\ensuremath{-2.6\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullSym}{\ensuremath{-10.49}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinFullSymRel}{\ensuremath{6.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtCtf}{\ensuremath{-10.82}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtCtfRel}{\ensuremath{3.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtKept}{\ensuremath{57\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtRaw}{\ensuremath{-8.36}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtRawRel}{\ensuremath{25.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtRo}{\ensuremath{-8.36}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtRoRel}{\ensuremath{25.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtRoSym}{\ensuremath{-10.82}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtRoSymRel}{\ensuremath{3.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtSym}{\ensuremath{-10.82}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinGtSymRel}{\ensuremath{3.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoCtf}{\ensuremath{-11.25}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoCtfRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoKept}{\ensuremath{78\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoRaw}{\ensuremath{-10.25}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoRawRel}{\ensuremath{8.9\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoRo}{\ensuremath{-11.25}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoRoRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoRoSym}{\ensuremath{-12.29}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoRoSymRel}{\ensuremath{-9.3\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoSym}{\ensuremath{-11.18}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaTwinRoSymRel}{\ensuremath{0.6\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroFullCtf}{\ensuremath{-17.10}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroFullCtfRel}{\ensuremath{5.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroFullKept}{\ensuremath{50\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
@@ -379,6 +1200,17 @@
 \providecommand{\VMxHvaZeroFullRoSymRel}{\ensuremath{-0.1\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroFullSym}{\ensuremath{-16.43}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroFullSymRel}{\ensuremath{8.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtCtf}{\ensuremath{-17.10}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtCtfRel}{\ensuremath{5.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtKept}{\ensuremath{59\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtRaw}{\ensuremath{-14.01}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtRawRel}{\ensuremath{22.2\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtRo}{\ensuremath{-14.01}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtRoRel}{\ensuremath{22.2\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtRoSym}{\ensuremath{-17.10}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtRoSymRel}{\ensuremath{5.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtSym}{\ensuremath{-17.10}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxHvaZeroGtSymRel}{\ensuremath{5.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroRoCtf}{\ensuremath{-18.00}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroRoCtfRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroRoKept}{\ensuremath{78\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
@@ -390,6 +1222,8 @@
 \providecommand{\VMxHvaZeroRoRoSymRel}{\ensuremath{-8.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroRoSym}{\ensuremath{-17.86}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxHvaZeroRoSymRel}{\ensuremath{0.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxIdealHvaTwin}{\ensuremath{-11.25}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxIdealRvbTwin}{\ensuremath{-15.68}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxOverFactor}{\ensuremath{1.096}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxOverPct}{\ensuremath{9.6\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): over-correction factor - 1
 \providecommand{\VMxOverPredicted}{\ensuremath{1.096}}  % 1 / (1 - 2 e)^2 with the mean calibrated flip probability e
@@ -405,6 +1239,17 @@
 \providecommand{\VMxRvbPtFullRoSymRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbPtFullSym}{\ensuremath{-16.09}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbPtFullSymRel}{\ensuremath{8.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtCtf}{\ensuremath{-16.74}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtCtfRel}{\ensuremath{5.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtKept}{\ensuremath{59\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtRaw}{\ensuremath{-13.65}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtRawRel}{\ensuremath{22.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtRo}{\ensuremath{-13.65}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtRoRel}{\ensuremath{22.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtRoSym}{\ensuremath{-16.74}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtRoSymRel}{\ensuremath{5.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtSym}{\ensuremath{-16.74}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbPtGtSymRel}{\ensuremath{5.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbPtRoCtf}{\ensuremath{-17.62}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbPtRoCtfRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbPtRoKept}{\ensuremath{78\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
@@ -416,6 +1261,39 @@
 \providecommand{\VMxRvbPtRoRoSymRel}{\ensuremath{-8.6\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbPtRoSym}{\ensuremath{-17.48}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbPtRoSymRel}{\ensuremath{0.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullCtf}{\ensuremath{-14.97}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullCtfRel}{\ensuremath{4.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullKept}{\ensuremath{49\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullRaw}{\ensuremath{-11.03}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullRawRel}{\ensuremath{29.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullRo}{\ensuremath{-11.99}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullRoRel}{\ensuremath{23.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullRoSym}{\ensuremath{-15.73}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullRoSymRel}{\ensuremath{-0.3\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullSym}{\ensuremath{-14.44}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinFullSymRel}{\ensuremath{7.9\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtCtf}{\ensuremath{-14.97}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtCtfRel}{\ensuremath{4.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtKept}{\ensuremath{58\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtRaw}{\ensuremath{-11.99}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtRawRel}{\ensuremath{23.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtRo}{\ensuremath{-11.99}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtRoRel}{\ensuremath{23.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtRoSym}{\ensuremath{-14.97}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtRoSymRel}{\ensuremath{4.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtSym}{\ensuremath{-14.97}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinGtSymRel}{\ensuremath{4.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoCtf}{\ensuremath{-15.68}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoCtfRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoKept}{\ensuremath{78\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoRaw}{\ensuremath{-14.42}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoRawRel}{\ensuremath{8.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoRo}{\ensuremath{-15.68}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoRoRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoRoSym}{\ensuremath{-16.94}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoRoSymRel}{\ensuremath{-8.1\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoSym}{\ensuremath{-15.57}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbTwinRoSymRel}{\ensuremath{0.7\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroFullCtf}{\ensuremath{-17.07}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroFullCtfRel}{\ensuremath{5.2\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroFullKept}{\ensuremath{50\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
@@ -427,6 +1305,17 @@
 \providecommand{\VMxRvbZeroFullRoSymRel}{\ensuremath{0.1\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroFullSym}{\ensuremath{-16.39}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroFullSymRel}{\ensuremath{8.9\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtCtf}{\ensuremath{-17.07}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtCtfRel}{\ensuremath{5.2\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtKept}{\ensuremath{59\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtRaw}{\ensuremath{-13.94}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtRawRel}{\ensuremath{22.6\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtRo}{\ensuremath{-13.94}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtRoRel}{\ensuremath{22.6\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtRoSym}{\ensuremath{-17.07}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtRoSymRel}{\ensuremath{5.2\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtSym}{\ensuremath{-17.07}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxRvbZeroGtSymRel}{\ensuremath{5.2\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroRoCtf}{\ensuremath{-18.00}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroRoCtfRel}{\ensuremath{0.0\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroRoKept}{\ensuremath{78\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
@@ -438,6 +1327,32 @@
 \providecommand{\VMxRvbZeroRoRoSymRel}{\ensuremath{-8.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroRoSym}{\ensuremath{-17.86}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
 \providecommand{\VMxRvbZeroRoSymRel}{\ensuremath{0.8\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json)
+\providecommand{\VMxTwHvaPtFullCtfRel}{\ensuremath{0.62\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaPtFullRawRel}{\ensuremath{-5.50\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaPtGtCtfRel}{\ensuremath{0.62\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaPtGtRawRel}{\ensuremath{-4.75\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaPtRoCtfRel}{\ensuremath{0.00\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaPtRoRawRel}{\ensuremath{-0.79\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaZeroFullCtfRel}{\ensuremath{1.27\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaZeroFullRawRel}{\ensuremath{-5.00\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaZeroGtCtfRel}{\ensuremath{1.27\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaZeroGtRawRel}{\ensuremath{-4.73\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaZeroRoCtfRel}{\ensuremath{0.00\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwHvaZeroRoRawRel}{\ensuremath{-0.27\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwMax}{\ensuremath{1.3\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): max |twin-rescaled bias|
+\providecommand{\VMxTwMin}{\ensuremath{0.5\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): min |twin-rescaled bias|
+\providecommand{\VMxTwRvbPtFullCtfRel}{\ensuremath{0.51\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbPtFullRawRel}{\ensuremath{-0.71\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbPtGtCtfRel}{\ensuremath{0.51\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbPtGtRawRel}{\ensuremath{-1.32\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbPtRoCtfRel}{\ensuremath{0.00\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbPtRoRawRel}{\ensuremath{0.57\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbZeroFullCtfRel}{\ensuremath{0.72\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbZeroFullRawRel}{\ensuremath{-0.48\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbZeroGtCtfRel}{\ensuremath{0.72\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbZeroGtRawRel}{\ensuremath{-1.25\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbZeroRoCtfRel}{\ensuremath{0.00\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
+\providecommand{\VMxTwRvbZeroRoRawRel}{\ensuremath{0.74\,\%}}  % docsgen.physics.mitigation_exact (cache/mitigation_exact.json): E(target) x E_ideal(twin) / E(twin)
 \providecommand{\VNoiseShots}{\ensuremath{16384}}  % docsgen.physics.noise_floor (cache/noise_floor.json)
 \providecommand{\VNumBonds}{\ensuremath{18}}  % docsgen.physics.facts
 \providecommand{\VNumMatchings}{\ensuremath{2}}  % docsgen.physics.facts
