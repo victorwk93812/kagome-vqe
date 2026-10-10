@@ -180,6 +180,7 @@ def collect(*, recompute: bool = False) -> Registry:
     _m2_vqe(reg, "m2_vqe", "Mv")
     _m2_vqe(reg, "m2b_vqe", "Mw")
     _m2_exact(reg, recompute=recompute)
+    _m2_seed_check(reg)
     return reg
 
 
@@ -902,6 +903,50 @@ def _m2_limits(reg: Registry, ex: dict[str, Any]) -> None:
         kind="int",
         source=f"{src}: settings with |z| > 2",
     )
+
+
+# HVA, readout + symmetry + twin, theta = 0, 16 fresh-set-up repeats per seed. Run by the
+# development session through evaluate_fixed and not saved under results/, so quoted:
+# (noise, seed) -> (row rel. bias, SEM, twin, SEM, target, SEM)
+SEED_CHECK = {
+    ("Full", "A"): (0.0132, 0.0022, -10.832, 0.019, -17.102, 0.024),
+    ("Full", "B"): (0.0114, 0.0014, -10.806, 0.018, -17.091, 0.018),
+    ("Gt", "A"): (0.0134, 0.0011, -10.834, 0.013, -17.102, 0.007),
+    ("Gt", "B"): (0.0121, 0.0016, -10.823, 0.015, -17.105, 0.012),
+}
+
+
+def _m2_seed_check(reg: Registry) -> None:
+    """Rerun of the one 2.7-sigma setting with new seeds (quoted; see ``SEED_CHECK``)."""
+    src = "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)"
+    reg.add("MqSeedA", 1001, kind="int", source=src, quoted=True)
+    reg.add("MqSeedB", 2002, kind="int", source=src, quoted=True)
+    reg.add("MqRepeats", 16, kind="int", source=src, quoted=True)
+    for (n, seed), (row, row_sem, twin, twin_sem, target, target_sem) in SEED_CHECK.items():
+        k = f"{n}{seed}"
+        exact_twin = reg[f"MbExactTwinHva{'FullZero' if n == 'Full' else 'GatesPt'}"].value
+        exact_target = reg[f"MxHvaZero{n}Ctf"].value
+        reg.add(f"MqRow{k}", row, kind="pct", decimals=2, source=src, quoted=True)
+        reg.add(f"MqRowSem{k}", row_sem, kind="pct", decimals=2, source=src, quoted=True)
+        reg.add(f"MqTwin{k}", twin, decimals=3, source=src, quoted=True)
+        reg.add(f"MqTwinSem{k}", twin_sem, decimals=3, source=src, quoted=True)
+        reg.add(f"MqTarget{k}", target, decimals=3, source=src, quoted=True)
+        reg.add(f"MqTargetSem{k}", target_sem, decimals=3, source=src, quoted=True)
+        reg.add(f"MqTwinZ{k}", (twin - exact_twin) / twin_sem, decimals=1, source=src, quoted=True)
+        reg.add(
+            f"MqTargetZ{k}",
+            (target - exact_target) / target_sem,
+            decimals=1,
+            source=src,
+            quoted=True,
+        )
+        reg.add(
+            f"MqRowZ{k}",
+            (row - reg[f"MxTwHvaZero{n}CtfRel"].value) / row_sem,
+            decimals=1,
+            source=src,
+            quoted=True,
+        )
 
 
 def write_tex(reg: Registry, path: Path = REPORT_TABLES / "numbers.tex") -> Path:

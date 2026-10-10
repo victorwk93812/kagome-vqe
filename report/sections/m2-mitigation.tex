@@ -507,15 +507,6 @@ draws are identical in the two runs), so this is one fluctuation counted twice. 
 with gate noise alone agrees ($z=\VMbTwinZHvaGatesPt$). The other component outlier, the RVB
 target at $\theta=0$ ($z=\VMbTargetZRvbFullZero$), pulls its row the other way.
 
-How surprising is this? With \VMbRepeats{} repeats the standard error is itself uncertain by about
-\VMbSpreadRelErr, so $z$ follows a Student distribution with $\VMbRepeats-1$ degrees of freedom.
-If every setting sat exactly at its limit, a row with $|z|\ge\VMbZHvaFullZero$ among the eight
-would occur with probability \VMbPRow, and \VMbCompOver{} or more of the \VMbCompN{} independent
-components (the shared twin counted once) with $|z|>\VMbCompCut$ with probability \VMbPComp. The deviations are therefore suggestive, not
-conclusive. One candidate for a systematic part: the limit uses the device's exact readout
-channel, while each repeat calibrates with \VMbSetupRo{} shots, which also pick up gate errors
-in the calibration circuits. This report has not tested it.
-
 \begin{table}[H]
   \centering
   \small
@@ -527,6 +518,39 @@ in the calibration circuits. This report has not tested it.
     $z$-scores against the standard error of the mean.}
   \label{tab:m2twinsplit}
 \end{table}
+
+How surprising is this? With \VMbRepeats{} repeats the standard error is itself uncertain by about
+\VMbSpreadRelErr, so $z$ follows a Student distribution with $\VMbRepeats-1$ degrees of freedom.
+If every setting sat exactly at its limit, a row with $|z|\ge\VMbZHvaFullZero$ among the eight
+would occur with probability \VMbPRow, and \VMbCompOver{} or more of the \VMbCompN{} independent
+components (the shared twin counted once) with $|z|>\VMbCompCut$ with probability \VMbPComp. The deviations are therefore suggestive, not
+conclusive. A systematic part was possible: the limit uses the device's exact readout channel,
+while each repeat calibrates with \VMbSetupRo{} shots, which also pick up gate errors in the
+calibration circuits. A systematic would persist with new seeds; a fluctuation would not.
+
+\paragraph{Check with new seeds.} At this report's suggestion the development session reran the
+outlying setting (HVA, readout + symmetry + twin, $\theta=0$) with seeds \VMqSeedA{} and
+\VMqSeedB, \VMqRepeats{} fresh-set-up repeats each, under full noise and under gate noise alone
+(\py{evaluate_fixed} directly; the numbers are quoted from \py{docs/roadmap.md}, not regenerated
+from \py{results/}). Table~\ref{tab:m2seeds} applies the same split. Under full noise the twin
+returns to its exact energy ($z=\VMqTwinZFullA$ and $\VMqTwinZFullB$), and the rows sit at
+\VMqRowFullA{} and \VMqRowFullB{} against the limit \VMxTwHvaZeroFullCtfRel. The deviation was a
+fluctuation in the twin, and any full-noise systematic from the finite calibration is below the
+precision of these runs, about \VMqRowSemFullA.
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{adjustbox}{max width=\linewidth}
+    \input{tables/m2_seed_check}
+  \end{adjustbox}
+  \caption{The outlying setting rerun with new seeds, \VMqRepeats{} repeats each (quoted from the
+    development session). Row: relative bias of readout + symmetry + twin. Twin and target split
+    as in Table~\ref{tab:m2twinsplit}; $z$ against the exact values, which are the same with
+    gate noise alone (\cref{prop:ctf}).}
+  \label{tab:m2seeds}
+\end{table}
+
 
 \paragraph{Error bars.} For readout + symmetry alone the bootstrap standard error matches
 the spread between repeats to within a factor \VMbSeRatioMin{}--\VMbSeRatioMax{}

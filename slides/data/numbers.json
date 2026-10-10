@@ -189,7 +189,7 @@
   "quoted": false
  },
  "ExactE": {
-  "value": -18.000000000000036,
+  "value": -17.999999999999964,
   "text": "−18.000",
   "math": "-18.000",
   "source": "docsgen.physics.facts",
@@ -203,14 +203,14 @@
   "quoted": false
  },
  "ExactEtwo": {
-  "value": -16.961322840707556,
+  "value": -16.961322840707563,
   "text": "−16.9613",
   "math": "-16.9613",
   "source": "docsgen.physics.facts",
   "quoted": false
  },
  "ExactGap": {
-  "value": 1.0386771592924795,
+  "value": 1.0386771592924013,
   "text": "1.0387",
   "math": "1.0387",
   "source": "docsgen.physics.facts",
@@ -6445,6 +6445,279 @@
   "math": "0.43\\%",
   "source": "results/m2b-*",
   "quoted": false
+ },
+ "MqRepeats": {
+  "value": 16.0,
+  "text": "16",
+  "math": "16",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowFullA": {
+  "value": 0.0132,
+  "text": "1.32 %",
+  "math": "1.32\\%",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowFullB": {
+  "value": 0.0114,
+  "text": "1.14 %",
+  "math": "1.14\\%",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowGtA": {
+  "value": 0.0134,
+  "text": "1.34 %",
+  "math": "1.34\\%",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowGtB": {
+  "value": 0.0121,
+  "text": "1.21 %",
+  "math": "1.21\\%",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowSemFullA": {
+  "value": 0.0022,
+  "text": "0.22 %",
+  "math": "0.22\\%",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowSemFullB": {
+  "value": 0.0014,
+  "text": "0.14 %",
+  "math": "0.14\\%",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowSemGtA": {
+  "value": 0.0011,
+  "text": "0.11 %",
+  "math": "0.11\\%",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowSemGtB": {
+  "value": 0.0016,
+  "text": "0.16 %",
+  "math": "0.16\\%",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowZFullA": {
+  "value": 0.23972107423946654,
+  "text": "0.2",
+  "math": "0.2",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowZFullB": {
+  "value": -0.9090097404808379,
+  "text": "−0.9",
+  "math": "-0.9",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowZGtA": {
+  "value": 0.6612603302971154,
+  "text": "0.7",
+  "math": "0.7",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqRowZGtB": {
+  "value": -0.3578835229207336,
+  "text": "−0.4",
+  "math": "-0.4",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqSeedA": {
+  "value": 1001.0,
+  "text": "1001",
+  "math": "1001",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqSeedB": {
+  "value": 2002.0,
+  "text": "2002",
+  "math": "2002",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetFullA": {
+  "value": -17.102,
+  "text": "−17.102",
+  "math": "-17.102",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetFullB": {
+  "value": -17.091,
+  "text": "−17.091",
+  "math": "-17.091",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetGtA": {
+  "value": -17.102,
+  "text": "−17.102",
+  "math": "-17.102",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetGtB": {
+  "value": -17.105,
+  "text": "−17.105",
+  "math": "-17.105",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetSemFullA": {
+  "value": 0.024,
+  "text": "0.024",
+  "math": "0.024",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetSemFullB": {
+  "value": 0.018,
+  "text": "0.018",
+  "math": "0.018",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetSemGtA": {
+  "value": 0.007,
+  "text": "0.007",
+  "math": "0.007",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetSemGtB": {
+  "value": 0.012,
+  "text": "0.012",
+  "math": "0.012",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetZFullA": {
+  "value": -0.25794348990200905,
+  "text": "−0.3",
+  "math": "-0.3",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetZFullB": {
+  "value": 0.26718645790838974,
+  "text": "0.3",
+  "math": "0.3",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetZGtA": {
+  "value": -0.884377679664031,
+  "text": "−0.9",
+  "math": "-0.9",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTargetZGtB": {
+  "value": -0.7658869798040276,
+  "text": "−0.8",
+  "math": "-0.8",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinFullA": {
+  "value": -10.832,
+  "text": "−10.832",
+  "math": "-10.832",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinFullB": {
+  "value": -10.806,
+  "text": "−10.806",
+  "math": "-10.806",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinGtA": {
+  "value": -10.834,
+  "text": "−10.834",
+  "math": "-10.834",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinGtB": {
+  "value": -10.823,
+  "text": "−10.823",
+  "math": "-10.823",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinSemFullA": {
+  "value": 0.019,
+  "text": "0.019",
+  "math": "0.019",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinSemFullB": {
+  "value": 0.018,
+  "text": "0.018",
+  "math": "0.018",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinSemGtA": {
+  "value": 0.013,
+  "text": "0.013",
+  "math": "0.013",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinSemGtB": {
+  "value": 0.015,
+  "text": "0.015",
+  "math": "0.015",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinZFullA": {
+  "value": -0.5250432191273098,
+  "text": "−0.5",
+  "math": "-0.5",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinZFullB": {
+  "value": 0.8902321575879274,
+  "text": "0.9",
+  "math": "0.9",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinZGtA": {
+  "value": -0.9212170125705983,
+  "text": "−0.9",
+  "math": "-0.9",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
+ },
+ "MqTwinZGtB": {
+  "value": -0.06505474422790296,
+  "text": "−0.1",
+  "math": "-0.1",
+  "source": "docs/roadmap.md at 1824789 and the dev session's report (seeds 1001, 2002)",
+  "quoted": true
  },
  "MtHvaPtRaw": {
   "value": -11.8992919921875,

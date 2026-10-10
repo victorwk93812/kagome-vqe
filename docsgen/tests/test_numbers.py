@@ -140,7 +140,8 @@ def registry() -> numbers.Registry:
 
 @needs_results
 def test_quoted_numbers_are_the_known_ones(registry: numbers.Registry) -> None:
-    quoted = {k for k, v in registry.items() if v.quoted}
+    quoted = {k for k, v in registry.items() if v.quoted and not k.startswith("Mq")}
+    assert all(v.quoted for k, v in registry.items() if k.startswith("Mq"))
     assert quoted == {
         "SeedBugSpread",
         "SeedBugGrad",

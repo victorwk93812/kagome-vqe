@@ -509,6 +509,40 @@ def m2_exact() -> list[str]:
     return rows
 
 
+def _pm_z(value: str, sem: str, z: str) -> str:
+    return f"\\V{value} ${{}}\\pm{{}}$ \\V{sem}\\,{{\\small($z=\\V{z}$)}}"
+
+
+def m2_seed_check() -> list[str]:
+    """The one 2.7-sigma setting rerun with new seeds (quoted numbers)."""
+    rows = [
+        r"\begin{tabular}{llccc}",
+        r"\toprule",
+        _row(
+            "noise",
+            "seed",
+            r"row bias (limit \VMxTwHvaZeroFullCtfRel)",
+            r"twin (exact \VMbExactTwinHvaFullZero)",
+            r"target (exact \VMbExactTargetHvaFullZero)",
+        ),
+        r"\midrule",
+    ]
+    for n, label in (("Full", "full"), ("Gt", "gates only")):
+        for seed in ("A", "B"):
+            k = f"{n}{seed}"
+            rows.append(
+                _row(
+                    label,
+                    f"\\VMqSeed{seed}",
+                    f"\\VMqRow{k} ${{}}\\pm{{}}$ \\VMqRowSem{k}",
+                    _pm_z(f"MqTwin{k}", f"MqTwinSem{k}", f"MqTwinZ{k}"),
+                    _pm_z(f"MqTarget{k}", f"MqTargetSem{k}", f"MqTargetZ{k}"),
+                )
+            )
+    rows += [r"\bottomrule", r"\end{tabular}"]
+    return rows
+
+
 def write_all(reg: Registry) -> list[Path]:
     """Write every table."""
     return [
@@ -526,4 +560,5 @@ def write_all(reg: Registry) -> list[Path]:
         _write("m2_twin", m2_twin()),
         _write("m2_twin_bias", m2_twin_bias()),
         _write("m2_twin_split", m2_twin_split()),
+        _write("m2_seed_check", m2_seed_check()),
     ]
