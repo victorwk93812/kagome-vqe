@@ -278,7 +278,7 @@ checkpoints are marked; the rest runs on simulators.
 
 | check | result |
 |---|---|
-| standard error falls as 1/√shots | real spread over 40 repeats: 0.144 at 1024 shots, 0.060 at 4096; unit-tested |
+| standard error falls as 1/√shots | real spread over 40 repeats of HVA at the exact parameters with FakeGuadalupeV2 noise: 0.144 at 1024 shots, 0.060 at 4096; unit-tested. Without noise the spread at the exact parameters is exactly zero, because each triangle's unmatched bonds cancel shot by shot |
 | identical rows differ between calls | yes, while the same run seed reproduces the sequence; unit-tested |
 | readout error alone moves the energy | -18.00 to -16.43 at the exact parameters; unit-tested |
 | RVB + ADAM no longer climbs | final -12.72, at the floor; previously drifted to -10.8 |
@@ -351,7 +351,39 @@ Original plan:
   shift, SPSA and the hybrid on RVB and HVA. Plot best-so-far energy against shots spent.
 - **Exit:** a recommended default gradient per ansatz, recorded in the configs.
 
-### M2. Error-mitigation baseline
+### M2. Error-mitigation baseline (done)
+
+**Status, October 2026.** Code in commit `c9272e3`; results in `results/m2-evaluation-0`,
+`results/m2-evaluation-0p3` and `results/m2_vqe-summary`; full tables in the README under
+"Error mitigation".
+
+| check | result |
+|---|---|
+| each technique implemented as a composable estimator layer | readout correction and symmetry filtering (counts level), ZNE, twin rescaling; unit-tested |
+| energy at fixed points, per stack | 10 stacks x 2 ansatzes x 2 points (exact and θ = 0.3), 8 repeats each |
+| gap closed and variance cost | readout + symmetry: bias 0.14 to 0.70 % from 29 %, spread unchanged, no extra shots per energy |
+| mitigation stack chosen for hardware | readout correction + symmetry filtering; readout + ZNE as the fallback for non-singlet ansatzes |
+| full optimisation with the stack | HVA + SPSA -18.08 (0.46 %), RVB + ADAM parameter shift -17.97 (0.19 %) |
+| H1 hardware check | skipped for now, as with H0 |
+
+Findings and open problems:
+
+- **The chosen stack overshoots slightly.** Mitigated energies sit a little below the noise-free
+  value, and below -18 near the optimum: -18.06 at the exact HVA parameters, -18.08 at the end
+  of the HVA optimisation. The readout calibration describes all shots but is applied to the
+  post-selected ones. A sector-aware readout correction is the obvious next step.
+- **Symmetry filtering breaks ZNE.** Post-selection removes noise non-multiplicatively, so
+  exponential extrapolation over-corrects to about -20.5. Never stack them.
+- **Twin rescaling is only as good as its twin.** RVB's automatic twin gives 0.0 to 0.6 % bias;
+  HVA's twin is a different state (-11.25) and rescaling overshoots by 5 to 6 %. On the Clifford
+  grid every HVA point is a ground state or has zero energy, so a scalable Clifford twin does
+  not exist for HVA on this lattice.
+- **The benchmark instance is still easy (M3).** At the exact parameters the state is a product
+  of singlets, which symmetry filtering suits unusually well. The generic point (θ = 0.3)
+  confirms the stack away from it, but harder lattices are needed before generalising.
+
+Original plan:
+
 
 - **Deliverables:**
   - Client-side ZNE by gate folding.
@@ -377,6 +409,15 @@ Original plan:
 - **Exit:** at least one instance where noiseless VQE has a visible gap, used by M4 and M5.
 
 ### M4. Depth compression
+
+**Early finding, October 2026** (from the documentation worktree's report, verified on
+`main`). Transpiling with the parameters left free keeps each Heisenberg bond block at 5 CX,
+because two-qubit resynthesis only works on numeric matrices. Binding the angles first lets the
+transpiler use the 3-CX form: HVA drops from 66 to 42 CX, and at a generic point
+(`phi = gamma = 0.3`) the noisy energy keeps 78 % of the ideal value instead of 71 %. Two ways to
+use it: build the bond block from a parametric 3-CX template, or transpile per evaluation with
+bound parameters. This is a nearly free first step for M4.
+
 
 - **Deliverables:**
   - **Step 1:** transpiler-level experiments: `approximation_degree`, PyZX, BQSKit, Rustiq for HVA built from Pauli evolutions.
