@@ -66,12 +66,13 @@ STACK_KEYS = {
     "readout+symmetry+twin": "RoSymTwin",
 }
 POINT_KEYS = {"m2-evaluation-0": "Zero", "m2-evaluation-0p3": "Pt"}
-# M2 reruns with the corrected estimator (56aadd3), one error source at a time
+# M2 reruns with the corrected estimator (56aadd3), one error source at a time, and a fresh
+# calibration and twin per repeat (2116da4)
 SOURCE_KEYS = {
-    "m2b-evaluation-0": "FullZero",
-    "m2b-evaluation-0p3": "FullPt",
-    "m2b_readout-evaluation-0p3": "RoPt",
-    "m2b_gates-evaluation-0p3": "GatesPt",
+    "m2c-evaluation-0": "FullZero",
+    "m2c-evaluation-0p3": "FullPt",
+    "m2c_readout-evaluation-0p3": "RoPt",
+    "m2c_gates-evaluation-0p3": "GatesPt",
 }
 EXACT_MODE_KEYS = {
     "raw": "Raw",
@@ -493,6 +494,13 @@ def _stack_numbers(
                 decimals=2,
                 source=f"{src}: mean reported standard error / |noise-free energy|",
             )
+            reg.add(
+                f"{k}SemRel",
+                row["spread"] / math.sqrt(row["repeats"]) / abs(row["ideal_energy"]),
+                kind="pct",
+                decimals=2,
+                source=f"{src}: spread / sqrt(repeats) / |noise-free energy|",
+            )
             if row.get("kept_fraction") is not None:
                 reg.add(f"{k}Kept", row["kept_fraction"], kind="pct", decimals=0, source=src)
     return rows
@@ -557,14 +565,35 @@ def _m2_sources(reg: Registry) -> None:
                 source=src,
             )
             for stack, st in (("twin", "Raw"), ("readout_symmetry_twin", "Filt")):
-                twin = rows[name][f"{ansatz}_{stack}"]["estimator"]
-                reg.add(f"MbTwin{a}{sk}{st}", twin["noisy_twin_energy"], decimals=2, source=src)
+                row = rows[name][f"{ansatz}_{stack}"]
+                twin = row["estimator"]
+                if not twin.get("fresh_setup_per_repeat"):
+                    msg = f"{src}: {row['name']} reused one twin for every repeat"
+                    raise ValueError(msg)
+                draws = np.asarray(twin["noisy_twin_energy_per_setup"])
+                reg.add(f"MbTwin{a}{sk}{st}", draws.mean(), decimals=3, source=f"{src}: mean twin")
+                reg.add(
+                    f"MbTwinSem{a}{sk}{st}",
+                    draws.std(ddof=1) / math.sqrt(draws.size),
+                    decimals=3,
+                    source=f"{src}: standard error of the mean twin",
+                )
+                if st == "Filt":
+                    # undo the rescaling repeat by repeat: the target energy each repeat measured
+                    target = np.asarray(row["energies"]) * draws / twin["ideal_twin_energy"]
+                    reg.add(f"MbTarget{a}{sk}", target.mean(), decimals=3, source=src)
+                    reg.add(
+                        f"MbTargetSem{a}{sk}",
+                        target.std(ddof=1) / math.sqrt(target.size),
+                        decimals=3,
+                        source=f"{src}: energies x twin / ideal twin, per repeat",
+                    )
             order = rows[name][f"{ansatz}_readout_symmetry"]["estimator"]["readout_symmetry_order"]
             if order != "correct_then_filter":
                 msg = f"{src}: readout + symmetry ran as {order!r}, expected correct_then_filter"
                 raise ValueError(msg)
-    src = "results/m2b-*/evaluation.json"
-    full = rows["m2b-evaluation-0"]
+    src = "results/m2c-*/evaluation.json"
+    full = rows["m2c-evaluation-0"]
     reg.add("MbRepeats", full["hva_raw"]["repeats"], kind="int", source=src)
     reg.add("MbShots", full["hva_raw"]["shots_per_evaluation"], kind="int", source=src)
     reg.add("MbShotsZne", full["hva_zne"]["shots_per_evaluation"], kind="int", source=src)
@@ -587,20 +616,21 @@ def _m2_sources(reg: Registry) -> None:
         for sk in SOURCE_KEYS.values()
     ]
     reg.add("MbMaxRoSymTwin", max(chosen), kind="pct", decimals=2, source=f"{src}: max |rel. bias|")
-    for st in ("RoZne", "RoSymZne"):
-        vals = [
-            reg[f"Mb{a}{sk}{st}Rel"].value
-            for a in ANSATZ_KEYS.values()
-            for sk in SOURCE_KEYS.values()
-            if sk != "RoPt"  # no gate noise there, so ZNE has nothing to extrapolate
-        ]
-        note = f"{src}: rel. bias over the settings with gate noise"
-        reg.add(f"Mb{st}Min", min(vals), kind="pct", decimals=1, source=f"{note} (min)")
-        reg.add(f"Mb{st}Max", max(vals), kind="pct", decimals=1, source=f"{note} (max)")
+    gated = [
+        reg[f"Mb{a}{sk}RoSymTwinRel"].value
+        for a in ANSATZ_KEYS.values()
+        for sk in SOURCE_KEYS.values()
+        if sk != "RoPt"
+    ]
+    note = f"{src}: readout + symmetry + twin, settings with gate noise"
+    reg.add("MbRoSymTwinMin", min(gated), kind="pct", decimals=1, source=f"{note} (min)")
+    reg.add("MbRoSymTwinMax", max(gated), kind="pct", decimals=1, source=f"{note} (max)")
+    _m2_first_reruns(reg)
+    _m2_zne_ranges(reg)
     for stack, st in (("readout_symmetry", "RoSym"), ("symmetry", "Sym")):
         kept = [
             rows[name][f"{ansatz}_{stack}"]["kept_fraction"]
-            for name in ("m2b-evaluation-0", "m2b-evaluation-0p3", "m2b_gates-evaluation-0p3")
+            for name in ("m2c-evaluation-0", "m2c-evaluation-0p3", "m2c_gates-evaluation-0p3")
             for ansatz in ("hva", "rvb")
         ]
         reg.add(f"MbKeptMin{st}", min(kept), kind="pct", decimals=0, source=src)
@@ -620,6 +650,38 @@ def _m2_sources(reg: Registry) -> None:
         decimals=0,
         source=f"1 / sqrt(2 (R - 1)), relative error of a standard deviation from R = {r}",
     )
+
+
+def _m2_first_reruns(reg: Registry) -> None:
+    """The first reruns (m2b) shared one calibration and one twin across the repeats."""
+    old = runs.evaluation("m2b-evaluation-0")
+    osrc = "results/m2b-evaluation-0/evaluation.json"
+    first = [
+        abs(r["bias"]) / abs(r["ideal_energy"])
+        for n in ("m2b-evaluation-0", "m2b-evaluation-0p3", "m2b_readout-evaluation-0p3",
+                  "m2b_gates-evaluation-0p3")
+        for k, r in runs.evaluation(n).items()
+        if k.endswith("readout_symmetry_twin")
+    ]  # fmt: skip
+    reg.add("MoMaxRoSymTwin", max(first), kind="pct", decimals=2, source="results/m2b-*")
+    r = old["hva_readout_symmetry_twin"]
+    reg.add("MoHvaFullZeroRoSymTwinSpread", r["spread"], decimals=3, source=osrc)
+    reg.add("MoHvaFullZeroRoSymTwinSe", float(np.mean(r["reported_stds"])), decimals=3, source=osrc)
+
+
+def _m2_zne_ranges(reg: Registry) -> None:
+    """Range of the ZNE stacks' bias over the reruns with gate noise."""
+    src = "results/m2c-*/evaluation.json"
+    for st in ("RoZne", "RoSymZne"):
+        vals = [
+            reg[f"Mb{a}{sk}{st}Rel"].value
+            for a in ANSATZ_KEYS.values()
+            for sk in SOURCE_KEYS.values()
+            if sk != "RoPt"  # no gate noise there, so ZNE has nothing to extrapolate
+        ]
+        note = f"{src}: rel. bias over the settings with gate noise"
+        reg.add(f"Mb{st}Min", min(vals), kind="pct", decimals=1, source=f"{note} (min)")
+        reg.add(f"Mb{st}Max", max(vals), kind="pct", decimals=1, source=f"{note} (max)")
 
 
 def _m2_vqe(reg: Registry, name: str, prefix: str) -> None:
@@ -714,14 +776,7 @@ def _m2_exact(reg: Registry, *, recompute: bool) -> None:
                 decimals=1,
                 source=f"{src}: max/min - 1 of the damping over target and twin, gate noise",
             )
-    sampled = runs.evaluation("m2b-evaluation-0")["hva_readout_symmetry_twin"]["estimator"]
-    reg.add(
-        "MbTwinExcessHvaFullZero",
-        ex["energies"]["hva_twin_full"]["correct_then_filter"] / sampled["noisy_twin_energy"] - 1,
-        kind="pct",
-        decimals=1,
-        source=f"{src} and results/m2b-evaluation-0: exact / sampled noisy twin energy - 1",
-    )
+    _m2_limits(reg, ex)
     tw = [
         abs(reg[f"MxTw{a}{p}{n}CtfRel"].value)
         for a in ANSATZ_KEYS.values()
@@ -751,6 +806,101 @@ def _m2_exact(reg: Registry, *, recompute: bool) -> None:
         reg["MxOverFactor"].value * ex["energies"]["hva_0.0_full"]["symmetry"],
         decimals=2,
         source=f"{src}: over-correction factor x symmetry-only energy, full noise",
+    )
+
+
+def _m2_limits(reg: Registry, ex: dict[str, Any]) -> None:
+    """Sampled revised stack against its infinite-shot limit, split into target and twin."""
+    src = "docsgen.physics.mitigation_exact"
+    limits = {"FullZero": ("Zero", "Full"), "FullPt": ("Pt", "Full"),
+              "RoPt": ("Pt", "Ro"), "GatesPt": ("Pt", "Gt")}  # fmt: skip
+    noise_name = {"Full": "full", "Ro": "readout_only", "Gt": "gates_only"}
+    zs = {}
+    for a, ansatz in ((ANSATZ_KEYS[x], x) for x in ANSATZ_KEYS):
+        for sk, (p, n) in limits.items():
+            k = f"Mb{a}{sk}RoSymTwin"
+            z = (reg[f"{k}Rel"].value - reg[f"MxTw{a}{p}{n}CtfRel"].value) / reg[f"{k}SemRel"].value
+            zs[(a, sk)] = z
+            reg.add(
+                f"MbZ{a}{sk}",
+                z,
+                decimals=1,
+                source=f"{src} and results/m2c-*: (sampled - limit) / SEM",
+            )
+            point = 0.0 if p == "Zero" else 0.3
+            tgt = ex["energies"][f"{ansatz}_{point}_{noise_name[n]}"]["correct_then_filter"]
+            twn = ex["energies"][f"{ansatz}_twin_{noise_name[n]}"]["correct_then_filter"]
+            reg.add(f"MbExactTarget{a}{sk}", tgt, decimals=3, source=src)
+            reg.add(f"MbExactTwin{a}{sk}", twn, decimals=3, source=src)
+            reg.add(
+                f"MbTwinZ{a}{sk}",
+                (reg[f"MbTwin{a}{sk}Filt"].value - twn) / reg[f"MbTwinSem{a}{sk}Filt"].value,
+                decimals=1,
+                source=f"{src}: (mean twin - exact twin) / SEM",
+            )
+            reg.add(
+                f"MbTargetZ{a}{sk}",
+                (reg[f"MbTarget{a}{sk}"].value - tgt) / reg[f"MbTargetSem{a}{sk}"].value,
+                decimals=1,
+                source=f"{src}: (mean target - exact target) / SEM",
+            )
+            # contributions to the relative bias of the rescaled energy (first order)
+            reg.add(
+                f"MbTwinShift{a}{sk}",
+                1 - twn / reg[f"MbTwin{a}{sk}Filt"].value,
+                kind="pct",
+                decimals=1,
+                source=f"{src}: 1 - exact twin / mean twin",
+            )
+            reg.add(
+                f"MbTargetShift{a}{sk}",
+                1 - reg[f"MbTarget{a}{sk}"].value / tgt,
+                kind="pct",
+                decimals=1,
+                source=f"{src}: 1 - mean target / exact target",
+            )
+    reg.add("MbZMax", max(abs(z) for z in zs.values()), decimals=1, source=f"{src}: max |z|")
+    # chance of such deviations if every setting were at its limit (Student t, R - 1 dof)
+    from scipy import stats
+
+    dof = reg["MbRepeats"].value - 1
+    p_row = 2 * stats.t.sf(reg["MbZMax"].value, dof)
+    reg.add(
+        "MbPRow",
+        1 - (1 - p_row) ** len(zs),
+        kind="pct",
+        decimals=0,
+        source=f"{src}: P(some |z| >= max |z| among {len(zs)} settings), Student t",
+    )
+    # the two full-noise runs recorded the same twin draws; count that data set once
+    for a in ANSATZ_KEYS.values():
+        if reg[f"MbTwin{a}FullPtFilt"].value != reg[f"MbTwin{a}FullZeroFilt"].value:
+            msg = f"{a}: full-noise twin draws differ between the two points"
+            raise ValueError(msg)
+    comps = [
+        reg[f"Mb{part}Z{a}{sk}"].value
+        for part in ("Target", "Twin")
+        for a in ANSATZ_KEYS.values()
+        for sk in limits
+        if not (part == "Twin" and sk == "FullPt")
+    ]
+    cut = 2.5
+    over = sum(abs(z) > cut for z in comps)
+    reg.add("MbCompCut", cut, decimals=1, source="threshold for component z-scores")
+    reg.add("MbCompN", len(comps), kind="int", source=f"{src}: target and twin z-scores")
+    reg.add("MbCompOver", over, kind="int", source=f"{src}: components with |z| > {cut}")
+    reg.add(
+        "MbPComp",
+        stats.binom.sf(over - 1, len(comps), 2 * stats.t.sf(cut, dof)),
+        kind="pct",
+        decimals=0,
+        source=f"{src}: P(at least that many of {len(comps)} components with |z| > {cut})",
+    )
+    reg.add(
+        "MbZOver",
+        sum(abs(z) > 2 for z in zs.values()),
+        kind="int",
+        source=f"{src}: settings with |z| > 2",
     )
 
 

@@ -393,7 +393,7 @@ def mitigation_exact(*, recompute: bool = False) -> dict[str, Any]:
     sampling is involved, so the numbers isolate the bias of each estimator.
 
     Points are all parameters equal to 0 or 0.3, and ``twin``: the twin parameters that the
-    M2 reruns chose (read from ``results/m2b-evaluation-0``).
+    M2 reruns chose (read from ``results/m2c-evaluation-0``).
     """
 
     def compute() -> dict[str, Any]:
@@ -417,7 +417,7 @@ def mitigation_exact(*, recompute: bool = False) -> dict[str, Any]:
             "kept": {},
             "exact": {},
         }
-        twins = runs.evaluation("m2b-evaluation-0")
+        twins = runs.evaluation("m2c-evaluation-0")
         for name in ("hva", "rvb"):
             problem = isa(name)
             phys = problem.measurement_qubits

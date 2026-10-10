@@ -426,19 +426,15 @@ def m2_twin() -> list[str]:
 
 
 def m2_twin_bias() -> list[str]:
-    """Bias of the revised stack: infinite-shot limit against the sampled mean and its SE."""
-    exact_key = {
-        "FullZero": ("Zero", "Full"),
-        "FullPt": ("Pt", "Full"),
-        "RoPt": ("Pt", "Ro"),
-        "GatesPt": ("Pt", "Gt"),
-    }
+    """Bias of the revised stack: infinite-shot limit against the sampled mean and its SEM."""
+    exact_key = {"FullZero": ("Zero", "Full"), "FullPt": ("Pt", "Full"),
+                 "RoPt": ("Pt", "Ro"), "GatesPt": ("Pt", "Gt")}  # fmt: skip
     rows = [
-        r"\begin{tabular}{lcccc}",
+        r"\begin{tabular}{lcccccc}",
         r"\toprule",
-        _row("", r"\multicolumn{2}{c}{HVA}", r"\multicolumn{2}{c}{RVB}"),
-        r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}",
-        _row("noise, point", *["infinite shots", r"sampled $\pm$ SE"] * 2),
+        _row("", r"\multicolumn{3}{c}{HVA}", r"\multicolumn{3}{c}{RVB}"),
+        r"\cmidrule(lr){2-4}\cmidrule(lr){5-7}",
+        _row("noise, point", *["infinite shots", r"sampled ${}\pm{}$ SEM", "$z$"] * 2),
         r"\midrule",
     ]
     for sk, (p, n) in exact_key.items():
@@ -446,7 +442,31 @@ def m2_twin_bias() -> list[str]:
         for a in ANSATZ_KEYS.values():
             cells += [
                 f"\\VMxTw{a}{p}{n}CtfRel",
-                f"\\VMb{a}{sk}RoSymTwinRel ${{}}\\pm{{}}$ \\VMb{a}{sk}RoSymTwinSeRel",
+                f"\\VMb{a}{sk}RoSymTwinRel ${{}}\\pm{{}}$ \\VMb{a}{sk}RoSymTwinSemRel",
+                f"\\VMbZ{a}{sk}",
+            ]
+        rows.append(_row(*cells))
+    rows += [r"\bottomrule", r"\end{tabular}"]
+    return rows
+
+
+def m2_twin_split() -> list[str]:
+    """Target and twin energies measured inside the revised stack, against their exact values."""
+    rows = [
+        r"\begin{tabular}{lcccccc}",
+        r"\toprule",
+        _row("", r"\multicolumn{3}{c}{HVA}", r"\multicolumn{3}{c}{RVB}"),
+        r"\cmidrule(lr){2-4}\cmidrule(lr){5-7}",
+        _row("noise, point", *["target", "twin", "$z$ (target, twin)"] * 2),
+        r"\midrule",
+    ]
+    for sk in SOURCE_KEYS.values():
+        cells = [SOURCE_TEX[sk]]
+        for a in ANSATZ_KEYS.values():
+            cells += [
+                f"\\VMbTarget{a}{sk}\\,{{\\small(\\VMbExactTarget{a}{sk})}}",
+                f"\\VMbTwin{a}{sk}Filt\\,{{\\small(\\VMbExactTwin{a}{sk})}}",
+                f"\\VMbTargetZ{a}{sk}, \\VMbTwinZ{a}{sk}",
             ]
         rows.append(_row(*cells))
     rows += [r"\bottomrule", r"\end{tabular}"]
@@ -505,4 +525,5 @@ def write_all(reg: Registry) -> list[Path]:
         _write("m2b_vqe", m2_vqe("Mw")),
         _write("m2_twin", m2_twin()),
         _write("m2_twin_bias", m2_twin_bias()),
+        _write("m2_twin_split", m2_twin_split()),
     ]

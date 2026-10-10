@@ -660,7 +660,7 @@ def fig_m2_twin() -> Figure:
             color = ANSATZ_COLORS[ansatz]
             y = len(SOURCE_KEYS) - 1 - i + (0.14 if j == 0 else -0.14)
             sampled = 100 * reg[f"Mb{a}{sk}RoSymTwinRel"].value
-            se = 100 * reg[f"Mb{a}{sk}RoSymTwinSeRel"].value
+            se = 100 * reg[f"Mb{a}{sk}RoSymTwinSemRel"].value
             exact = 100 * reg[f"MxTw{a}{p}{n}CtfRel"].value
             right.errorbar(sampled, y, xerr=2 * se, fmt="o", color=color, ms=5, lw=1.1)
             right.scatter([exact], [y], marker="|", s=160, color=style.ACCENT, lw=2.2, zorder=4)
